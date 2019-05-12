@@ -44,7 +44,7 @@
         All rights reserved © 2019 Office of the Deputy Chief Secretary (Planning), Sabaragamuwa Provincial Council.
         Design & Developed by 
         <a href="https://www.linkedin.com" target="_blanck" style="color: white !important;">
-          <u>Pushpamal Gunasena</u>
+          <u>Pushpamal Gunasena(ICT Assistant)</u>
         </a>
       </span>
     </div>
