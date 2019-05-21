@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-dark" style="">
+<nav class="navbar navbar-expand-md navbar-light navbar-laravel" style="z-index:500;">
     <div class="container-fluid">
-        <li class="nav-item " style="list-style: none;">
-            <a class="navbar-brand " href="{{ url('/') }}">
+        <li class="nav-item " style="list-style: none; ">
+            <a class="navbar-brand " href="{{ url('/') }}" id="nav-brand" style="transition: 0.2s !important; font-size: 30px;">
                 {{ config('app.name', 'මුල්පිටුව') }}
             </a>
         </li>

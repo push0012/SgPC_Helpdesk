@@ -71,6 +71,27 @@
         .bg-secondary-front{
             background-color:#b3cbcb;
         }
+        .header{
+            background-color: black !important;
+            
+            z-index: 1000;
+        }
+        .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: black;
+        
+        }
+
+        .sticky + .content {
+        padding-top: 56px;
+        }
+        .top-container {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -78,14 +99,19 @@
     <div class="container-fluid bg-light" >
         <div id="app"> 
        
-            <header >
+            <div class="top-container">
                 <div class="container-fluid" >
                         <a href="{{ url('/') }}">
                             <img src="{{ asset('image/head1.jpg') }}"  style="width: 100%; height: 100% !important; align:center;">
                         </a>
                 </div>
-            </header> @include('navbar')
+            </div> 
+            <div class="header" id="myHeader" >
+            @include('navbar')
+            </div>
+            <div class="content">
             @include('slider')
+            </div>
             
             <div class="container-fluid middle-content" style="color: black; text-align:justify;">
                 <div  style=" color:black;">
@@ -190,4 +216,20 @@
 @include('footer')
 </div>
 </body>
+<script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            document.getElementById("nav-brand").style.fontSize = "20px";
+        } else {
+            header.classList.remove("sticky");
+            document.getElementById("nav-brand").style.fontSize = "30px";
+        }
+        }
+    </script>
 </html>
