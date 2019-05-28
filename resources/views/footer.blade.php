@@ -35,10 +35,12 @@
 
 <div class="copyright" >
   <div class="container" style="border-top: 1px solid #636363; padding-top:3px;">
-    <div class="row justify-content-center " >
-      <span> 
-        All rights reserved © 2019 Office of the Deputy Chief Secretary (Planning), Sabaragamuwa Provincial Council.
-        
+  <div class="row justify-content-center align-content-center">
+    <img src="{{ asset('image/pln_logo.jpg') }}"  style="height: 35px !important; margin-right: 10px !important;"/>
+      <span style="text-align:center;"> 
+      නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය, සබරගමුව පළාත් සභාව
+      <br/>
+      +94 45 2222173 / spcplan@yahoo.com
       </span>
     </div>
   </div>
