@@ -23,6 +23,9 @@ header {
 .container-fluid{
     padding: 0px !important;
 }
+.container{
+    max-width: 940px !important;
+}
   .containers {
     vertical-align: middle;
     margin-top: 5% !important;
@@ -37,7 +40,15 @@ header {
 nav a{
     color:white !important;
 }
-
+.nav-item{
+    margin-left: 6.18px !important;
+    width: 180px !important;
+}
+.navbar{
+    padding-top: unset !important;
+    padding-bottom: unset !important;
+    text-align: center;
+}
 .py-4{
     padding: 0 15px 0 15px;
 }
@@ -194,6 +205,25 @@ nav a{
     font-size: 0.85em !important;
 }
 .footer h4{
+    text-align: center;
+}
+.header{
+    background-color: black !important;
+    z-index: 1000;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: black;
+
+}
+.sticky + .content {
+    padding-top: 56px;
+}
+.top-container {
+    background-color: #f1f1f1;
     text-align: center;
 }
 @media (max-width: 576px) { 
