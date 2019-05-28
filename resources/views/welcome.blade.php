@@ -7,6 +7,9 @@
     <title>තොරතුරු කේන්ද්‍රය</title>  
 
     <link rel="icon" type="image/png" href="{{ asset('image/sg_info.png') }}" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet"> 
     <link href="{{ asset('css/home.css') }}" rel="stylesheet"> 
