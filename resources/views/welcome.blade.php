@@ -28,7 +28,7 @@
                 <div class="container" >
                     <div class="row" style="height: 50%; background-color: black !important;">
                         <div class="col-md-3 d-flex align-items-center justify-content-center">
-                            <img src="{{ asset('image/flag.jpg') }}"  style="height: 65%;">
+                            <img src="{{ asset('image/flag.jpg') }}"  style="height: 65px; margin: 10px 0 10px 0;">
                         </div>
                         <div class="col-md-9 align-self-center" >
                             <h3 style="float: left !important; color: white;">සබරගමුව උපකාරක කවුළුව : වෘත්තීය මංපෙත</h3>
@@ -67,10 +67,10 @@
                         <div  style=" color:black;">
                             
                             <div class="container-fluid ">
-                                <div class="row">
-                                    <div class="col-md-12 bg-secondary" style="padding: unset;">
-                                        <div class="" style="margin-top:0px; background-color: black;">
-                                            <h5 class="text-light align-self-center" align="center" 
+                                <div class="row ">
+                                    <div class="col-md-12 bg-info" style="padding: unset;">
+                                        <div class="" style="margin:10px;">
+                                            <h5 class="align-self-center box-head" align="center" 
                                             style="font-size:1.2em; font-weight:bold; padding: 5px 0 5px 0;">
                                             සබරගමුව උපකාරක කවුළුව : වෘත්තීය මංපෙත
                                         </h5>

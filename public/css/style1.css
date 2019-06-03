@@ -240,4 +240,13 @@ nav a{
         display: none !important;
     }
 }
+.hrs {
+    height: 0.7px;
+    color: blue;
+    background-color: white;
+    border: none;
+    }
+.text-black{
+    color: black !important;
+}
      
