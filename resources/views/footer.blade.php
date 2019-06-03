@@ -4,26 +4,26 @@
    <div class="row link_info justify-content-center bg-white" style=" height: 250px; color: white; padding-top: 0;">
 
     <div class="col-md-4 col-sm-12 footer-bar" style="background-color:#000000;">
-     <h4>Contact Us</h4>
+     <h4>අමතන්න</h4>
      <h5 style="padding-left:5%; padding-top:10%;">
      <span style="font-size:1.9em; margin-left: 0px;">045-22XXXXX</span>
     </h5>
     </div>
   <div class="col-md-4 col-sm-12 footer-bar" style="background-color:#000000;">
-   <h4>Important Links</h4>
+   <h4>වැදගත් සබැඳි</h4>
    <li style="line-height:3">
       <a href="">
-      Government Information Center
+      රාජ්‍ය තොරතුරු කේන්ද්‍රය
       </a>
   </li>
    <li style="">
    <a href="">
-   Sabaragamu Web Portal
+   සබරගමුව වෙබ් අඩවිය
    </a>
   </li>
  </div>
  <div class="col-md-4 col-sm-12 footer-bar" style="background-color:#000000;">
-   <h4>Social Media</h4>
+   <h4>සමාජ මාධ්‍ය</h4>
    <ul style="list-style-type: none; margin-top:10%; display: inline">
     <li style="padding-right:15%;"><i class="fab fa-facebook fa-3x"></i></li>
     <li style="padding-right:15%;"><i class="fab fa-linkedin fa-3x"></i></li>
