@@ -1,6 +1,6 @@
 html, body {
     /*background: url("../image/header.png") !important;*/
-    
+    background-color: #2e2e1f !important;
     background-repeat: inherit !important;
     font-family: 'Nunito', sans-serif !important;
     /*font-weight: 200;*/
@@ -173,10 +173,10 @@ nav a{
     padding-top: 0.5%;
    
 }
-.footer{
-/* background-color:rgba(0, 115, 230);
-    margin-top: 10px;*/
-}
+/*.footer{
+ background-color:rgba(0, 115, 230);
+    margin-top: 10px;
+}*/
 .link_info{
     padding-top: 10px;
     color: #000000;

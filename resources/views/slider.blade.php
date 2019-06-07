@@ -67,17 +67,22 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="{{ asset('image/slide1.jpg') }}" alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Agriculturel Support</h5>
-            <p>Agriculturul fkjasfkjafk</p>
-          </div>
+          <img class="d-block w-100" src="{{ asset('image/slider/slide1.jpg') }}" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="{{ asset('image/slide2.jpg') }}" alt="Second slide">
+          <img class="d-block w-100" src="{{ asset('image/slider/slide2.jpg') }}" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100" src="{{ asset('image/slide3.jpg') }}" alt="Third slide">
+          <img class="d-block w-100" src="{{ asset('image/slider/slide3.jpg') }}" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{{ asset('image/slider/slide4.jpg') }}" alt="Forth slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{{ asset('image/slider/slide5.jpg') }}" alt="Fifth slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="{{ asset('image/slider/slide6.jpg') }}" alt="Sixth slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
