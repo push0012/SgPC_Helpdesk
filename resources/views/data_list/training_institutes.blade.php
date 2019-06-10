@@ -16,49 +16,49 @@
          <tbody>
             <tr>
                 <td>
-                <a href="#">
+                <a href="http://www.tvec.gov.lk">
                 තෘතියික අධ්‍යාපන හා වෘත්තීය අධ්‍යාපන ‍‍‍‍කොමිෂන් සභා‍‍ව  (TVEC)
                 </a>
                 </td>  
             </tr>
             <tr>
                 <td>
-                <a href="#">
+                <a href="http://www.naita.gov.lk">
                 ජාතික ආධුනිකත්ව සහ කාර්මික පුහුණු කිරීම් අධිකාරිය (NAITA)
                 </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                <a href="#">
+                <a href="http://www.dtet.gov.lk">
                 කාර්මික අධ්‍යාපන හා පුහුණු කිරීමේ දෙපාර්තමේන්තුව (DTET)
                 </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                <a href="#">
+                <a href="http://www.vtasl.gov.lk">
                 ශ්‍රී ලංකා වෘත්තීය පුහුණු අධිකාරිය (VTA)
                 </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                <a href="#">
+                <a href="http://www.nysc.lk">
                 ජාතික තරුණ සේවා සභාව (NYSC)
                 </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                <a href="#">
+                <a href="http://www.cgtti.lk">
                 ලංකා-ජර්මන් කාර්මික අභ්‍යාස ආයතනය
                 </a>
                 </td>
             </tr>
             <tr>
                 <td>
-                <a href="#">
+                <a href="http://www.youthcorps.lk">
                 ජාතික යොවුන් සේනාංකය
                 </a>
                 </td>
@@ -66,10 +66,8 @@
             
           </tbody>
           </table>
+          <br>
         </div>
-        @if(session('message'))
-          <span class="badge badge-success">{{session('message')}}</span>
-        @endif 
     </div>
 </div>
 @endsection

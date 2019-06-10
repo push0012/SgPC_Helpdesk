@@ -13,14 +13,19 @@
   <div class="col-md-4 col-sm-12 footer-bar" style="background-color:#000000;">
    <h4 class="bg-white text-black">වැදගත් සබැඳි</h4>
    
-   <li style="line-height:3">
-      <a href="">
+   <li style="line-height:2">
+      <a href="http://www.gic.gov.lk">
       රාජ්‍ය තොරතුරු කේන්ද්‍රය
       </a>
   </li>
-   <li style="">
-   <a href="">
-   සබරගමුව වෙබ් අඩවිය
+   <li style="line-height:2">
+   <a href="http://www.sg.gov.lk">
+   සබරගමුව වෙබ් බිහිදොර
+   </a>
+  </li>
+  <li style="line-height:2">
+   <a href="http://www.data.gov.lk/">
+   ශ්‍රී ලංකා දත්ත බිහිදොර
    </a>
   </li>
  </div>
