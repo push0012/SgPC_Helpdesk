@@ -29,6 +29,9 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                 <li class="nav-item bg-success" style="">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('අමතන්න') }}</a>
                 </li>
+                <li class="nav-item bg-success" style="">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('තොරතුරු') }}</a>
+                </li>
                <!-- <li class="nav-item bg-info" style="">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
