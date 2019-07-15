@@ -24,13 +24,13 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                     <a class="nav-link" href="{{ route('login') }}">{{ __('අප ගැන') }}</a>
                 </li>
                 <li class="nav-item bg-success" style="">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('භාගත කිරීම්') }}</a>
+                    <a class="nav-link" href="{{ url('download') }}">{{ __('භාගත කිරීම්') }}</a>
                 </li>
-                <li class="nav-item bg-success" style="">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('අමතන්න') }}</a>
+                <li class="nav-item bg-primary" style="">
+                    <a class="nav-link" href="{{ url('contactus') }}">{{ __('අමතන්න') }}</a>
                 </li>
-                <li class="nav-item bg-success" style="">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('තොරතුරු') }}</a>
+                <li class="nav-item bg-danger" style="">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('තොරතුරු පනත') }}</a>
                 </li>
                <!-- <li class="nav-item bg-info" style="">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
