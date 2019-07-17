@@ -50,13 +50,13 @@
 </head>
 <body>
     <div class="container bg-light">
-    <div id="app">
+    <div id="app"> 
      
             <div>
                 <div class="container" >
                     <div class="row" style="height: 50%; background-color: black !important;">
                         <div class="col-md-3 d-flex align-items-center justify-content-center">
-                            <img src="{{ asset('image/flag.jpg') }}"  style="height: 65%;">
+                            <img src="{{ asset('image/flag.jpg') }}"  style="height: 65px; margin: 10px 0 10px 0;">
                         </div>
                         <div class="col-md-9 align-self-center" >
                             <h3 style="float: left !important; color: white;">සබරගමුව උපකාරක කවුළුව : වෘත්තීය මංපෙත</h3>
