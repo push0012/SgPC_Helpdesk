@@ -13,8 +13,8 @@
 
         <!--Grid column-->
         <div class="col-md-8 mb-md-0 mb-5">
-            <form id="contact-form" name="contact-form" action="{{ url('/sendmail') }}" method="POST">
-
+            <form id="contact-form" name="contact-form" action="{{ url('sendmail') }}" method="POST">
+            @csrf
                 <!--Grid row-->
                 <div class="row">
 
