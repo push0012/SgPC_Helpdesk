@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'තොරතුරු කේන්ද්‍රය') }}</title>
+    <title>@yield('pageTitle')</title>
 
     <!-- Scripts -->
     
