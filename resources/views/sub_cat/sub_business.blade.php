@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+@section('pageTitle', '‍‍ව්‍යපාර කාණ්ඩය')
 @section('content')
 <div class="container">
     <div class="row">
