@@ -30,3 +30,4 @@ Route::get('/download', function(){ return view('detail_page.downloads'); });
 
 //interact page routes
 Route::get('/contactus', function(){ return view('interact.contact'); });
+Route::post('/sendmail', 'ContactUsController@sendMail');
