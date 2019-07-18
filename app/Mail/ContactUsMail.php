@@ -30,9 +30,9 @@ class ContactUsMail extends Mailable
      */
     public function build()
     {
-        return $this->subject($this->email->subject)
-                    ->from($this->email->email, $this->email->name)
+        return $this->subject('HelpDesk Contact')
+                    ->from('hdcspspc@gmail.com', 'Administrator')
                     ->to('pushpamal0012@gmail.com')
-                    ->view('contactmail');
+                    ->view('interact.contactmail');
     }
 }
