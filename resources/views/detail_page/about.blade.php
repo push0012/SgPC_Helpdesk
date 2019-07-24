@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('pageTitle', 'අප ගැන')
 @section('content')
-<div class="container">
+<div class="container" style="margin-bottom: 25px;">
     <div class="row justify-content-center">
         <div class="col-md-12">
         <div class="container">
