@@ -26,6 +26,7 @@
                 </p>
             </div>
         </div>
+        <hr>
         <div class="row">
             <div class="col-md-12">
                 <h5 style="font-size:1.2em; font-weight:bold;">අපගේ දැක්ම....</h5>
@@ -34,7 +35,7 @@
                 </p>
             </div>
         </div>
-
+        <hr>
         <div class="row">
             <div class="col-md-12">
                 <h5 style="font-size:1.2em; font-weight:bold;">අපගේ මෙහෙවර.....</h5>
@@ -45,7 +46,7 @@
                 </p>
             </div>
         </div>
-
+        <hr>
         <div class="row">
             <div class="col-md-12">
                 <h5 style="font-size:1.2em; font-weight:bold;">ක්‍රියාකාරී දෙපාර්තමේන්තු</h5>
@@ -107,6 +108,7 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="row">
             <div class="col-md-12">
                 <h5 style="font-size:1.2em; font-weight:bold;">ආයතන ව්‍යුහය</h5>
