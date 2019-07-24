@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-        <h2 class="h1-responsive font-weight-bold my-4">අපව අමතන්න</h2>
+        <h4 class="h1-responsive font-weight-bold my-4">අපව අමතන්න</h4>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">
         ඔබට කිසියම් ප්‍රශ්නයක් තිබේද? කරුණාකර අපව කෙලින්ම සම්බන්ධ කර ගැනීමට පසුබට නොවන්න.
