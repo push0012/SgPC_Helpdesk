@@ -27,6 +27,7 @@ Route::get('/stu_regi', function(){ return view('sub_cat.sub_stu_registration');
 //detail page routes
 Route::get('/business_info', function(){ return view('detail_page.business_info')->with('category',"Agriculture"); });
 Route::get('/download', function(){ return view('detail_page.downloads'); });
+Route::get('/about', function(){ return view('detail_page.about'); });
 
 //interact page routes
 Route::get('/contactus', function(){ return view('interact.contact'); });
