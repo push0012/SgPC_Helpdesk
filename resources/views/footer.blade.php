@@ -7,7 +7,7 @@
      <h4 class="bg-white text-black">අමතන්න</h4>
      
      <h5 style="padding-left:5%; padding-top:10%;">
-     <span style="font-size:1.9em; margin-left: 0px;">045-22XXXXX</span>
+     <span style="font-size:1.9em; margin-left: 0px;">045-2222173</span>
     </h5>
     </div>
   <div class="col-md-4 col-sm-12 footer-bar" style="background-color:#000000;">
