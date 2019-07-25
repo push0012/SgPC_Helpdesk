@@ -60,7 +60,7 @@
                 </div>
                 <div class="col-md-10">
                     <a href="{{ asset('file/hirechi.pdf') }}" target="_blank">
-                        තොරතුරු වලට ප්‍රවේශ වීමේ පටිපාටිය
+                        RTI අභ්‍යන්තර උපදෙස් 01
                     </a>
                 </div>
             </div>
