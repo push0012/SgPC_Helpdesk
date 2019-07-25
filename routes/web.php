@@ -33,3 +33,4 @@ Route::get('/rti', function(){ return view('detail_page.rti'); });
 //interact page routes
 Route::get('/contactus', function(){ return view('interact.contact'); });
 Route::post('/sendmail', 'ContactUsController@sendMail');
+Route::post('/sendinquiry', 'ContactUsController@sendInquiry');
