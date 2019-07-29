@@ -46,13 +46,11 @@
             <div class="container-fluid">
                 <div class="col-md-12" >
                     <div class="row " style="">
-                        <div class="col-md-3 left-menus bg-secondary-front" style="padding: 2%; color: black;">
-                            <h4 align="center" class="bg-info" style="border-radius:5px;">නිවේදන</h4>
-                            <ul style="list-style-type:square; padding-left:4%;" class="list-group list-group-flush">
-                                <marquee style="" direction="up" height="100%" scrollamount="1">
-                                    <li class="">industry's standard</li></marquee>
-                                    <marquee style="" direction="up" height="200%" scrollamount="1">
-                                        <li class="">only five centuries</li></marquee>
+                                <div class="col-md-3 left-menus bg-secondary-front" style="padding: 2%; color: black;">
+                                    <h4 align="center" class="bg-info" style="border-radius:5px;">නිවේදන</h4>
+                                    <ul style="list-style-type:square; padding-left:4%;" class="list-group list-group-flush">
+                                        <li class="">industry's standard</li>
+                                        <li class="">only five centuries</li>
                                         <li class="">It was in the 1960s</li>
                                         <li class="">simply random text</li>
                                     </ul>
@@ -133,10 +131,8 @@
                                             </div>
                                         </div>
                                     </a>
-                                    
                                 </div> 
                             </div>
-                            
                         </div>     
                     </div>
                 </div>
