@@ -4,8 +4,10 @@
 <div class="container" style="margin-bottom: 25px;">
     <div class="row justify-content-center">
         <div class="col-md-12">
+        <h4 class="h1-responsive font-weight-bold my-4">නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය.</h4>
         <div class="container">
-        <h5 style="font-size:1.2em; font-weight:bold;">නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය...</h5>
+        
+       <!-- <h5 style="font-size:1.2em; font-weight:bold;">නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය...</h5>-->
 
         <div class="row">
             <div class="col-md-06">
