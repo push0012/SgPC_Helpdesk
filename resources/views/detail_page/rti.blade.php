@@ -5,8 +5,9 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
         <h4 class="h1-responsive font-weight-bold my-4">තොරතුරු දැන ගැනීමේ අයිතිවාසිකම</h4>
+        <h5 style="font-size: 1.1em;">තොරතුරු පනත හරහා තොරතුරු ලබාගැනීමේ ලේඛන.</h5>
         <div class="container">
-            <div class="row bg-danger" style="height: 40px; color: white; padding-top: 6px; margin-bottom: 20px;">
+            <div class="row bg-dark" style="height: 30px; color: white; padding-top: 4px; margin-bottom: 20px;">
                 <div class="col-md-2" style="">
                     #
                 </div>
@@ -56,6 +57,11 @@
             </div>
             </div>
             <br/>
+            <h5 style="font-size: 1.1em;">තොරතුරු පනත සම්බන්ඳ විශේෂ වෙබ් අඩවි.</h5>
+                <ul style="list-style:none !important; line-height:200%;">
+                    <li><a href="https://www.rti.gov.lk" target="_blank">තොරතුරු පනත නිල වෙබ් අඩවිය</a></li>
+                    <li><a href="http://www.rtiwatch.lk" target="_blank">Transparency International Sri Lanka</a></li>
+                </ul>
             <h5 style="font-size: 1.1em;">ක්ෂණික විමසීම් සඳහා පහතින් ඔබේ පණිවුඩය අප වෙත යොමු කරන්න.</h5>
             
             <div class="accordion" id="accordionExample">
