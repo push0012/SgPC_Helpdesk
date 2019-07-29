@@ -4,12 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
+        <h4 class="h1-responsive font-weight-bold my-4">භාගත කිරීම්</h4>
+        <p>අප ආයතය මගින් සිදුකරනු ලබන සියලු කාර්යයන්ට අදාල ලේඛන භාගත කරගැනීමට මෙහිදී හැකිවේ.</p>
+        
         <div class="accordion" id="accordionExample">
             <div class="card border-0" >
                 <div class="card-header border-0" id="headingOne" >
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <h5>අයදුම්පත්‍ර</h5>
+                    <a href="#"><h5>අයදුම්පත්‍ර</h5></a>
                     </button>
                 </h2>
                 </div>
@@ -28,7 +31,7 @@
                 <div class="card-header border-0" id="headingTwo">
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <h5>චක්‍රලේඛ</h5>
+                    <a href="#"><h5>චක්‍රලේඛ</h5></a>
                     </button>
                 </h2>
                 </div>
@@ -42,7 +45,7 @@
                 <div class="card-header border-0" id="headingThree">
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <h5>ටෙන්ඩර් දැන්වීම්</h5>
+                    <a href="#"><h5>ටෙන්ඩර් දැන්වීම්</h5></a>
                     </button>
                 </h2>
                 </div>
@@ -57,7 +60,7 @@
                 <div class="card-header border-0" id="headingFour">
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <h5>අත්පොත්</h5>
+                    <a href="#"><h5>අත්පොත්</h5></a>
                     </button>
                 </h2>
                 </div>
