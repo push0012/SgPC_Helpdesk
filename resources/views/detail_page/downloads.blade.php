@@ -12,17 +12,33 @@
                 <div class="card-header border-0" id="headingOne" >
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <a href="#"><h5>අයදුම්පත්‍ර</h5></a>
+                    <h5>
+                        අයදුම්පත්‍ර
+                        <span class="btn" style="font-size:0.5em;">Click Here...</span>
+                    </h5>
                     </button>
                 </h2>
                 </div>
                 <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body border-0">
                     <ul style="list-style-type: none;">
-                        <li style="padding-top:1%;">උපාධීධාරී ලියාපදිංචිය (සිංහල)</li>
-                        <li style="padding-top:1%;">උපාධීධාරී ලියාපදිංචිය (ඉංග්‍රීසි)</li>
-                        <li style="padding-top:1%;">ඩිප්ලෝමාධාරී ලියාපදිංචිය (සිංහල)</li>
-                        <li style="padding-top:1%;">ඩිප්ලෝමාධාරී ලියාපදිංචිය (ඉංග්‍රීසි)</li>
+
+                        <a href="{{ asset('file/grs.pdf') }}" target="_blank" class="page_links">
+                            <li style="padding-top:1%;">උපාධීධාරී ලියාපදිංචිය (සිංහල)</li>
+                        </a>
+
+                        <a href="{{ asset('file/gre.pdf') }}" target="_blank" class="page_links">
+                            <li style="padding-top:1%;">උපාධීධාරී ලියාපදිංචිය (ඉංග්‍රීසි)</li>
+                        </a>
+
+                        <a href="{{ asset('file/drs.pdf') }}" target="_blank" class="page_links">
+                            <li style="padding-top:1%;">ඩිප්ලෝමාධාරී ලියාපදිංචිය (සිංහල)</li>
+                        </a>
+
+                        <a href="{{ asset('file/dre.pdf') }}" target="_blank" class="page_links">
+                            <li style="padding-top:1%;">ඩිප්ලෝමාධාරී ලියාපදිංචිය (ඉංග්‍රීසි)</li>
+                        </a>
+
                     </ul>
                 </div>
                 </div>
@@ -31,7 +47,10 @@
                 <div class="card-header border-0" id="headingTwo">
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <a href="#"><h5>චක්‍රලේඛ</h5></a>
+                    <h5>
+                        චක්‍රලේඛ
+                        <span class="btn" style="font-size:0.5em;">Click Here...</span>
+                    </h5>
                     </button>
                 </h2>
                 </div>
@@ -45,7 +64,10 @@
                 <div class="card-header border-0" id="headingThree">
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <a href="#"><h5>ටෙන්ඩර් දැන්වීම්</h5></a>
+                    <h5>
+                        ටෙන්ඩර් දැන්වීම්
+                        <span class="btn" style="font-size:0.5em;">Click Here...</span>
+                    </h5>
                     </button>
                 </h2>
                 </div>
@@ -60,7 +82,10 @@
                 <div class="card-header border-0" id="headingFour">
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    <a href="#"><h5>අත්පොත්</h5></a>
+                    <h5>
+                        අත්පොත්
+                        <span class="btn" style="font-size:0.5em;">Click Here...</span>
+                    </h5>
                     </button>
                 </h2>
                 </div>
