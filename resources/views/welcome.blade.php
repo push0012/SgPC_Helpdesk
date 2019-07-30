@@ -31,8 +31,19 @@
                             <img src="{{ asset('image/flag.jpg') }}"  style="height: 65px; margin: 10px 0 10px 0;">
                         </div>
                         <div class="col-md-9 align-self-center" >
-                            <h3 style="float: left !important; color: white;">සබරගමුව උපකාරක කවුළුව : වෘත්තීය මංපෙත</h3>
-                            <h5 style="float: left !important; color: white;">සබරගමුව පළාත් සභාව</h5>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h3 style="float: left !important; color: white;">සබරගමුව උපකාරක කවුළුව : වෘත්තීය මංපෙත</h3>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <h4 style="float: left !important; color: white;">නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය</h4>
+                                    </div>
+                                    <div class="col-md-12">
+                                    <h5 style="float: left !important; color: white;">සබරගමුව පළාත් සභාව</h5>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <!--<a href="{{ url('/') }}">
