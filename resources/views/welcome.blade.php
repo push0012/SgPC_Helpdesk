@@ -28,7 +28,7 @@
                 <div class="container" >
                     <div class="row" style="height: 50%; background-color: black !important;">
                         <div class="col-md-3 d-flex align-items-center justify-content-center">
-                            <img src="{{ asset('image/flag.jpg') }}"  style="height: 65px; margin: 10px 0 10px 0;">
+                            <img src="{{ asset('image/flag.jpg') }}"  style="height: 80px; margin: 10px 0 10px 0;">
                         </div>
                         <div class="col-md-9 align-self-center" >
                             <div class="container">
@@ -40,7 +40,7 @@
                                         <h4 style="float: left !important; color: white;">නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය</h4>
                                     </div>
                                     <div class="col-md-12">
-                                    <h5 style="float: left !important; color: white;">සබරගමුව පළාත් සභාව</h5>
+                                        <h5 style="float: left !important; color: white;">සබරගමුව පළාත් සභාව</h5>
                                     </div>
                                 </div>
                             </div>
