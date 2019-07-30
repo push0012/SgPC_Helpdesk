@@ -24,7 +24,7 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                     <a class="nav-link" href="{{ url('about')  }}">{{ __('අප ගැන') }}</a>
                 </li>
                 <li class="nav-item bg-success" style="">
-                    <a class="nav-link" href="{{ url('download') }}">{{ __('භාගත කිරීම්') }}</a>
+                    <a class="nav-link" href="{{ url('download') }}">{{ __('බාගත කිරීම්') }}</a>
                 </li>
                 <li class="nav-item bg-primary" style="">
                     <a class="nav-link" href="{{ url('contactus') }}">{{ __('අමතන්න') }}</a>

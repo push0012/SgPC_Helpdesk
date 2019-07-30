@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-        <h4 class="h1-responsive font-weight-bold my-4">භාගත කිරීම්</h4>
-        <p>අප ආයතය මගින් සිදුකරනු ලබන සියලු කාර්යයන්ට අදාල ලේඛන භාගත කරගැනීමට මෙහිදී හැකිවේ.</p>
+        <h4 class="h1-responsive font-weight-bold my-4">බාගත කිරීම්</h4>
+        <p>අප ආයතය මගින් සිදුකරනු ලබන සියලු කාර්යයන්ට අදාල ලේඛන බාගත කරගැනීමට මෙහිදී හැකිවේ.</p>
         
         <div class="accordion" id="accordionExample">
             <div class="card border-0" >
