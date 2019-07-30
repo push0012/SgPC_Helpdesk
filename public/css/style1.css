@@ -67,9 +67,7 @@ nav a{
 .box:hover{
     text-decoration: none;
     color: black !important;
-    background-color: unset;
-    
-    
+    background-color: unset;    
 }
 #app{
     width: 100% !important;
@@ -118,8 +116,6 @@ nav a{
 .link-list td {
     padding:1% 0% 1% 2% !important;
 }
-
-
 .imgs{
     width: 50%;
     height: 65%;
@@ -171,8 +167,8 @@ nav a{
     font-weight: bold;
     vertical-align:middle;
     padding-top: 0.5%;
-   
 }
+
 /*.footer{
  background-color:rgba(0, 115, 230);
     margin-top: 10px;
@@ -253,4 +249,6 @@ nav a{
 .text-black{
     color: black !important;
 }
-     
+.page_links{
+    text-decoration: none !important;
+}
