@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
         <h4 class="h1-responsive font-weight-bold my-4">තොරතුරු දැන ගැනීමේ අයිතිවාසිකම</h4>
-        <h5 style="font-size: 1.1em;">නම් කල නිලධාරී</h5>
+        <h5 style="font-size: 1.1em;">පත්කල නිලධාරියා</h5>
         <div class="container">
             <div class="row " style="padding-top: 4px; margin-bottom: 20px;">
                 <div class="col-md-3" style="">
@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <h5 style="font-size: 1.1em;">තොරතුරු නිලධාරී</h5>
+        <h5 style="font-size: 1.1em;">තොරතුරු නිලධාරියා</h5>
         <div class="container">
             <div class="row" style="padding-top: 4px; margin-bottom: 20px;">
                 <div class="col-md-3" style="">
