@@ -252,3 +252,6 @@ nav a{
 .page_links{
     text-decoration: none !important;
 }
+.image-detail{
+    line-height: 40% !important;
+}
