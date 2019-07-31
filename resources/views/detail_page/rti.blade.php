@@ -5,6 +5,39 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
         <h4 class="h1-responsive font-weight-bold my-4">තොරතුරු දැන ගැනීමේ අයිතිවාසිකම</h4>
+        <h5 style="font-size: 1.1em;">නම් කල නිලධාරී</h5>
+        <div class="container">
+            <div class="row " style="padding-top: 4px; margin-bottom: 20px;">
+                <div class="col-md-3" style="">
+                    <img src="{{ asset('image/appointofficer.png') }}"  style="height: 150px; margin: 10px 0 10px 0;">
+                </div>
+                <div class="col-md-9" style="">
+                    <p class="image-detail">පරාක්‍රම පියසේන මයා</p>
+                    <p class="image-detail">නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන)</p>
+                    <p class="image-detail"><i class="fas fa-mobile-alt"></i> +94718714270</p>
+                    <p class="image-detail"><i class="fas fa-phone-square"></i> +94452223082</p>
+                    <p class="image-detail"><i class="fas fa-fax"></i> +94452223082</p>
+                    <p class="image-detail"><i class="fas fa-at"></i> parakramage@yahoo.com</p>
+                </div>
+            </div>
+        </div>
+        <h5 style="font-size: 1.1em;">තොරතුරු නිලධාරී</h5>
+        <div class="container">
+            <div class="row" style="padding-top: 4px; margin-bottom: 20px;">
+                <div class="col-md-3" style="">
+                    <img src="{{ asset('image/informationofficer.png') }}"  style="height: 150px; margin: 10px 0 10px 0;">
+                </div>
+                <div class="col-md-9" style="">
+                <p style="line-height:75%;">ජී. ඩී. ජේ. කේ. ගොඩගේ මයා</p>
+                    <p class="image-detail">අධ්‍යක්ෂ (ක්‍රමසම්පාදන)</p>
+                    <p class="image-detail"><i class="fas fa-mobile-alt"></i> +94718714380</p>
+                    <p class="image-detail"><i class="fas fa-phone-square"></i> +94452233779</p>
+                    <p class="image-detail"><i class="fas fa-fax"></i> +94452222173</p>
+                    <p class="image-detail"><i class="fas fa-at"></i> godagegdjk@yahoo.com</p>
+                </div>
+            </div>
+        </div>
+        <hr>
         <h5 style="font-size: 1.1em;">තොරතුරු පනත හරහා තොරතුරු ලබාගැනීමේ ලේඛන.</h5>
         <div class="container">
             <div class="row bg-dark" style="height: 30px; color: white; padding-top: 4px; margin-bottom: 20px;">
