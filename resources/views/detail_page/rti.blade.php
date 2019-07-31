@@ -28,7 +28,7 @@
                     <img src="{{ asset('image/informationofficer.png') }}"  style="height: 150px; margin: 10px 0 10px 0;">
                 </div>
                 <div class="col-md-9" style="">
-                <p style="line-height:75%;">ජී. ඩී. ජේ. කේ. ගොඩගේ මයා</p>
+                    <p class="image-detail">ජී. ඩී. ජේ. කේ. ගොඩගේ මයා</p>
                     <p class="image-detail">අධ්‍යක්ෂ (ක්‍රමසම්පාදන)</p>
                     <p class="image-detail"><i class="fas fa-mobile-alt"></i> +94718714380</p>
                     <p class="image-detail"><i class="fas fa-phone-square"></i> +94452233779</p>
