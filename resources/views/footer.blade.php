@@ -33,9 +33,15 @@
    <h4 class="bg-white text-black">සමාජ මාධ්‍ය</h4>
    
    <ul style="list-style-type: none; margin-top:10%; display: inline">
-    <li style="padding-right:15%;"><i class="fab fa-facebook-f fa-3x text-primary"></i></li>
-    <li style="padding-right:15%;"><i class="fab fa-linkedin fa-3x text-info"></i></li>
-    <li><i class="fab fa-twitter fa-3x text-info "></i></li>
+    <li style="padding-right:15%;">
+      <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f fa-3x text-primary"></i></a>
+    </li>
+    <li style="padding-right:15%;">
+      <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-3x text-info"></i></a>
+    </li>
+    <li>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-3x text-info "></i></a>
+    </li>
   </ul>
 </div>
 </div>
