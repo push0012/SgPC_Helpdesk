@@ -96,15 +96,36 @@
                 <li><a href="http://www.rtiwatch.lk" target="_blank">Transparency International Sri Lanka</a></li>
             </ul>
             <hr>
-            <h5 style="font-size: 1.1em;">කාර්යාලය මගින් ජනතාවට ප්‍රදානය කරනු ලබන පොදු තොරතුරු</h5>
+            <h5 style="font-size: 1.1em;">804 ප්‍රධාන ලේකම් වැය ශීර්ෂ යටතේ ප්‍රාග්ධන ප්‍රතිපාදන වෙන් කරන ලද ව්‍යාපෘති</h5>
             <div class="container">
+                
                 <div class="row" style="height: 40px;">
                     <div class="col-md-1">
                         01
                     </div>
                     <div class="col-md-11">
-                        <a href="{{ asset('file/rti_act.pdf') }}" target="_blank">
-                            තොරතුරු දැන ගැනීමේ අයිතිවාසිකම පිළිබඳ පනත
+                        <a href="{{ asset('file/common01.pdf') }}" target="_blank">
+                            නම්‍යශීලී අරමුදල්
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="height: 40px;">
+                    <div class="col-md-1">
+                        02
+                    </div>
+                    <div class="col-md-11">
+                        <a href="{{ asset('file/common02.pdf') }}" target="_blank">
+                            විශේෂ අවශ්‍යතා සහිත ගම්මාන සංවර්ධන වැඩසටහන
+                        </a>
+                    </div>
+                </div>
+                <div class="row" style="height: 40px;">
+                    <div class="col-md-1">
+                        03
+                    </div>
+                    <div class="col-md-11">
+                        <a href="{{ asset('file/common03.pdf') }}" target="_blank">
+                            උපමානපාදක අරමුදල්
                         </a>
                     </div>
                 </div>
