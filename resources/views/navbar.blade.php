@@ -16,17 +16,17 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
                 @guest
-                <li class="nav-item bg-primary" style="">
+                <!--<li class="nav-item bg-primary" style="">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('සංඛ්‍යාන දත්ත') }}</a>
-                </li>
-                <br>
+                </li>-->
+                
                 <li class="nav-item bg-danger" style="">
                     <a class="nav-link" href="{{ url('about')  }}">{{ __('අප ගැන') }}</a>
                 </li>
-                <li class="nav-item bg-success" style="">
+                <li class="nav-item bg-primary" style="">
                     <a class="nav-link" href="{{ url('download') }}">{{ __('බාගත කිරීම්') }}</a>
                 </li>
-                <li class="nav-item bg-primary" style="">
+                <li class="nav-item bg-success" style="">
                     <a class="nav-link" href="{{ url('contactus') }}">{{ __('අමතන්න') }}</a>
                 </li>
                 <li class="nav-item bg-danger" style="">
