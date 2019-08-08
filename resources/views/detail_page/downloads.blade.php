@@ -83,7 +83,7 @@
                 <h2 class="mb-0">
                     <button class="btn btn-link-collapsed show" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                     <h5>
-                        අත්පොත්
+                        සංඛ්‍යාන දත්ත
                         <span class="btn" style="font-size:0.5em;">Click Here...</span>
                     </h5>
                     </button>
