@@ -60,10 +60,12 @@
                                 <div class="col-md-3 left-menus bg-secondary-front" style="padding: 2%; color: black;">
                                     <h4 align="center" class="bg-info" style="border-radius:5px;">නිවේදන</h4>
                                     <ul style="list-style-type:square; padding-left:4%;" class="list-group list-group-flush">
-                                        <li class="">industry's standard</li>
-                                        <li class="">only five centuries</li>
-                                        <li class="">It was in the 1960s</li>
-                                        <li class="">simply random text</li>
+                                        <li class="">
+                                        ශ්‍රී ලංකා පාර්ලිමේන්තු ගිණුම් කාරක සභාවේ 2017 මුදල් වර්ශය සඳහා 
+                                        නිර්මල මූල්‍ය කලමනාකරණය හා කාර්යක්ශම කාර්යසාධනය සඳහා වූ
+                                         ස්වර්ණ සම්මානයෙන් පිදුම් ලැබූ වගයි
+                                        </li>
+                            
                                     </ul>
                                 </div>
                                 <div class="col-md-9" style="padding: unset !important;">
