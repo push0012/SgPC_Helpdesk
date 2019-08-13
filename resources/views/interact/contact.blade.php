@@ -58,7 +58,7 @@
 
                         <div class="md-form">
                             <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">ඔබගේ පණිවුඩය</label>
+                            <label for="message">අප කාර්යාලය පිලිබඳ චෝදනා හෝ ප්‍රසංශා</label>
                         </div>
 
                     </div>
