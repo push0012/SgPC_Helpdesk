@@ -32,7 +32,7 @@ class ContactUsMail extends Mailable
     {
         return $this->subject('HelpDesk Contact')
                     ->from('hdcspspc@gmail.com', 'Administrator')
-                    ->to('pushpamal0012@gmail.com')
+                    ->to('spcplan@yahoo.com')
                     ->view('interact.contactmail');
     }
 }
