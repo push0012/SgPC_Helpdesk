@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row " style="padding-top: 4px; margin-bottom: 20px;">
                     <div class="col-md-3" style="">
-                        <img src="{{ asset('image/appointofficer.jpg') }}"  style="height: 150px; margin: 10px 0 10px 0;">
+                        <img src="{{ asset('image/appointofficerori.jpg') }}"  style="height: 150px; margin: 10px 0 10px 0;">
                     </div>
                     <div class="col-md-9" style="">
                         <p class="image-detail">පරාක්‍රම පියසේන මයා</p>
