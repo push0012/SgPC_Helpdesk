@@ -39,3 +39,4 @@ Route::post('/sendinquiry', 'ContactUsController@sendInquiry');
 Route::resource('dsdivision', 'DsDivisionController');
 Route::resource('college', 'CollegeController');
 Route::resource('course', 'CourseController');
+Route::resource('student', 'StudentController');
