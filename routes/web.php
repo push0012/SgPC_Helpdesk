@@ -37,3 +37,4 @@ Route::post('/sendinquiry', 'ContactUsController@sendInquiry');
 
 //Backend Routes
 Route::resource('dsdivision', 'DsDivisionController');
+Route::resource('college', 'CollegeController');
