@@ -34,3 +34,6 @@ Route::get('/rti', function(){ return view('detail_page.rti'); });
 Route::get('/contactus', function(){ return view('interact.contact'); });
 Route::post('/sendmail', 'ContactUsController@sendMail');
 Route::post('/sendinquiry', 'ContactUsController@sendInquiry');
+
+//Backend Routes
+Route::resource('dsdivision', 'DsDivisionController');
