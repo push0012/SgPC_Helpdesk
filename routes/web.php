@@ -40,3 +40,4 @@ Route::resource('dsdivision', 'DsDivisionController');
 Route::resource('college', 'CollegeController');
 Route::resource('course', 'CourseController');
 Route::resource('student', 'StudentController');
+Route::resource('collegecourse', 'CollegeCourseController');
