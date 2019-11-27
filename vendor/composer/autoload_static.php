@@ -361,6 +361,7 @@ class ComposerStaticInite2289ffc8396e1660fd0d85e8ae6db6a
 
     public static $classMap = array (
         'App\\College' => __DIR__ . '/../..' . '/app/College.php',
+        'App\\CollegeCourse' => __DIR__ . '/../..' . '/app/CollegeCourse.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Course' => __DIR__ . '/../..' . '/app/Course.php',
         'App\\DsDivision' => __DIR__ . '/../..' . '/app/DsDivision.php',
@@ -376,6 +377,7 @@ class ComposerStaticInite2289ffc8396e1660fd0d85e8ae6db6a
         'App\\Http\\Controllers\\CourseController' => __DIR__ . '/../..' . '/app/Http/Controllers/CourseController.php',
         'App\\Http\\Controllers\\DsDivisionController' => __DIR__ . '/../..' . '/app/Http/Controllers/DsDivisionController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\StudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/StudentController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
