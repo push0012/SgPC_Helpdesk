@@ -15,5 +15,5 @@ class StudentEducationDegree extends Model
         'stu_id','clg_id','cos_id'
     ];
 
-    public $timestamps = false;
+    //public $timestamps = false;
 }
