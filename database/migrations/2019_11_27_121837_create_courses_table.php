@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('cos_title',200);
             $table->string('cos_type',50);
             $table->string('cos_duration',10);
+            $table->string('specialty',50);
             $table->boolean('deleted');
             $table->string('user_data',50);
             $table->timestamps();
