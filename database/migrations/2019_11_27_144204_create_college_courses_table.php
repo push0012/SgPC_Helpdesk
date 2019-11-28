@@ -16,6 +16,7 @@ class CreateCollegeCoursesTable extends Migration
         Schema::create('college_courses', function (Blueprint $table) {
             $table->string('cos_coor_name',200);
             $table->string('cos_coor_mobile',10);
+            $table->string('specialty',50);
             $table->boolean('deleted');
             $table->string('user_data',50);
             $table->timestamps();
