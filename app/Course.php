@@ -11,7 +11,7 @@ class Course extends Model
     protected $primaryKey = 'cos_id';
 
     protected $fillable = [
-        'cos_title','cos_type','cos_duration','specialty',
+        'cos_title','cos_type','cos_duration',
         'deleted','user_data'
     ];
 }
