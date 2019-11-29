@@ -43,6 +43,7 @@ return array(
     'App\\Student' => $baseDir . '/app/Student.php',
     'App\\StudentEducationDegree' => $baseDir . '/app/StudentEducationDegree.php',
     'App\\StudentEducationDiploma' => $baseDir . '/app/StudentEducationDiploma.php',
+    'App\\StudentProfessional' => $baseDir . '/app/StudentProfessional.php',
     'App\\User' => $baseDir . '/app/User.php',
     'BeyondCode\\DumpServer\\DumpServerCommand' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
     'BeyondCode\\DumpServer\\DumpServerServiceProvider' => $vendorDir . '/beyondcode/laravel-dump-server/src/DumpServerServiceProvider.php',
