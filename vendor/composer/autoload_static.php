@@ -397,6 +397,7 @@ class ComposerStaticInite2289ffc8396e1660fd0d85e8ae6db6a
         'App\\Student' => __DIR__ . '/../..' . '/app/Student.php',
         'App\\StudentEducationDegree' => __DIR__ . '/../..' . '/app/StudentEducationDegree.php',
         'App\\StudentEducationDiploma' => __DIR__ . '/../..' . '/app/StudentEducationDiploma.php',
+        'App\\StudentLanguage' => __DIR__ . '/../..' . '/app/StudentLanguage.php',
         'App\\StudentProfessional' => __DIR__ . '/../..' . '/app/StudentProfessional.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
         'BeyondCode\\DumpServer\\DumpServerCommand' => __DIR__ . '/..' . '/beyondcode/laravel-dump-server/src/DumpServerCommand.php',
