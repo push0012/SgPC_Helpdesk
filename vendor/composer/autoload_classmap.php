@@ -33,6 +33,7 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\ImageSave' => $baseDir . '/app/ImageSave.php',
     'App\\Mail\\ContactUsMail' => $baseDir . '/app/Mail/ContactUsMail.php',
     'App\\Mail\\Information' => $baseDir . '/app/Mail/Information.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
