@@ -12,7 +12,7 @@ class StudentEducationDiploma extends Model
 
     protected $fillable = [
         'medium','effective_date',
-        'stu_id','clg_id','cos_id'
+        'stu_id','clg_id','cos_id','sep_confirm_data'
     ];
 
     //public $timestamps = false;
