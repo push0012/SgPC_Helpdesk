@@ -41,6 +41,7 @@ return array(
     'App\\Providers\\EventServiceProvider' => $baseDir . '/app/Providers/EventServiceProvider.php',
     'App\\Providers\\RouteServiceProvider' => $baseDir . '/app/Providers/RouteServiceProvider.php',
     'App\\Student' => $baseDir . '/app/Student.php',
+    'App\\StudentConfirmDegree' => $baseDir . '/app/StudentConfirmDegree.php',
     'App\\StudentEducationDegree' => $baseDir . '/app/StudentEducationDegree.php',
     'App\\StudentEducationDiploma' => $baseDir . '/app/StudentEducationDiploma.php',
     'App\\StudentLanguage' => $baseDir . '/app/StudentLanguage.php',
