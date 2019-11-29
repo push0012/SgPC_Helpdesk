@@ -396,6 +396,7 @@ class ComposerStaticInite2289ffc8396e1660fd0d85e8ae6db6a
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\Student' => __DIR__ . '/../..' . '/app/Student.php',
         'App\\StudentConfirmDegree' => __DIR__ . '/../..' . '/app/StudentConfirmDegree.php',
+        'App\\StudentConfirmDiploma' => __DIR__ . '/../..' . '/app/StudentConfirmDiploma.php',
         'App\\StudentEducationDegree' => __DIR__ . '/../..' . '/app/StudentEducationDegree.php',
         'App\\StudentEducationDiploma' => __DIR__ . '/../..' . '/app/StudentEducationDiploma.php',
         'App\\StudentLanguage' => __DIR__ . '/../..' . '/app/StudentLanguage.php',
