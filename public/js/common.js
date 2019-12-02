@@ -1,18 +1,21 @@
 function validate() {
 	var output = true;
 	$(".registration-error").html('');
-	if($("#account-field").css('display') != 'none') {
-		if(!($("#email").val())) {
+	if($("#personal-field").css('display') != 'none') {
+		console.log('comes here');
+		console.log($("#title").val());
+		if($("#title").val() == null) {
+			console.log('comes here too');
 			output = false;
-			$("#email-error").html("required");
+			$("#title-error").html("required");
 		}	
-		if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+		/*if(!$("#email").val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
 			$("#email-error").html("invalid");
 			output = false;
-		}
+		}*/
 	}
 	
-	if($("#password-field").css('display') != 'none') {
+	/*if($("#password-field").css('display') != 'none') {
 		if(!($("#user-password").val())) {
 			output = false;
 			$("#password-error").html("required");
@@ -25,12 +28,13 @@ function validate() {
 			output = false;
 			$("#confirm-password-error").html("Not Matched");
 		}	
-	}
+	}*/
 	return output;
 	}
+	
 $(document).ready(function() {
 	$("#next").click(function(){
-		var output = true;
+		var output = validate();
 		if(output) {
 			var current = $(".highlight");
 			var next = $(".highlight").next("li");
@@ -63,4 +67,11 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+	$('#district').change(function(){
+		console.log($(this).val() )
+	})
+		
+	
+
 });
