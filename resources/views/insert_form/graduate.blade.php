@@ -18,9 +18,9 @@
                         <div class="container-fluid">
                             <div class="form-group row">
                                 <div class="col-md-3">
-                                <label for="title">Title</label></span>	
+                                <label for="title">Title</label><span id="title-error" class="registration-error"></span>
                                     <div>
-                                        <select class="form-control" name="title" id="title">
+                                        <select class="form-control" name="title" id="title" required>
                                             <option value="None" disabled selected>Select Title</option>
                                             <option value="Rev.">Rev. </option>
                                             <option value="Mrs.">Mrs. </option>
@@ -30,13 +30,13 @@
                                     </div>
                                 </div>
                                 <div class="col-md-9">
-                                    <label for="stu_name">Name with Initials</label></span>
+                                    <label for="stu_name">Name with Initials</label>
                                     <div><input type="text" name="stu_name" id="stu_name" class="form-control" length="250" placeholder="Name with Initials"/></div>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-3">
-                                <label for="sex">Gender</label></span>	
+                                <label for="sex">Gender</label>	
                                     <div>
                                         <select class="form-control" name="sex" id="sex">
                                             <option value="None" disabled selected>Select Gender</option>
@@ -46,7 +46,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="dob">Date of Birth</label><!--<span id="email-error" class="registration-error"></span>-->
+                                    <label for="dob">Date of Birth</label>
                                     <div><input type="date" name="dob" id="dob" class="form-control" length="250" placeholder="Name with Initials"/></div>
                                 </div>
                                 <div class="col-md-6">
@@ -61,25 +61,18 @@
                                         <textarea class="form-control" name="stu_address" id="stu_address" ></textarea>
                                     </div>
                                 </div>
-                                <div class="col-md-2">
-                                    <label for="stu_name">District</label>
-                                    <div style="padding:10px 0 0 20px; line-height:25px;">
-                                        <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="district" id="district" value="1" checked>
-                                        <label class="form-check-label" for="1">
-                                            Rathnapura
-                                        </label>
-                                        </div>
-                                        <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="district" id="district" value="2">
-                                        <label class="form-check-label" for="2">
-                                            Kegalle
-                                        </label>
-                                        </div>
+                                <div class="col-md-3">
+                                    <label for="district">District</label>
+                                    <div>
+                                        <select class="form-control" name="district" id="district">
+                                            <option value="None" disabled selected>Select District</option>
+                                            <option value="1">Ratnapura</option>
+                                            <option value="2">Kegalle</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                <label for="dsa_id">Divisional Secretariat</label></span>	
+                                <div class="col-md-3">
+                                <label for="dsa_id">Divisional Secretariat</label>
                                     <div>
                                         <select class="form-control" name="dsa_id" id="dsa_id">
                                             <option value="None" disabled selected>Select DS Area</option>
@@ -91,7 +84,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-3">
-                                    <label for="stu_mobile">Mobile</label></span>
+                                    <label for="stu_mobile">Mobile</label>
                                     <div><input type="text" name="stu_mobile" id="stu_mobile" class="form-control" placeholder="Mobile"/></div>
                                 </div>
                                 <div class="col-md-3">
@@ -109,7 +102,7 @@
                         <div class="container-fluid">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="clg_id">University</label></span>	
+                                    <label for="clg_id">University</label>
                                     <div>
                                         <select class="form-control" name="clg_id" id="clg_id">
                                             <option value="None" disabled selected>Select University</option>
@@ -120,7 +113,7 @@
                             </div> 
                             <div class="form-group row">
                                 <div class="col-md-5">
-                                    <label for="cos_id">Degree</label></span>	
+                                    <label for="cos_id">Degree</label>
                                     <div>
                                         <select class="form-control" name="cos_id" id="cos_id">
                                             <option value="None" disabled selected>Select Degree</option>
@@ -129,7 +122,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="speciality">Speciality</label></span>	
+                                    <label for="speciality">Speciality</label>
                                     <div>
                                         <select class="form-control" name="speciality" id="speciality">
                                             <option value="None" disabled selected>Select Speciality</option>
@@ -138,7 +131,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="speciality_in_word">Speciality in Words</label></span>	
+                                    <label for="speciality_in_word">Speciality in Words</label>	
                                     <div>
                                         <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify"/></div>
                                     </div>
@@ -146,7 +139,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-4">
-                                    <label for="medium">Medium</label></span>	
+                                    <label for="medium">Medium</label>
                                     <div>
                                         <select class="form-control" name="medium" id="medium">
                                             <option value="None" disabled selected>Select Medium</option>
@@ -156,7 +149,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="degree_class">Degree Class</label></span>	
+                                    <label for="degree_class">Degree Class</label>
                                     <div>
                                         <select class="form-control" name="degree_class" id="degree_class">
                                             <option value="None" disabled selected>Select Degree Class</option>
@@ -168,7 +161,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="effective_date">Effective Date</label></span>	
+                                    <label for="effective_date">Effective Date</label>
                                     <div>
                                         <div><input type="date" name="effective_date" id="effective_date" class="form-control"/></div>
                                     </div>
@@ -230,11 +223,63 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="job_preference">Job Preference</label>
+                                    <div>
+                                        <textarea class="form-control" name="job_preference" id="job_preference" ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <div class="col-md-2">
                                     Language Skill
                                 </div>
                                 <div class="col-md-10">
                                     
+                                    <button type="button" class="btn btn-outline-success btn-sm float-right" id="addLanguage">
+                                        <span class="btn-label"><i class="fas fa-plus"></i></span>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm float-right" id="removeLanguage">
+                                        <span class="btn-label"><i class="fas fa-times"></i></span>
+                                    </button>
+
+                                    <table id="languageTable" class="display languageTable" style="width:500px">
+                                        <thead>
+                                            <tr>
+                                                <th style="max-width:125px !important;  min-width:125px !important;">Language</th>
+                                                <th style="min-width:125px !important;">Writting</th>
+                                                <th style="min-width:125px !important;">Reading</th>
+                                                <th style="min-width:125px !important;">Speech</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-3">
+                                    <label for="it_skill">IT Skill</label>
+                                    <div>
+                                        <select class="form-control" name="it_skill" id="it_skill">
+                                            <option value="None" disabled selected>Select Option</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <label for="it_skill_detail">If "Yes", Provide Details</label>
+                                    <div>
+                                        <textarea class="form-control" name="it_skill_detail" id="it_skill_detail" ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="extra_activity">Extra-Curricular Activities</label>
+                                    <div>
+                                        <textarea class="form-control" name="extra_activity" id="extra_activity" ></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div> 
