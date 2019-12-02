@@ -266,3 +266,15 @@ nav a{
 .registration-error{color:#FF0000; padding-left:15px;}
 .message {color: #00FF00;font-weight: bold;width: 100%;padding: 10;}
 .btnAction{padding: 5px 10px;background-color: #09F;border: 0;color: #FFF;cursor: pointer; margin-top:15px;}
+
+.languageTable tr td{
+    padding:10px !important;
+    /*padding-bottom:10px !important;*/
+}
+#addLanguage{
+    width: 35px;
+    margin-left: 10px;
+}
+#removeLanguage{
+    width: 35px;
+}
