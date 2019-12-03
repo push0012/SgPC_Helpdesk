@@ -25,7 +25,8 @@
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" defer></script>
-    <script src="{{ asset('js/common.js') }}" defer></script>
+    <script src="{{ asset('js/commonfield.js') }}" defer></script>
+    <script src="{{ asset('js/gcommon.js') }}" defer></script>
     <script src="{{ asset('js/languagetable.js') }}" defer></script>
     <style>
         .left-menus{
