@@ -16,7 +16,9 @@ Route::get('/training_institutes', function(){ return view('data_list.training_i
 
 //insert form routes
 Route::get('/business_ins', function(){ return view('insert_form.business'); });
-Route::get('/graduate_ins', function(){ return view('insert_form.graduate'); });
+
+Route::get('/graduate_ins', 'GraduationController@index');
+
 Route::get('/diploma_ins', function(){ return view('insert_form.diploma'); });
 
 //sub category page routes
