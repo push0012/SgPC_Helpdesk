@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CollegeCourse;
+use DB;
 
 class CollegeCourseController extends Controller
 {
@@ -48,7 +49,8 @@ class CollegeCourseController extends Controller
      */
     public function show($id)
     {
-        //
+        $cozbycollege = DB::table('collegecourseview')->where('clg_id', $id)->get();
+        return response()->json($cozbycollege, 201);
     }
 
     /**
