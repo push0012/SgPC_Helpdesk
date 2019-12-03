@@ -48,7 +48,8 @@ class DsDivisionController extends Controller
      */
     public function show($id)
     {
-        //
+        $dsa_by_district = DsDivision::where('dsa_district',$id)->get();
+        return response()->json($dsa_by_district, 201);
     }
 
     /**
