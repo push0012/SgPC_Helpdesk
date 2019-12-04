@@ -11,66 +11,66 @@ var s = $('#languageTable').DataTable({
     s.row.add( [
         '<lable id=\"language_name\" name=\"language_name\" value=\"Sinhala\">Sinhala</lable>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         
     ] ).draw( false );
     s.row.add( [
         '<lable id=\"language_name\" name=\"language_name\" value=\"Sinhala\">Tamil</lable>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         
     ] ).draw( false );
     s.row.add( [
         '<lable id=\"language_name\" name=\"language_name\" value=\"Sinhala\">English</lable>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         
     ] ).draw( false );
@@ -79,22 +79,22 @@ $('#addLanguage').on( 'click', function () {
     s.row.add( [
         '<input type=\"text\" id=\"language_name\" name=\"language_name\" size=\"10\" required/>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" selected>Very Good</option>'+
+            '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\">Weak</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
         '</select>',
         
     ] ).draw( false );
