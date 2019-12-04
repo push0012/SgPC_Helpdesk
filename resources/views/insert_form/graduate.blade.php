@@ -124,18 +124,18 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <label for="speciality">Speciality</label>
+                                    <label for="spc_id">Speciality</label>
                                     <div>
-                                        <select class="form-control" name="speciality" id="speciality">
+                                        <select class="form-control" name="spc_id" id="spc_id">
                                             <option value="None" disabled selected>Select Speciality</option>
-                                            <option value="Female">Female</option>
+                                            
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="speciality_in_word">Speciality in Words</label>	
                                     <div>
-                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify"/></div>
+                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify" disabled/></div>
                                     </div>
                                 </div>
                             </div>
@@ -295,7 +295,7 @@
                     <div>
                         <input class="btnAction" type="button" name="back" id="back" value="Back" style="display:none;">
                         <input class="btnAction" type="button" name="next" id="next" value="Next" >
-                        <input class="btnAction" type="submit" name="finish" id="finish" value="Finish" style="display:none;">
+                        <input class="btnAction" type="button" name="finish" id="finish" value="Finish" style="display:none;">
                     </div>
                 </form>
                    
