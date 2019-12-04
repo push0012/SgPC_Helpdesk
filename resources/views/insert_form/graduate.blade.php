@@ -12,6 +12,7 @@
                     <li id="gpersonal" class="highlight">Personal Information</li>
                     <li id="geducational">Educational Information</li>
                     <li id="gprofessional">Professional Information</li>
+                    <li id="gcaptcha">Verify Human</li>
                 </ul>
                 <form name="frmRegistration" id="registration-form" method="post" style="font-size:0.8em !important;">
                     <div id="gpersonal-field">
@@ -202,7 +203,7 @@
                         <div class="container-fluid">
                             <div class="form-group row">
                                 <div class="col-md-6">
-                                    <label for="job_availability">Job Availability</label></span>	
+                                    <label for="job_availability">Job Availability</label><span id="job_availability-error" class="registration-error"></span>	
                                     <div>
                                         <select class="form-control" name="job_availability" id="job_availability">
                                             <option value="None" disabled selected>Select Job Availability</option>
@@ -212,9 +213,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="job_sector">If "Yes" Specify Sector</label></span>	
+                                    <label for="job_sector">If "Yes" Specify Sector</label><span id="job_sector-error" class="registration-error"></span>
                                     <div>
-                                        <select class="form-control" name="job_sector" id="job_sector">
+                                        <select class="form-control" name="job_sector" id="job_sector" disabled>
                                             <option value="None" disabled selected>Select Job Sector</option>
                                             <option value="Government">Government</option>
                                             <option value="Private">Private</option>
@@ -225,7 +226,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="job_preference">Job Preference</label>
+                                    <label for="job_preference">Job Preference</label>	
                                     <div>
                                         <textarea class="form-control" name="job_preference" id="job_preference" ></textarea>
                                     </div>
@@ -233,7 +234,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-2">
-                                    Language Skill
+                                <label for="language">Language Skill</label>
                                 </div>
                                 <div class="col-md-10">
                                     
@@ -259,7 +260,7 @@
 
                             <div class="form-group row">
                                 <div class="col-md-3">
-                                    <label for="it_skill">IT Skill</label>
+                                    <label for="it_skill">IT Skill</label><span id="it_skill-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="it_skill" id="it_skill">
                                             <option value="None" disabled selected>Select Option</option>
@@ -269,9 +270,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-9">
-                                    <label for="it_skill_detail">If "Yes", Provide Details</label>
+                                    <label for="it_skill_detail">If "Yes", Provide Details</label><span id="it_skill_detail-error" class="registration-error"></span>
                                     <div>
-                                        <textarea class="form-control" name="it_skill_detail" id="it_skill_detail" ></textarea>
+                                        <textarea class="form-control" name="it_skill_detail" id="it_skill_detail" disabled></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -281,6 +282,12 @@
                                     <div>
                                         <textarea class="form-control" name="extra_activity" id="extra_activity" ></textarea>
                                     </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div id="gcaptcha-field" style="display:none;">
+                            <div class="container-fluid">
+                                <div class="form-group row">
                                 </div>
                             </div>
                         </div> 
