@@ -43,3 +43,10 @@ Route::resource('college', 'CollegeController');
 Route::resource('course', 'CourseController');
 Route::resource('student', 'StudentController');
 Route::resource('collegecourse', 'CollegeCourseController');
+Route::resource('special', 'DegreeSpecialController');
+
+//ajax request routes
+Route::get('/speciality_request', 'DegreeSpecialController@speciality');
+
+//saving main data fields
+Route::post('/graduate_register', 'GraduationController@store');
