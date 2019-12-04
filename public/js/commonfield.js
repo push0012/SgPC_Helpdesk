@@ -73,4 +73,24 @@ $(document).ready(function() {
 	$('#effective_date').prop('max', function(){
 		return new Date().toJSON().split('T')[0];
 	});
+
+	//jobavailability doprdown eneble
+	$('#job_availability').change(function(e) {
+		if($(this).val() == "Yes"){
+			$("#job_sector").attr('disabled',false);
+		}else{
+			$("#job_sector").attr('disabled',true);
+		}	
+	});
+
+	//it skill doprdown eneble
+	$('#it_skill').change(function(e) {
+		if($(this).val() == "Yes"){
+			$("#it_skill_detail").attr('disabled',false);
+		}else{
+			$("#it_skill_detail").attr('disabled',true);
+		}	
+	});
+
+	
 });
