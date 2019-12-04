@@ -9,42 +9,20 @@ var s = $('#languageTable').DataTable({
 
 
     s.row.add( [
-        '<lable id=\"language_name\" name=\"language_name\" value=\"Sinhala\">Sinhala</lable>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<input type=\"text\" class=\"hiddninput\" id=\"language_name\" name=\"language_name\" value=\"Sinhala\" disabled/>',
+        '<select class=\"form-control\" name=\"writting\" id=\"writting\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
             '<option value=\"D\" selected>Weak</option>'+
         '</select>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<select class=\"form-control\" name=\"reading\" id=\"reading\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
             '<option value=\"D\" selected>Weak</option>'+
         '</select>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" >Very Good</option>'+
-            '<option value=\"B\">Good</option>'+
-            '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\" selected>Weak</option>'+
-        '</select>',
-        
-    ] ).draw( false );
-    s.row.add( [
-        '<lable id=\"language_name\" name=\"language_name\" value=\"Sinhala\">Tamil</lable>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" >Very Good</option>'+
-            '<option value=\"B\">Good</option>'+
-            '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\" selected>Weak</option>'+
-        '</select>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
-            '<option value=\"A\" >Very Good</option>'+
-            '<option value=\"B\">Good</option>'+
-            '<option value=\"C\">Fair</option>'+
-            '<option value=\"D\" selected>Weak</option>'+
-        '</select>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<select class=\"form-control\" name=\"speech\" id=\"speech\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
@@ -53,20 +31,42 @@ var s = $('#languageTable').DataTable({
         
     ] ).draw( false );
     s.row.add( [
-        '<lable id=\"language_name\" name=\"language_name\" value=\"Sinhala\">English</lable>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<input type=\"text\" class=\"hiddninput\" id=\"language_name\" name=\"language_name\" value=\"Tamil\" disabled/>',
+        '<select class=\"form-control\" name=\"writting\" id=\"writting\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
             '<option value=\"D\" selected>Weak</option>'+
         '</select>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<select class=\"form-control\" name=\"reading\" id=\"reading\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
             '<option value=\"D\" selected>Weak</option>'+
         '</select>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<select class=\"form-control\" name=\"speech\" id=\"speech\">'+
+            '<option value=\"A\" >Very Good</option>'+
+            '<option value=\"B\">Good</option>'+
+            '<option value=\"C\">Fair</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
+        '</select>',
+        
+    ] ).draw( false );
+    s.row.add( [
+        '<input type=\"text\" class=\"hiddninput\" id=\"language_name\" name=\"language_name\" value=\"English\" disabled/>',
+        '<select class=\"form-control\" name=\"writting\" id=\"writting\">'+
+            '<option value=\"A\" >Very Good</option>'+
+            '<option value=\"B\">Good</option>'+
+            '<option value=\"C\">Fair</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
+        '</select>',
+        '<select class=\"form-control\" name=\"reading\" id=\"reading\">'+
+            '<option value=\"A\" >Very Good</option>'+
+            '<option value=\"B\">Good</option>'+
+            '<option value=\"C\">Fair</option>'+
+            '<option value=\"D\" selected>Weak</option>'+
+        '</select>',
+        '<select class=\"form-control\" name=\"speech\" id=\"speech\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
@@ -78,19 +78,19 @@ var s = $('#languageTable').DataTable({
 $('#addLanguage').on( 'click', function () {
     s.row.add( [
         '<input type=\"text\" id=\"language_name\" name=\"language_name\" size=\"10\" required/>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<select class=\"form-control\" name=\"writting\" id=\"writting\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
             '<option value=\"D\" selected>Weak</option>'+
         '</select>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<select class=\"form-control\" name=\"reading\" id=\"reading\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
             '<option value=\"D\" selected>Weak</option>'+
         '</select>',
-        '<select class=\"form-control\" name=\"method\" id=\"method\">'+
+        '<select class=\"form-control\" name=\"speech\" id=\"speech\">'+
             '<option value=\"A\" >Very Good</option>'+
             '<option value=\"B\">Good</option>'+
             '<option value=\"C\">Fair</option>'+
