@@ -271,6 +271,12 @@ nav a{
     padding:10px !important;
     /*padding-bottom:10px !important;*/
 }
+.hiddninput
+{
+    color: #000000;
+    border: none;
+    background: transparent;
+}
 #addLanguage{
     width: 35px;
     margin-left: 10px;
