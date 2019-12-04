@@ -28,6 +28,7 @@
     <script src="{{ asset('js/commonfield.js') }}" defer></script>
     <script src="{{ asset('js/gcommon.js') }}" defer></script>
     <script src="{{ asset('js/languagetable.js') }}" defer></script>
+    <script src="{{ asset('js/datasave.js') }}" defer></script>
     <style>
         .left-menus{
             display: none !important;
