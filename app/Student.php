@@ -12,7 +12,7 @@ class Student extends Model
 
     protected $fillable = [
         'title','stu_name','sex','dob','nic',
-        'stu_address','stu_telephone','stu_email','district','dsa_id',
+        'stu_address','stu_mobile','stu_telephone','stu_email','district','dsa_id',
         'deleted','user_data','stu_confirm_data'
     ];
 }
