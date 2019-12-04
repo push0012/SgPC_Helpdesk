@@ -11,8 +11,8 @@ class CollegeCourse extends Model
     //protected $primaryKey = 'clg_id, cos_id';
 
     protected $fillable = [
-        'cos_coor_name','cos_coor_mobile','specialty',
-        'clg_id', 'cos_id',
+        'cos_coor_name','cos_coor_mobile',
+        'clg_id', 'cos_id','spc_id',
         'deleted','user_data'
     ];
 }
