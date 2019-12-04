@@ -1,7 +1,7 @@
 function gvalidate() {
 	var output = true;
 	$(".registration-error").html('');
-	if($("#gpersonal-field").css('display') != 'none') {
+	/*if($("#gpersonal-field").css('display') != 'none') {
 		if(($("#title").val() == null)) {
 			output = false;
 			$("#title-error").html("Required");
@@ -42,9 +42,9 @@ function gvalidate() {
 			output = false;
 			$("#stu_email-error").html("Required");
 		}
-	}
+	}*/
 	
-	if($("#geducational-field").css('display') != 'none') {
+	/*if($("#geducational-field").css('display') != 'none') {
 
 		if($("#clg_id").val() == null) {
 			output = false;
@@ -67,8 +67,29 @@ function gvalidate() {
 			$("#effective_date-error").html("Required");
 		}
 		
-	}
+	}*/
+	if($("#gprofessional-field").css('display') != 'none') {
 
+		if($("#job_availability").val() == null) {
+			output = false;
+			$("#job_availability-error").html("Required");
+		}
+		if($("#it_skill").val() == null) {
+			output = false;
+			$("#it_skill-error").html("Required");
+		}
+		
+		//job sector enable true
+		if($('#job_sector').is(':disabled') == false && $("#job_sector").val() == null) {
+			output = false;
+			$("#job_sector-error").html("Required");
+		}
+		//it skill details enabled true
+		if($('#it_skill_detail').is(':disabled') == false && $("#it_skill_detail").val() == "") {
+			output = false;
+			$("#it_skill_detail-error").html("Required");
+		}
+	}
 	return output;
 }
 $(document).ready(function() {
@@ -84,7 +105,7 @@ $(document).ready(function() {
 				$("#finish").hide();
 				$(".highlight").removeClass("highlight");
 				next.addClass("highlight");
-				if($(".highlight").attr("id") == "gprofessional") {
+				if($(".highlight").attr("id") == "gcaptcha") {
 					$("#next").hide();
 					$("#finish").show();				
 				}
