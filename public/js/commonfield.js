@@ -69,6 +69,36 @@ $(document).ready(function() {
 			}
 		});
 	});
+
+
+	$('#cos_id').change(function(e) {
+		//console.log(clgid)
+		var postData = {
+			'cos_id' :$(this).val(),
+			'clg_id' :$("#clg_id").val()
+		}
+		$.ajax({
+			type: "GET",
+			url: '/speciality_request/',
+			data: postData,
+			success: function( msg ) {
+				$("#spc_id").empty();
+				$.each(msg, function(value,key) {  
+					$("#spc_id").append($("<option>").attr("value", key.spc_id).text(key.spc_name));   
+				});
+			}
+		});
+	});
+	$('#spc_id').change(function(e) {
+
+		if($(this).val() == 2){
+			$("#speciality_in_word").attr('disabled',false);
+		}else{
+			$("#speciality_in_word").attr('disabled',true);
+		}
+	});
+
+
 	//prevent later dates entering
 	$('#effective_date').prop('max', function(){
 		return new Date().toJSON().split('T')[0];
