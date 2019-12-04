@@ -68,7 +68,7 @@ function gvalidate() {
 		}
 		
 	}*/
-	if($("#gprofessional-field").css('display') != 'none') {
+	/*if($("#gprofessional-field").css('display') != 'none') {
 
 		if($("#job_availability").val() == null) {
 			output = false;
@@ -89,7 +89,7 @@ function gvalidate() {
 			output = false;
 			$("#it_skill_detail-error").html("Required");
 		}
-	}
+	}*/
 	return output;
 }
 $(document).ready(function() {
