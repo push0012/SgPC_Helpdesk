@@ -46,13 +46,12 @@ $(document).ready(function() {
             url: '/graduate_register',
             data: savedata,
             success: function( msg ) {
-                console.log( msg);
+                callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
             },
             error: function(msg) {
-                console.log(msg);
+                callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
             }
         });
-        console.log(savedata);
     });
 
     //Diploma Data Store
@@ -100,12 +99,11 @@ $(document).ready(function() {
             url: '/diploma_register',
             data: savedata,
             success: function( msg ) {
-                console.log( msg);
+                callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
             },
             error: function(msg) {
-                console.log(msg);
+                callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
             }
         });
-        console.log(savedata);
     });
 });
