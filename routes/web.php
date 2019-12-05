@@ -51,4 +51,5 @@ Route::get('collegecourse_diploma/{id}', 'CollegeCourseController@show_diploma')
 
 //saving main data fields
 Route::post('/graduate_register', 'GraduationController@store');
+Route::post('/diploma_register', 'DiplomaController@store');
 
