@@ -47,7 +47,8 @@ $(document).ready(function() {
 			type: "GET",
 			url: '/dsdivision/' + distr,
 			success: function( msg ) {
-				$("#dsa_id").empty();
+				//$("#dsa_id").empty();
+				$('#dsa_id :gt(0)').remove();
 				$.each(msg, function(value,key) {  
 					$("#dsa_id").append($("<option>").attr("value", key.dsa_id).text(key.dsa_name));   
 				});
@@ -55,6 +56,7 @@ $(document).ready(function() {
 		});
 	});
 
+	//for graduation detail form
 	$('#clg_id').change(function(e) {
 		var clgid = $(this).val();
 		console.log(clgid)
@@ -62,15 +64,13 @@ $(document).ready(function() {
 			type: "GET",
 			url: '/collegecourse/' + clgid,
 			success: function( msg ) {
-				$("#cos_id").empty();
+				$('#cos_id :gt(0)').remove();
 				$.each(msg, function(value,key) {  
 					$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title));   
 				});
 			}
 		});
 	});
-
-
 	$('#cos_id').change(function(e) {
 		//console.log(clgid)
 		var postData = {
@@ -82,13 +82,41 @@ $(document).ready(function() {
 			url: '/speciality_request/',
 			data: postData,
 			success: function( msg ) {
-				$("#spc_id").empty();
+				$('#spc_id :gt(0)').remove();
 				$.each(msg, function(value,key) {  
 					$("#spc_id").append($("<option>").attr("value", key.spc_id).text(key.spc_name));   
 				});
 			}
 		});
 	});
+
+	//for diploma details form
+	$('#d_clg_id').change(function(e) {
+		var clgid = $(this).val();
+		console.log(clgid)
+		$.ajax({
+			type: "GET",
+			url: '/collegecourse_diploma/' + clgid,
+			success: function( msg ) {
+				$('#d_cos_id :gt(0):gt(1)').remove();
+				$.each(msg, function(value,key) {  
+					$("#d_cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title));   
+				});
+			}
+		});
+	});
+
+	//enable with new type speciallity
+	$('#d_cos_id').change(function(e) {
+
+		if($(this).val() == 0){
+			$("#speciality_in_word").attr('disabled',false);
+		}else{
+			$("#speciality_in_word").attr('disabled',true);
+		}
+	});
+
+	//enable with other type speciallity
 	$('#spc_id').change(function(e) {
 
 		if($(this).val() == 2){
