@@ -138,7 +138,7 @@ function dvalidate() {
 		}
 	}
 	*/
-	if($("#deducational-field").css('display') != 'none') {
+	/*if($("#deducational-field").css('display') != 'none') {
 
 		if($("#d_clg_id").val() == null) {
 			output = false;
@@ -157,7 +157,7 @@ function dvalidate() {
 			$("#effective_date-error").html("Required");
 		}
 		
-	}
+	}*/
 	/*if($("#dprofessional-field").css('display') != 'none') {
 
 		if($("#job_availability").val() == null) {
