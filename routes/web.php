@@ -18,8 +18,7 @@ Route::get('/training_institutes', function(){ return view('data_list.training_i
 Route::get('/business_ins', function(){ return view('insert_form.business'); });
 
 Route::get('/graduate_ins', 'GraduationController@index');
-
-Route::get('/diploma_ins', function(){ return view('insert_form.diploma'); });
+Route::get('/diploma_ins', 'DiplomaController@index');
 
 //sub category page routes
 Route::get('/business', function(){ return view('sub_cat.sub_business'); });
@@ -47,6 +46,9 @@ Route::resource('special', 'DegreeSpecialController');
 
 //ajax request routes
 Route::get('/speciality_request', 'DegreeSpecialController@speciality');
+Route::get('collegecourse_diploma/{id}', 'CollegeCourseController@show_diploma');
+
 
 //saving main data fields
 Route::post('/graduate_register', 'GraduationController@store');
+
