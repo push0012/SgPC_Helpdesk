@@ -19,6 +19,7 @@
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet"> 
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> 
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/fontawesome/css/all.css') }}" rel="stylesheet"> 
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <script src="{{ asset('js/app.js') }}" defer></script>
