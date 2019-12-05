@@ -7,18 +7,19 @@
             
                 <div style="font-size:1.5em;">{{ __('ඩිප්ලෝමාධාරී ලියාපදිංචිය') }}</div>
                 <ul id="registration-step">
-                    <li id="personal" class="highlight">Personal Information</li>
-                    <li id="educational">Educational Information</li>
-                    <li id="professional">Professional Information</li>
+                    <li id="dpersonal" class="highlight">Personal Information</li>
+                    <li id="deducational">Educational Information</li>
+                    <li id="dprofessional">Professional Information</li>
+                    <li id="dcaptcha">Verify Human</li>
                 </ul>
                 <form name="frmRegistration" id="registration-form" method="post" style="font-size:0.8em !important;">
-                    <div id="personal-field">
+                    <div id="dpersonal-field">
                         <div class="container-fluid">
                             <div class="form-group row">
                                 <div class="col-md-3">
-                                <label for="title">Title</label>
+                                <label for="title">Title</label><span id="title-error" class="registration-error"></span>
                                     <div>
-                                        <select class="form-control" name="title" id="title">
+                                        <select class="form-control" name="title" id="title" required>
                                             <option value="None" disabled selected>Select Title</option>
                                             <option value="Rev.">Rev. </option>
                                             <option value="Mrs.">Mrs. </option>
@@ -28,13 +29,13 @@
                                     </div>
                                 </div>
                                 <div class="col-md-9">
-                                    <label for="stu_name">Name with Initials</label>
-                                    <div><input type="text" name="stu_name" id="stu_name" class="form-control" length="250" placeholder="Name with Initials"/></div>
+                                    <label for="stu_name">Name with Initials</label><span id="stu_name-error" class="registration-error"></span>
+                                    <div><input type="text" name="stu_name" id="stu_name" class="form-control" length="250" placeholder="Name with Initials" required/></div>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-3">
-                                <label for="sex">Gender</label>	
+                                <label for="sex">Gender</label><span id="sex-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="sex" id="sex">
                                             <option value="None" disabled selected>Select Gender</option>
@@ -44,23 +45,23 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="dob">Date of Birth</label>
-                                    <div><input type="date" name="dob" id="dob" class="form-control" length="250" placeholder="Name with Initials"/></div>
+                                    <label for="dob">Date of Birth</label><span id="dob-error" class="registration-error"></span>
+                                    <div><input type="date" name="dob" id="dob" min="1960-01-01" max="2050-12-31" class="form-control"/></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="nic">National Identity Card Number</label>
-                                    <div><input type="text" name="nic" id="nic" class="form-control" length="250" placeholder="National Identity Card Number"/></div>
+                                    <label for="nic">National Identity Card Number</label><span id="nic-error" class="registration-error"></span>
+                                    <div><input type="text" name="nic" id="nic" class="form-control" minlength="9" maxlength="12" length="250" placeholder="National Identity Card Number"/></div>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6">
-                                    <label for="stu_address">Address</label>
+                                    <label for="stu_address">Address</label><span id="stu_address-error" class="registration-error"></span>
                                     <div>
                                         <textarea class="form-control" name="stu_address" id="stu_address" ></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="stu_name">District</label>
+                                    <label for="district">District</label><span id="district-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="district" id="district">
                                             <option value="None" disabled selected>Select District</option>
@@ -70,57 +71,58 @@
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                <label for="dsa_id">Divisional Secretariat</label>
+                                <label for="dsa_id">DS Division</label><span id="dsa_id-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="dsa_id" id="dsa_id">
-                                            <option value="None" disabled selected>Select DS Area</option>
-                                            <option value="Female">Female</option>
-                                            <option value="Male">Male</option>
+                                            <option value="None" disabled selected>Select DS Division</option>
                                         </select>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-3">
-                                    <label for="stu_mobile">Mobile</label>
-                                    <div><input type="text" name="stu_mobile" id="stu_mobile" class="form-control" placeholder="Mobile"/></div>
+                                    <label for="stu_mobile">Mobile</label><span id="stu_mobile-error" class="registration-error"></span>
+                                    <div><input type="text" name="stu_mobile" id="stu_mobile" minlength="10" maxlength="10" class="form-control" placeholder="Mobile"/></div>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="stu_telephone">Telephone</label></span>
-                                    <div><input type="text" name="stu_telephone" id="stu_telephone" class="form-control" placeholder="Telephone"/></div>
+                                    <label for="stu_telephone">Telephone</label><span id="stu_telephone-error" class="registration-error"></span>
+                                    <div><input type="text" name="stu_telephone" id="stu_telephone" minlength="10" maxlength="10" class="form-control" placeholder="Telephone"/></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="stu_email">Email</label></span>
+                                    <label for="stu_email">Email</label><span id="stu_email-error" class="registration-error"></span>
                                     <div><input type="email" name="stu_email" id="stu_email" class="form-control" placeholder="E-mail"/></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="educational-field" style="display:none;">
+                    <div id="deducational-field" style="display:none;">
                         <div class="container-fluid">
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="clg_id">Institute</label>
+                                    <label for="d_clg_id">Institute</label><span id="d_clg_id-error" class="registration-error"></span>
                                     <div>
-                                        <select class="form-control" name="clg_id" id="clg_id">
-                                            <option value="None" disabled selected>Select Institute</option>
-                                            <option value="Female">Female</option>
+                                        <select class="form-control" name="d_clg_id" id="d_clg_id">
+                                            <option value="None" disabled selected>Select University</option>
+                                            @foreach($colleges as $college)
+                                                <option value="{{ $college->clg_id}}">{{ $college->clg_name }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
                             </div> 
                             <div class="form-group row">
                                 <div class="col-md-9">
-                                    <label for="cos_id">Diploma</label>
+                                    <label for="d_cos_id">Diploma</label><span id="d_cos_id-error" class="registration-error"></span>
                                     <div>
-                                        <select class="form-control" name="cos_id" id="cos_id">
+                                        <select class="form-control" name="d_cos_id" id="d_cos_id">
                                             <option value="None" disabled selected>Select Diploma</option>
-                                            <option value="Female">Female</option>
+                                            <option value="0">New</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="effective_date">Effective Date</label>
+                                    <label for="effective_date">Effective Date</label><span id="effective_date-error" class="registration-error"></span>
                                     <div>
                                         <div><input type="date" name="effective_date" id="effective_date" class="form-control"/></div>
                                     </div>
@@ -129,13 +131,13 @@
                             <div class="form-group row">
                                 <div class="col-md-9">
                                     
-                                    <label for="speciality_in_word">Speciality in Words</label>	
+                                    <label for="speciality_in_word">Speciality in Words</label><span id="speciality_in_word-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify"/></div>
+                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify" disabled/></div>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="medium">Medium</label>
+                                    <label for="medium">Medium</label><span id="medium-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="medium" id="medium">
                                             <option value="None" disabled selected>Select Medium</option>
@@ -175,11 +177,11 @@
                             </div>
                         </div>
                     </div>
-                    <div id="professional-field" style="display:none;">
+                    <div id="dprofessional-field" style="display:none;">
                         <div class="container-fluid">
                             <div class="form-group row">
                                 <div class="col-md-6">
-                                    <label for="job_availability">Job Availability</label></span>	
+                                    <label for="job_availability">Job Availability</label><span id="job_availability-error" class="registration-error"></span>	
                                     <div>
                                         <select class="form-control" name="job_availability" id="job_availability">
                                             <option value="None" disabled selected>Select Job Availability</option>
@@ -189,9 +191,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="job_sector">If "Yes" Specify Sector</label></span>	
+                                    <label for="job_sector">If "Yes" Specify Sector</label><span id="job_sector-error" class="registration-error"></span>
                                     <div>
-                                        <select class="form-control" name="job_sector" id="job_sector">
+                                        <select class="form-control" name="job_sector" id="job_sector" disabled>
                                             <option value="None" disabled selected>Select Job Sector</option>
                                             <option value="Government">Government</option>
                                             <option value="Private">Private</option>
@@ -202,7 +204,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="job_preference">Job Preference</label>
+                                    <label for="job_preference">Job Preference</label>	
                                     <div>
                                         <textarea class="form-control" name="job_preference" id="job_preference" ></textarea>
                                     </div>
@@ -210,7 +212,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-2">
-                                    Language Skill
+                                <label for="language">Language Skill</label>
                                 </div>
                                 <div class="col-md-10">
                                     
@@ -223,8 +225,8 @@
 
                                     <table id="languageTable" class="display languageTable" style="width:500px">
                                         <thead>
-                                            <tr align="center">
-                                                <th style="max-width:125px !important;  min-width:125px !important;"></th>
+                                            <tr>
+                                                <th style="max-width:125px !important;  min-width:125px !important;">Language</th>
                                                 <th style="min-width:125px !important;">Writting</th>
                                                 <th style="min-width:125px !important;">Reading</th>
                                                 <th style="min-width:125px !important;">Speech</th>
@@ -236,7 +238,7 @@
 
                             <div class="form-group row">
                                 <div class="col-md-3">
-                                    <label for="it_skill">IT Skill</label>
+                                    <label for="it_skill">IT Skill</label><span id="it_skill-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="it_skill" id="it_skill">
                                             <option value="None" disabled selected>Select Option</option>
@@ -246,9 +248,9 @@
                                     </div>
                                 </div>
                                 <div class="col-md-9">
-                                    <label for="it_skill_detail">If "Yes", Provide Details</label>
+                                    <label for="it_skill_detail">If "Yes", Provide Details</label><span id="it_skill_detail-error" class="registration-error"></span>
                                     <div>
-                                        <textarea class="form-control" name="it_skill_detail" id="it_skill_detail" ></textarea>
+                                        <textarea class="form-control" name="it_skill_detail" id="it_skill_detail" disabled></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -261,11 +263,17 @@
                                 </div>
                             </div>
                         </div> 
+                        <div id="dcaptcha-field" style="display:none;">
+                            <div class="container-fluid">
+                                <div class="form-group row">
+                                </div>
+                            </div>
+                        </div> 
                     </div>
                     <div>
-                        <input class="btnAction" type="button" name="back" id="back" value="Back" style="display:none;">
-                        <input class="btnAction" type="button" name="next" id="next" value="Next" >
-                        <input class="btnAction" type="submit" name="finish" id="finish" value="Finish" style="display:none;">
+                        <input class="btnAction" type="button" name="dback" id="dback" value="Back" style="display:none;">
+                        <input class="btnAction" type="button" name="dnext" id="dnext" value="Next" >
+                        <input class="btnAction" type="button" name="dfinish" id="dfinish" value="Finish" style="display:none;">
                     </div>
                 </form>
         </div>  
