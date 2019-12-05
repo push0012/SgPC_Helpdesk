@@ -95,6 +95,7 @@ function gvalidate() {
 $(document).ready(function() {
 	$("#next").click(function(){
 		var output = gvalidate();
+		callNotification('fas fa-exclamation-triangle','hello world','please come here','danger' );
 		if(output) {
 			var current = $(".highlight");
 			var next = $(".highlight").next("li");
