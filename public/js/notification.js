@@ -14,7 +14,7 @@ $.notify({
         align: "right"
     },
     z_index: 1031,
-    delay: 2000,
+    delay: 3000,
     timer: 1000,
     animate: {
         enter: 'animated fadeIn',
