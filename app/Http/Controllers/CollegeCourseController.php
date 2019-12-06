@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\CollegeCourse;
+use App\College;
 use DB;
 
 class CollegeCourseController extends Controller
@@ -15,7 +16,8 @@ class CollegeCourseController extends Controller
      */
     public function index()
     {
-        //
+        $universities = College::all();
+        return view('admin.insert_course')->with('colleges',$universities);
     }
 
     /**
