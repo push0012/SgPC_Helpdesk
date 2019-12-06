@@ -92,6 +92,39 @@ function gvalidate() {
 	}*/
 	return output;
 }
+function form_validate(){
+	var output = true;
+	$(".registration-error").html('');
+	if($("#clg_name").val() == "") {
+		output = false;
+		$("#clg_name-error").html("Required");
+	}
+	if($("#clg_type").val() == null) {
+		output = false;
+		$("#clg_type-error").html("Required");
+	}
+	if($("#clg_address").val() == "") {
+		output = false;
+		$("#clg_address-error").html("Required");
+	}
+	if($("#clg_telephone").val() == "") {
+		output = false;
+		$("#clg_telephone-error").html("Required");
+	}
+	if($("#clg_email").val() == "") {
+		output = false;
+		$("#clg_email-error").html("Required");
+	}
+	if($("#clg_website").val() == "") {
+		output = false;
+		$("#clg_website-error").html("Required");
+	}
+	if($("#it_skill").val() == "") {
+		output = false;
+		$("#it_skill-error").html("Required");
+	}
+	return output;
+}
 function dvalidate() {
 	var output = true;
 	$(".registration-error").html('');
