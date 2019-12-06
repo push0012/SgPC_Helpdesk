@@ -267,7 +267,7 @@ nav a{
 .message {color: #00FF00;font-weight: bold;width: 100%;padding: 10;}
 .btnAction{padding: 5px 10px;background-color: #09F;border: 0;color: #FFF;cursor: pointer; margin-top:15px;}
 
-.languageTable tr td{
+.languageTable tr td, .courseTable tr td{
     padding:10px !important;
     /*padding-bottom:10px !important;*/
 }
@@ -277,11 +277,11 @@ nav a{
     border: none;
     background: transparent;
 }
-#addLanguage{
+#addLanguage, #addSPC{
     width: 35px;
     margin-left: 10px;
 }
-#removeLanguage{
+#removeLanguage, #removeSPC{
     width: 35px;
 }
 .store
