@@ -14,7 +14,7 @@ class CollegeController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.insert_college');
     }
 
     /**
