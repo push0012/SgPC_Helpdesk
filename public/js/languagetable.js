@@ -116,4 +116,39 @@ $('#removeLanguage').click( function () {
     s.row('.selected').remove().draw( false );
 } );
 
+
+
+//add course Speciality things within DataTable
+    var s = $('#courseTable').DataTable({
+        paging: false,
+        searching: false,
+        ordering:  false,
+        info: false,
+        select: true
+    });
+
+    $('#addSPC').on( 'click', function () {
+        s.row.add( [
+            '<input type=\"text\" id=\"spc_id\" name=\"spc_id\" size=\"70\" required/>',
+            '<input type=\"text\" id=\"cos_duration\" name=\"cos_duration\" size=\"10\" required/>',
+        ] ).draw( false );
+    } );
+    
+    //draw First row
+    $('#addSPC').click();
+    //Course_Subject Table
+    //select specific rows when click on row
+    $('#courseTable tbody').on( 'click', 'tr', function () {
+        if ( $(this).hasClass('selected') ) {
+            $(this).removeClass('selected');
+        }
+        else {
+            s.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    } );
+    //remove selected row when click on remove button
+    $('#removeSPC').click( function () {
+        s.row('.selected').remove().draw( false );
+    } );
 });
