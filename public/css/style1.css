@@ -284,3 +284,7 @@ nav a{
 #removeLanguage{
     width: 35px;
 }
+.store
+{
+    float:right;
+}
