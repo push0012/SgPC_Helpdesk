@@ -106,4 +106,34 @@ $(document).ready(function() {
             }
         });
     });
+
+    $("#clg_store").click(function(){
+        var output = form_validate();
+        if(output){
+            var savedata = {
+                'clg_name': $('#clg_name').val(),
+                'clg_type': $('#clg_type').val(),
+                'clg_address': $('#clg_address').val(),
+                'clg_telephone': $('#clg_telephone').val(),
+                'clg_email': $('#clg_email').val(),
+                'clg_website': $('#clg_website').val(),
+            }
+            $.ajax({
+                type: "POST",
+                url: '/college',
+                data: savedata,
+                success: function( msg ) {
+                    callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
+                    setTimeout(function(){
+                        window.location = '/college';
+                    },4000); 
+                },
+                error: function(msg) {
+                    callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
+                    window.location = '/college';
+                }
+            });
+        }
+    });
+    
 });
