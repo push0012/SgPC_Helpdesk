@@ -128,7 +128,7 @@
                                     <div>
                                         <select class="form-control" name="spc_id" id="spc_id">
                                             <option value="None" disabled selected>Select Speciality</option>
-                                            
+                                            <option value="0">New</option>
                                         </select>
                                     </div>
                                 </div>
