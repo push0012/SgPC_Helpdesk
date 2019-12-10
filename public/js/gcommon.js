@@ -95,7 +95,7 @@ function gvalidate() {
 function form_validate(){
 	var output = true;
 	$(".registration-error").html('');
-	if($("#clg_name").val() == "") {
+	/*if($("#clg_name").val() == "") {
 		output = false;
 		$("#clg_name-error").html("Required");
 	}
@@ -122,6 +122,16 @@ function form_validate(){
 	if($("#it_skill").val() == "") {
 		output = false;
 		$("#it_skill-error").html("Required");
+	}
+*/
+	if($("#e_clg_id").val() == null) {
+		output = false;
+		$("#e_clg_id-error").html("Required");
+	}
+
+	if($("#cos_id").val() == null) {
+		output = false;
+		$("#cos_id-error").html("Required");
 	}
 	return output;
 }
