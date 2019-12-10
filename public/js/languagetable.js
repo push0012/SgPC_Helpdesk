@@ -110,7 +110,7 @@ $('#languageTable tbody').on( 'click', 'tr:not(:first-child):not(:nth-child(2)):
         s.$('tr.selected').removeClass('selected');
         $(this).addClass('selected');
     }
-} );
+} ); 
 //remove selected row when click on remove button
 $('#removeLanguage').click( function () {
     s.row('.selected').remove().draw( false );
@@ -129,7 +129,7 @@ $('#removeLanguage').click( function () {
 
     $('#addSPC').on( 'click', function () {
         s.row.add( [
-            '<input type=\"text\" id=\"spc_id\" name=\"spc_id\" size=\"70\" required/>',
+            '<input type=\"text\" id=\"spc_name\" name=\"spc_name\" size=\"70\" required/>',
             '<input type=\"text\" id=\"cos_duration\" name=\"cos_duration\" size=\"10\" required/>',
         ] ).draw( false );
     } );
@@ -151,4 +151,6 @@ $('#removeLanguage').click( function () {
     $('#removeSPC').click( function () {
         s.row('.selected').remove().draw( false );
     } );
+
+
 });
