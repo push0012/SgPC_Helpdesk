@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\CollegeCourse;
 use App\College;
+use App\DegreeSpecial;
+use App\Course;
 use DB;
 
 class CollegeCourseController extends Controller
@@ -16,8 +18,9 @@ class CollegeCourseController extends Controller
      */
     public function index()
     {
-        $universities = College::all();
-        return view('admin.insert_course')->with('colleges',$universities);
+        $colleges = College::all();
+        $courses = Course::all();
+        return view('admin.insert_course', compact(['colleges', 'courses']));
     }
 
     /**
@@ -38,7 +41,25 @@ class CollegeCourseController extends Controller
      */
     public function store(Request $request)
     {
-        $collegecourse = CollegeCourse::create($request->all());
+        //speciality
+        //clg_id
+        //cos_id
+        $specialities = $request->speciality;
+
+        foreach($specialities as $speciality){ 
+            $special = DegreeSpecial::create([
+                'spc_name' => $speciality['spc_name'],
+            ]);
+
+            $request->request->add([
+                'spc_id' => $special->spc_id,
+                'cos_duration' => $speciality['cos_duration']
+                ]);
+                
+            CollegeCourse::create($request->all());
+        }
+
+        $collegecourse = "data saved";
 
         return response()->json($collegecourse, 201);
     }
