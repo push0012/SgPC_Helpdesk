@@ -17,8 +17,7 @@
     <link rel="icon" type="image/png" href="{{ asset('image/sg_info.png') }}" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet"> 
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> 
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet"> 
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">  
     <link href="{{ asset('css/fontawesome/css/all.css') }}" rel="stylesheet"> 
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
