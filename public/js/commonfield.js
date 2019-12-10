@@ -82,7 +82,7 @@ $(document).ready(function() {
 			url: '/speciality_request/',
 			data: postData,
 			success: function( msg ) {
-				$('#spc_id :gt(0)').remove();
+				$('#spc_id :gt(0):gt(1)').remove();
 				$.each(msg, function(value,key) {  
 					$("#spc_id").append($("<option>").attr("value", key.spc_id).text(key.spc_name));   
 				});
@@ -119,7 +119,7 @@ $(document).ready(function() {
 	//enable with other type speciallity
 	$('#spc_id').change(function(e) {
 
-		if($(this).val() == 2){
+		if($(this).val() ==0){
 			$("#speciality_in_word").attr('disabled',false);
 		}else{
 			$("#speciality_in_word").attr('disabled',true);
