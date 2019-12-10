@@ -53,3 +53,5 @@ Route::get('collegecourse_diploma/{id}', 'CollegeCourseController@show_diploma')
 Route::post('/graduate_register', 'GraduationController@store');
 Route::post('/diploma_register', 'DiplomaController@store');
 
+//approving request things
+Route::get('/dig', function(){ return view('admin.pending.degree_list'); });
