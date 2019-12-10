@@ -114,16 +114,17 @@
                                 </div>
                             </div> 
                             <div class="form-group row">
-                                <div class="col-md-5">
+                                <div class="col-md-12">
                                     <label for="cos_id">Degree</label><span id="cos_id-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="cos_id" id="cos_id">
                                             <option value="None" disabled selected>Select Degree</option>
-
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
                                     <label for="spc_id">Speciality</label>
                                     <div>
                                         <select class="form-control" name="spc_id" id="spc_id">
@@ -132,7 +133,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-6">
                                     <label for="speciality_in_word">Speciality in Words</label>	
                                     <div>
                                         <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify" disabled/></div>
