@@ -107,6 +107,7 @@ $(document).ready(function() {
         });
     });
 
+    //Store Colleges
     $("#clg_store").click(function(){
         var output = form_validate();
         if(output){
@@ -131,6 +132,45 @@ $(document).ready(function() {
                 error: function(msg) {
                     callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
                     window.location = '/college';
+                }
+            });
+        }
+    });
+
+    //store Courses
+    $("#cos_store").click(function(){
+        var output = form_validate();
+        console.log(output);
+        if(output){
+        var posts = []; 
+        $('#courseTable > tbody  > tr').each(function() {
+            var postData = {
+                'spc_name':$(this).find('#spc_name').val(),
+                'cos_duration':$(this).find('#cos_duration').val(),
+            };
+            posts.push(postData);
+        });
+        
+            var savedata = {
+                'clg_id': $('#e_clg_id').val(),
+                'cos_id': $('#cos_id').val(),
+                'speciality': posts,
+            }
+            $.ajax({
+                type: "POST",
+                url: '/collegecourse',
+                data: savedata,
+                success: function( msg ) {
+                    /*callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
+                    setTimeout(function(){
+                        window.location = '/collegecourse';
+                    },4000);*/
+                    console.log(msg);
+                },
+                error: function(msg) {
+                    console.log(msg);
+                    //callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
+                   // window.location = '/collegecourse';
                 }
             });
         }
