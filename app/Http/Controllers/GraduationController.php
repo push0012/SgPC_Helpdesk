@@ -9,6 +9,8 @@ use App\Student;
 use App\StudentEducationDegree;
 use App\StudentProfessional;
 use App\StudentLanguage;
+use DB;
+
 
 class GraduationController extends Controller
 {
@@ -37,5 +39,11 @@ class GraduationController extends Controller
         }
 
         return response()->json($studentss, 201);
+    }
+
+    public function pending()
+    {
+        $degree_list = DB::table('degreestudentlist')->get();
+        return view('admin.pending.degree_list')->with('degree_lists',$degree_list);
     }
 }
