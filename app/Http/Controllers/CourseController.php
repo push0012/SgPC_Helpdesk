@@ -14,7 +14,9 @@ class CourseController extends Controller
      */
     public function index()
     {
-        //
+        $course = Course::where('cos_type','Degree')->get();
+
+        return response()->json($course, 201);
     }
 
     /**
