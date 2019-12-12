@@ -9,6 +9,7 @@ use App\Student;
 use App\StudentEducationDegree;
 use App\StudentProfessional;
 use App\StudentLanguage;
+use App\StudentConfirmDegree;
 use DB;
 
 
@@ -45,5 +46,40 @@ class GraduationController extends Controller
     {
         $degree_list = DB::table('degreestudentlist')->get();
         return view('admin.pending.degree_list')->with('degree_lists',$degree_list);
+    }
+
+    public function detail_pending($id)
+    {
+        $degreeholder = DB::table('degreestudentlist')->where('stu_id', $id)->first();
+        return view('admin.pending.degree_holder')->with('degreeholders',$degreeholder);
+    }
+
+    public function approving(Request $request)
+    {
+        $confirm = StudentConfirmDegree::create($request->all());
+
+        $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '1'));
+        $gos = StudentEducationDegree::where('stu_id', $request->stu_id)
+                                        ->where('clg_id', $request->clg_id)
+                                        ->where('cos_id', $request->cos_id)
+                                        ->where('spc_id', $request->spc_id)
+                                        ->update(array('srg_confirm_data' => '1'));
+        $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '1'));
+        $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
+        return response()->json($goss, 201);
+    }
+
+    public function rejecting(Request $request)
+    {
+        
+        $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '2'));
+        $gos = StudentEducationDegree::where('stu_id', $request->stu_id)
+                                        ->where('clg_id', $request->clg_id)
+                                        ->where('cos_id', $request->cos_id)
+                                        ->where('spc_id', $request->spc_id)
+                                        ->update(array('srg_confirm_data' => '1'));
+        $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '2'));
+        $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '2'));
+        return response()->json($goss, 201);
     }
 }
