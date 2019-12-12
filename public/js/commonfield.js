@@ -59,17 +59,37 @@ $(document).ready(function() {
 	//for graduation detail form
 	$('#clg_id').change(function(e) {
 		var clgid = $(this).val();
-		console.log(clgid)
-		$.ajax({
-			type: "GET",
-			url: '/collegecourse/' + clgid,
-			success: function( msg ) {
-				$('#cos_id :gt(0)').remove();
-				$.each(msg, function(value,key) {  
-					$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title));   
-				});
-			}
-		});
+
+		if(clgid == 0)
+		{
+			$.ajax({
+				type: "GET",
+				url: '/course',
+				success: function( msg ) {
+					$('#cos_id :gt(0)').remove();
+					console.log('bit')   
+					$("#cos_id").append($("<option>").attr("value", 0).text('New'));
+					$.each(msg, function(value,key) {  
+						$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title));  
+						
+					});
+				}
+			});
+		}else{
+			$.ajax({
+				type: "GET",
+				url: '/collegecourse/' + clgid,
+				success: function( msg ) {
+					$('#cos_id :gt(0)').remove();
+					$("#cos_id").append($("<option>").attr("value", 0).text('New'));
+					console.log('fkk')
+					$.each(msg, function(value,key) {  
+						$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title)); 
+						  
+					});
+				}
+			});
+		}
 	});
 	$('#cos_id').change(function(e) {
 		//console.log(clgid)
@@ -126,6 +146,25 @@ $(document).ready(function() {
 		}
 	});
 
+	//within degree register form open new field
+	//new University
+	$('#clg_id').change(function(e) {
+
+		if($(this).val() ==0){
+			$("#new_clg").attr('disabled',false);
+		}else{
+			$("#new_clg").attr('disabled',true);
+		}
+	});
+	//New Degree
+	$('#cos_id').change(function(e) {
+
+		if($(this).val() ==0){
+			$("#new_cos").attr('disabled',false);
+		}else{
+			$("#new_cos").attr('disabled',true);
+		}
+	});
 
 	//prevent later dates entering
 	$('#effective_date').prop('max', function(){
