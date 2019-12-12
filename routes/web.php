@@ -53,5 +53,8 @@ Route::get('collegecourse_diploma/{id}', 'CollegeCourseController@show_diploma')
 Route::post('/graduate_register', 'GraduationController@store');
 Route::post('/diploma_register', 'DiplomaController@store');
 
-//approving request things
+//approving request things for graduation
 Route::get('/dig', 'GraduationController@pending');
+Route::get('/views/{id}', 'GraduationController@detail_pending');
+Route::post('/approving', 'GraduationController@approving');
+Route::post('/rejecting', 'GraduationController@rejecting');
