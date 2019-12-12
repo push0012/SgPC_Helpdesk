@@ -9,31 +9,32 @@
     </div>
     <br/>
     <div class="row justify-content-center">
-        <div class="col-md-3">
-            Student Name
-        </div>  
-        <div class="col-md-3">
-            NIC
-        </div>
-        <div class="col-md-3">
-            Degree
-        </div>
-        <div class="col-md-3">
-            View
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-md-3">
-            Student Name
-        </div>  
-        <div class="col-md-3">
-            NIC
-        </div>
-        <div class="col-md-3">
-            Degree
-        </div>
-        <div class="col-md-3">
-            View
+    <div class="table-responsive">
+        <table id="mytable" class="table-bordred table-striped data-list" >
+         
+         <thead>           
+           <th >Name</th>
+           <th>NIC</th>
+           <th>Degree</th>
+           <th>University</th>
+           <th></th>
+         </thead>
+         <tbody>
+        @foreach($degree_lists as $degree_list)
+          <tr style="font-size:0.85em !important;">
+            <td>{{ $degree_list->stu_name}}</td>
+            <td>{{ $degree_list->nic}}</td>
+            @if($degree_list->spc_name == 'General')
+            <td>{{ $degree_list->cos_title}} ({{$degree_list->spc_name}}) </td>
+            @else
+            <td>{{ $degree_list->cos_title}}(Special) in {{$degree_list->spc_name}}</td>
+            @endif
+            <td>{{ $degree_list->clg_name}}</td>
+            <td><a class="btn btn-transparent" href="" ><i class="fas fa-bars"></i></a></td>
+          </tr>
+          @endforeach
+          </tbody>
+          </table>
         </div>
     </div>
 </div>
