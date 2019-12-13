@@ -44,7 +44,7 @@ $(document).ready(function() {
         }
         $.ajax({
             type: "POST",
-            url: '/graduate_register',
+            url: '/aplication/graduate/register',
             data: savedata,
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
@@ -97,7 +97,7 @@ $(document).ready(function() {
         }
         $.ajax({
             type: "POST",
-            url: '/diploma_register',
+            url: '/application/diploma/register',
             data: savedata,
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
@@ -122,7 +122,7 @@ $(document).ready(function() {
             }
             $.ajax({
                 type: "POST",
-                url: '/college',
+                url: '/admin/masterdata/college',
                 data: savedata,
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
@@ -159,7 +159,7 @@ $(document).ready(function() {
             }
             $.ajax({
                 type: "POST",
-                url: '/collegecourse',
+                url: '/admin/masterdata/collegecourse',
                 data: savedata,
                 success: function( msg ) {
                     /*callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
@@ -189,7 +189,7 @@ $(document).ready(function() {
         console.log(savedata);
         $.ajax({
             type: "POST",
-            url: '/approving',
+            url: '/admin/pending/degree/approving',
             data: savedata,
             success: function( msg ) {
                 /*callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
@@ -217,7 +217,7 @@ $(document).ready(function() {
         console.log(savedata);
         $.ajax({
             type: "POST",
-            url: '/rejecting',
+            url: '/admin/pending/degree/rejecting',
             data: savedata,
             success: function( msg ) {
                 /*callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
@@ -245,7 +245,7 @@ $(document).ready(function() {
         console.log(savedata);
         $.ajax({
             type: "POST",
-            url: '/approvingd',
+            url: '/admin/pending/diploma/approving',
             data: savedata,
             success: function( msg ) {
                 /*callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
@@ -272,7 +272,7 @@ $(document).ready(function() {
         console.log(savedata);
         $.ajax({
             type: "POST",
-            url: '/rejectingd',
+            url: '/admin/pending/diploma/rejecting',
             data: savedata,
             success: function( msg ) {
                 /*callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
