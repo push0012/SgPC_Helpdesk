@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\College;
 use App\Student;
+use App\Course;
+use App\CollegeCourse;
 use App\StudentEducationDiploma;
 use App\StudentProfessional;
 use App\StudentLanguage;
@@ -21,6 +23,15 @@ class DiplomaController extends Controller
     {
         $student = Student::create($request->all());
         $request->request->add(['stu_id' => $student->stu_id]);
+
+        if($request->cos_id == 0)
+        {
+            $newCourse = Course::create(['cos_title'=> $request->speciality_in_word,'cos_type' =>'Diploma']);
+            CollegeCourse::create(['clg_id'=>$request->clg_id,'cos_id'=>$newCourse->cos_id,'spc_id'=>2]);
+            $request->merge(['cos_id' => $newCourse->cos_id]);
+
+        }
+
         $students = StudentEducationDiploma::create($request->all());
         $studentss = StudentProfessional::create($request->all());
 
