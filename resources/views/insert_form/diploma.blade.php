@@ -131,7 +131,7 @@
                             <div class="form-group row">
                                 <div class="col-md-9">
                                     
-                                    <label for="speciality_in_word">Speciality in Words</label><span id="speciality_in_word-error" class="registration-error"></span>
+                                    <label for="speciality_in_word">Specify Diploma</label><span id="speciality_in_word-error" class="registration-error"></span>
                                     <div>
                                         <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify" disabled/></div>
                                     </div>
