@@ -233,5 +233,60 @@ $(document).ready(function() {
             }
         });
     });
+
+    //diploma approve
+    $("#d_reg_app").click(function(){
+        var savedata = {
+            'stu_id': $('#stu_id').val(),
+            'clg_id': $('#clg_id').val(),
+            'cos_id': $('#cos_id').val(),
+            'diploma_reg_no': $('#d_reg_no').val(),
+        }
+        console.log(savedata);
+        $.ajax({
+            type: "POST",
+            url: '/approvingd',
+            data: savedata,
+            success: function( msg ) {
+                /*callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
+                setTimeout(function(){
+                    window.location = '/collegecourse';
+                },4000);*/
+                console.log(msg);
+            },
+            error: function(msg) {
+                console.log(msg);
+                //callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
+               // window.location = '/collegecourse';
+            }
+        });
+    });
+
+    //diploma Reject
+    $("#d_reg_rej").click(function(){
+        var savedata = {
+            'stu_id': $('#stu_id').val(),
+            'clg_id': $('#clg_id').val(),
+            'cos_id': $('#cos_id').val(),
+        }
+        console.log(savedata);
+        $.ajax({
+            type: "POST",
+            url: '/rejectingd',
+            data: savedata,
+            success: function( msg ) {
+                /*callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
+                setTimeout(function(){
+                    window.location = '/collegecourse';
+                },4000);*/
+                console.log(msg);
+            },
+            error: function(msg) {
+                console.log(msg);
+                //callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
+               // window.location = '/collegecourse';
+            }
+        });
+    });
     
 });
