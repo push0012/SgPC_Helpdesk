@@ -59,55 +59,56 @@ $(document).ready(function() {
 	//for graduation detail form
 	$('#clg_id').change(function(e) {
 		var clgid = $(this).val();
-
-		if(clgid == 0)
-		{
-			$.ajax({
-				type: "GET",
-				url: '/course',
-				success: function( msg ) {
-					$('#cos_id :gt(0)').remove();
-					console.log('bit')   
-					$("#cos_id").append($("<option>").attr("value", 0).text('New'));
-					$.each(msg, function(value,key) {  
-						$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title));  
-						
-					});
-				}
-			});
-		}else{
-			$.ajax({
-				type: "GET",
-				url: '/collegecourse/' + clgid,
-				success: function( msg ) {
-					$('#cos_id :gt(0)').remove();
-					$("#cos_id").append($("<option>").attr("value", 0).text('New'));
-					console.log('fkk')
-					$.each(msg, function(value,key) {  
-						$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title)); 
-						  
-					});
-				}
-			});
-		}
+		$.ajax({
+			type: "GET",
+			url: '/collegecourse/' + clgid,
+			success: function( msg ) {
+				$('#cos_id :gt(0)').remove();
+				$("#cos_id").append($("<option>").attr("value", 0).text('New'));
+				console.log('fkk')
+				$.each(msg, function(value,key) {  
+					$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title)); 
+					  
+				});
+			}
+		});
 	});
+	
 	$('#cos_id').change(function(e) {
 		//console.log(clgid)
 		var postData = {
 			'cos_id' :$(this).val(),
 			'clg_id' :$("#clg_id").val()
 		}
-		$.ajax({
-			type: "GET",
-			url: '/speciality_request/',
-			data: postData,
-			success: function( msg ) {
-				$('#spc_id :gt(0):gt(1)').remove();
-				$.each(msg, function(value,key) {  
-					$("#spc_id").append($("<option>").attr("value", key.spc_id).text(key.spc_name));   
-				});
-			}
-		});
+		if(postData.cos_id == 0){
+			$.ajax({
+				type: "GET",
+				url: '/special/',
+				data: postData,
+				success: function( msg ) {
+					$('#spc_id :gt(0)').remove();
+					$("#spc_id").append($("<option>").attr("value", 0).text('New'));
+					$.each(msg, function(value,key) {  
+						$("#spc_id").append($("<option>").attr("value", key.spc_id).text(key.spc_name));   
+					});
+				}
+			});
+		}else{
+			$.ajax({
+				type: "GET",
+				url: '/speciality_request/',
+				data: postData,
+				success: function( msg ) {
+					$('#spc_id :gt(0)').remove();
+					$("#spc_id").append($("<option>").attr("value", 0).text('New'));
+					$.each(msg, function(value,key) {  
+						$("#spc_id").append($("<option>").attr("value", key.spc_id).text(key.spc_name));   
+					});
+				}
+			});
+		}
+
+		
 	});
 
 	//for diploma details form
