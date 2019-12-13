@@ -45,7 +45,7 @@ $(document).ready(function() {
 		var distr = $(this).val();
 		$.ajax({
 			type: "GET",
-			url: '/dsdivision/' + distr,
+			url: '/admin/masterdata/dsdivision/' + distr,
 			success: function( msg ) {
 				//$("#dsa_id").empty();
 				$('#dsa_id :gt(0)').remove();
@@ -61,7 +61,7 @@ $(document).ready(function() {
 		var clgid = $(this).val();
 		$.ajax({
 			type: "GET",
-			url: '/collegecourse/' + clgid,
+			url: '/admin/masterdata/collegecourse/' + clgid,
 			success: function( msg ) {
 				$('#cos_id :gt(0)').remove();
 				$("#cos_id").append($("<option>").attr("value", 0).text('New'));
@@ -83,7 +83,7 @@ $(document).ready(function() {
 		if(postData.cos_id == 0){
 			$.ajax({
 				type: "GET",
-				url: '/special/',
+				url: '/admin/masterdata/special/',
 				data: postData,
 				success: function( msg ) {
 					$('#spc_id :gt(0)').remove();
