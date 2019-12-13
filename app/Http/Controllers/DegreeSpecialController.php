@@ -15,7 +15,9 @@ class DegreeSpecialController extends Controller
      */
     public function index()
     {
-        //
+        $speciality = DegreeSpecial::all();
+
+        return response()->json($speciality, 201);
     }
 
     /**
