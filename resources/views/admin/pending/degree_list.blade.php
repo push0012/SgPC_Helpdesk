@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('pageTitle', 'සැකසුම් - උපාධිදාරී ලියාපදිංචිය අයදුම්')
+@section('pageTitle', 'සැකසුම් - උපාධිදාරී ලියාපදිංචි අයදුම්')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div style="font-size:1.5em;">{{ __('උපාධිදාරී ලියාපදිංචිය අයදුම්') }}</div>
+            <div style="font-size:1.5em;">{{ __('උපාධිදාරී ලියාපදිංචි අයදුම්') }}</div>
         </div>
     </div>
     <br/>
