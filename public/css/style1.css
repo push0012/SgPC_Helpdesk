@@ -291,3 +291,27 @@ nav a{
 .digdetail{
     padding: 5px 0px 5px 0px;
 }
+
+.btn-labeled {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.btn-labeling{
+    position: relative;
+    left: -12px;
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 3px 0 0 3px;
+}
+.btn { margin-bottom:10px; }
+.btn-right
+{
+    left: 12px !important;
+}
+.hrlines
+{
+    border: 0;
+    padding-top: 0.1px !important;
+    padding-bottom: 0.1px !important;
+}
