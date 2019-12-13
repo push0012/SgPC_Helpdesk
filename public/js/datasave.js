@@ -25,7 +25,6 @@ $(document).ready(function() {
             'stu_email' : $('#stu_email').val(),
 
             'clg_id':$('#clg_id').val(),
-            'new_clg':$('#clg_id').val(),
             'cos_id' : $('#cos_id').val(),
             'new_cos':$('#new_cos').val(),
             'spc_id':$('#spc_id').val(),
