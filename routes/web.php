@@ -58,3 +58,9 @@ Route::get('/dig', 'GraduationController@pending');
 Route::get('/views/{id}', 'GraduationController@detail_pending');
 Route::post('/approving', 'GraduationController@approving');
 Route::post('/rejecting', 'GraduationController@rejecting');
+
+//approving request things for Diploma
+Route::get('/dip', 'DiplomaController@pending');
+Route::get('/views/{id}', 'DiplomaController@detail_pending');
+Route::post('/approvingd', 'DiplomaController@approving');
+Route::post('/rejectingd', 'DiplomaController@rejecting');
