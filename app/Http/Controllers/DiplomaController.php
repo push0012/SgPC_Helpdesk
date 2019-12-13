@@ -10,6 +10,8 @@ use App\CollegeCourse;
 use App\StudentEducationDiploma;
 use App\StudentProfessional;
 use App\StudentLanguage;
+use DB;
+use App\StudentConfirmDiploma;
 
 class DiplomaController extends Controller
 {
@@ -23,7 +25,7 @@ class DiplomaController extends Controller
     {
         $student = Student::create($request->all());
         $request->request->add(['stu_id' => $student->stu_id]);
-
+ 
         if($request->cos_id == 0)
         {
             $newCourse = Course::create(['cos_title'=> $request->speciality_in_word,'cos_type' =>'Diploma']);
@@ -48,5 +50,44 @@ class DiplomaController extends Controller
         }
 
         return response()->json($studentss, 201);
+    }
+
+    public function pending()
+    {
+        $diploma_list = DB::table('diplomastudentlist')->get();
+        return view('admin.pending.diploma_list')->with('diploma_lists',$diploma_list);
+    }
+
+    public function detail_pending($id)
+    {
+        $diplomaholder = DB::table('diplomastudentlist')->where('stu_id', $id)->first();
+        return view('admin.pending.diploma_holder')->with('diplomaholder',$diplomaholder);
+    }
+
+    public function approving(Request $request)
+    {
+        $confirm = StudentConfirmDiploma::create($request->all());
+
+        $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '1'));
+        $gos = StudentEducationDiploma::where('stu_id', $request->stu_id)
+                                        ->where('clg_id', $request->clg_id)
+                                        ->where('cos_id', $request->cos_id)
+                                        ->update(array('sep_confirm_data' => '1'));
+        $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '1'));
+        $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
+        return response()->json($goss, 201);
+    }
+
+    public function rejecting(Request $request)
+    {
+        
+        $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '2'));
+        $gos = StudentEducationDiploma::where('stu_id', $request->stu_id)
+                                        ->where('clg_id', $request->clg_id)
+                                        ->where('cos_id', $request->cos_id)
+                                        ->update(array('sep_confirm_data' => '2'));
+        $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '2'));
+        $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '2'));
+        return response()->json($goss, 201);
     }
 }
