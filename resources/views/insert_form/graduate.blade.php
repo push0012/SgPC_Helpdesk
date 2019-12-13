@@ -296,14 +296,20 @@
                                 </div>
                             </div>
                         </div> 
-                        <div id="gcaptcha-field" style="display:none;">
+                    </div>
+                    <div id="gcaptcha-field" style="display:none;">
                             <div class="container-fluid">
-                                <div class="form-group row">
+                                <div class=" row">
+
+                                    <div id="captcha">
+                                    </div>
+                                    <input type="text" placeholder="Captcha" id="cpatchaTextBox"/>
+                                    <button type="submit">Submit</button>
+                                    <button type="button" onClick="createCaptcha()">get</button>
                                 </div>
                             </div>
-                        </div> 
-                    </div>
-                    <div>
+                    </div> 
+                    <div class="row justify-content-center">
                         <input class="btnAction" type="button" name="back" id="back" value="Back" style="display:none;">
                         <input class="btnAction" type="button" name="next" id="next" value="Next" >
                         <input class="btnAction" type="button" name="finish" id="finish" value="Finish" style="display:none;">
