@@ -17,9 +17,6 @@ Route::get('/training_institutes', function(){ return view('data_list.training_i
 //insert form routes
 Route::get('/business_ins', function(){ return view('insert_form.business'); });
 
-Route::get('/graduate_ins', 'GraduationController@index');
-Route::get('/diploma_ins', 'DiplomaController@index');
-
 //sub category page routes
 Route::get('/business', function(){ return view('sub_cat.sub_business'); });
 Route::get('/human_reso', function(){ return view('sub_cat.sub_humans'); });
@@ -37,30 +34,57 @@ Route::post('/sendmail', 'ContactUsController@sendMail');
 Route::post('/sendinquiry', 'ContactUsController@sendInquiry');
 
 //Backend Routes
-Route::resource('dsdivision', 'DsDivisionController');
-Route::resource('college', 'CollegeController');
-Route::resource('course', 'CourseController');
-Route::resource('student', 'StudentController');
-Route::resource('collegecourse', 'CollegeCourseController');
-Route::resource('special', 'DegreeSpecialController');
 
 //ajax request routes
 Route::get('/speciality_request', 'DegreeSpecialController@speciality');
 Route::get('collegecourse_diploma/{id}', 'CollegeCourseController@show_diploma');
 
 
-//saving main data fields
-Route::post('/graduate_register', 'GraduationController@store');
-Route::post('/diploma_register', 'DiplomaController@store');
 
-//approving request things for graduation
-Route::get('/dig', 'GraduationController@pending');
-Route::get('/views/{id}', 'GraduationController@detail_pending');
-Route::post('/approving', 'GraduationController@approving');
-Route::post('/rejecting', 'GraduationController@rejecting');
 
-//approving request things for Diploma
-Route::get('/dip', 'DiplomaController@pending');
-Route::get('/views/{id}', 'DiplomaController@detail_pending');
-Route::post('/approvingd', 'DiplomaController@approving');
-Route::post('/rejectingd', 'DiplomaController@rejecting');
+
+Route::group(['prefix' => 'application','as'=>'application.'], function () {
+    Route::group(['prefix' => 'graduate','as'=>'graduate.'], function () {
+        Route::get('/', 'GraduationController@index');
+        Route::post('/register', 'GraduationController@store');
+    });
+    Route::group(['prefix' => 'diploma','as'=>'diploma.'], function () {
+        Route::get('/', 'DiplomaController@index');
+        Route::post('/register', 'DiplomaController@store');
+    });
+});
+
+
+Route::group(['prefix' => 'admin','as'=>'admin.'], function () {
+
+    Route::get('/', function(){ return view('admin.admin_dashboard'); });
+
+    Route::group(['prefix' => 'masterdata','as'=>'masterdata'], function () {
+        Route::resource('dsdivision', 'DsDivisionController');
+        Route::resource('college', 'CollegeController');
+        Route::resource('course', 'CourseController');
+        Route::resource('collegecourse', 'CollegeCourseController');
+        Route::resource('special', 'DegreeSpecialController');
+        Route::resource('student', 'StudentController');
+    });
+
+    Route::group(['prefix' => 'pending','as'=>'pending'], function () {
+
+        Route::group(['prefix' => 'degree','as'=>'degree'], function () {
+            //approving request things for graduation
+            Route::get('/', 'GraduationController@pending');
+            Route::get('/views/{id}', 'GraduationController@detail_pending');
+            Route::post('/approving', 'GraduationController@approving');
+            Route::post('/rejecting', 'GraduationController@rejecting');
+        });
+        Route::group(['prefix' => 'diploma','as'=>'diploma'], function () {
+            //approving request things for Diploma
+            Route::get('/', 'DiplomaController@pending');
+            Route::get('/views/{id}', 'DiplomaController@detail_pending');
+            Route::post('/approving', 'DiplomaController@approving');
+            Route::post('/rejecting', 'DiplomaController@rejecting');
+        });
+
+    });
+    
+});
