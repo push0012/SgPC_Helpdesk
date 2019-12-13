@@ -32,6 +32,7 @@
     <script src="{{ asset('js/languagetable.js') }}" defer></script>
     <script src="{{ asset('js/datasave.js') }}" defer></script>
     <script src="{{ asset('js/notification.js') }}" defer></script>
+    <script src="{{ asset('js/captcha.js') }}" defer></script>
     <style>
         .left-menus{
             display: none !important;
