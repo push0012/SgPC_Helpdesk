@@ -322,3 +322,7 @@ canvas{
 .captcha-image{
     margin: 20px !important;
 }
+.btnAction{
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
