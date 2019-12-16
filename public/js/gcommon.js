@@ -1,7 +1,7 @@
 function gvalidate() {
 	var output = true;
 	$(".registration-error").html('');
-	/*if($("#gpersonal-field").css('display') != 'none') {
+	if($("#gpersonal-field").css('display') != 'none') {
 		if(($("#title").val() == null)) {
 			output = false;
 			$("#title-error").html("Required");
@@ -42,9 +42,9 @@ function gvalidate() {
 			output = false;
 			$("#stu_email-error").html("Required");
 		}
-	}*/
+	}
 	
-	/*if($("#geducational-field").css('display') != 'none') {
+	if($("#geducational-field").css('display') != 'none') {
 
 		if($("#clg_id").val() == null) {
 			output = false;
@@ -53,6 +53,10 @@ function gvalidate() {
 		if($("#cos_id").val() == null) {
 			output = false;
 			$("#cos_id-error").html("Required");
+		}
+		if($("#spc_id").val() == null) {
+			output = false;
+			$("#spc_id-error").html("Required");
 		}
 		if($("#medium").val() == null) {
 			output = false;
@@ -66,9 +70,19 @@ function gvalidate() {
 			output = false;
 			$("#effective_date-error").html("Required");
 		}
+		//new cos enable true
+		if($('#new_cos').is(':disabled') == false && $("#new_cos").val() == "") {
+			output = false;
+			$("#new_cos-error").html("Required");
+		}
+		//speciality_in_word enable true
+		if($('#speciality_in_word').is(':disabled') == false && $("#speciality_in_word").val() == "") {
+			output = false;
+			$("#speciality_in_word-error").html("Required");
+		}
 		
-	}*/
-	/*if($("#gprofessional-field").css('display') != 'none') {
+	}
+	if($("#gprofessional-field").css('display') != 'none') {
 
 		if($("#job_availability").val() == null) {
 			output = false;
@@ -89,7 +103,7 @@ function gvalidate() {
 			output = false;
 			$("#it_skill_detail-error").html("Required");
 		}
-	}*/
+	}
 	return output;
 }
 function form_validate(){
@@ -138,7 +152,7 @@ function form_validate(){
 function dvalidate() {
 	var output = true;
 	$(".registration-error").html('');
-	/*if($("#dpersonal-field").css('display') != 'none') {
+	if($("#dpersonal-field").css('display') != 'none') {
 		if(($("#title").val() == null)) {
 			output = false;
 			$("#title-error").html("Required");
@@ -180,8 +194,8 @@ function dvalidate() {
 			$("#stu_email-error").html("Required");
 		}
 	}
-	*/
-	/*if($("#deducational-field").css('display') != 'none') {
+	
+	if($("#deducational-field").css('display') != 'none') {
 
 		if($("#d_clg_id").val() == null) {
 			output = false;
@@ -200,8 +214,8 @@ function dvalidate() {
 			$("#effective_date-error").html("Required");
 		}
 		
-	}*/
-	/*if($("#dprofessional-field").css('display') != 'none') {
+	}
+	if($("#dprofessional-field").css('display') != 'none') {
 
 		if($("#job_availability").val() == null) {
 			output = false;
@@ -222,7 +236,7 @@ function dvalidate() {
 			output = false;
 			$("#it_skill_detail-error").html("Required");
 		}
-	}*/
+	}
 	return output;
 }
 $(document).ready(function() {
@@ -240,9 +254,9 @@ $(document).ready(function() {
 				$(".highlight").removeClass("highlight");
 				next.addClass("highlight");
 				if($(".highlight").attr("id") == "gcaptcha") {
-					createCaptcha_degree();
 					$("#next").hide();
-					$("#finish").show();				
+					$("#finish").show();
+					createCaptcha_degree();				
 				}
 			}
 		}
@@ -277,9 +291,9 @@ $(document).ready(function() {
 				$(".highlight").removeClass("highlight");
 				next.addClass("highlight");
 				if($(".highlight").attr("id") == "dcaptcha") {
-					createCaptcha_diploma();
 					$("#dnext").hide();
-					$("#dfinish").show();				
+					$("#dfinish").show();	
+					createCaptcha_diploma();			
 				}
 			}
 		}
