@@ -41,7 +41,7 @@ Route::get('collegecourse_diploma/{id}', 'CollegeCourseController@show_diploma')
 
 
 Route::get('/confirm', function(){ return view('insert_form.register_confirm'); });
-
+Route::get('/failure', function(){ return view('insert_form.register_fail'); });
 
 Route::group(['prefix' => 'application','as'=>'application.'], function () {
     Route::group(['prefix' => 'graduate','as'=>'graduate.'], function () {
