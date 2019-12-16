@@ -49,7 +49,7 @@ function degree_save(){
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
-                    window.location = '/confirm';
+                    window.location = '/confirm/?ref=' + msg.ref+'&date='+msg.date;
                 },4000); 
             },
             error: function(msg) {
@@ -141,12 +141,14 @@ $(document).ready(function() {
                 data: savedata,
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
+                    console.log(msg);
                     setTimeout(function(){
                         window.location = '/admin/masterdata/college';
                     },4000); 
                 },
                 error: function(msg) {
                     callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
+                    console.log(msg);
                     setTimeout(function(){
                         window.location = '/admin/masterdata/college';
                     },4000); 
