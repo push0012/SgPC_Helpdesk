@@ -24,18 +24,23 @@
                     <div class="row justify-content-center">
                         <div class="col-md-6 row justify-content-center">
                             <lable>Reference Number&nbsp;:  &nbsp;</lable>
+                        </div>
+                        <div class="col-md-6 row justify-content-center">
+                            <lable>Regstered Date&nbsp;: &nbsp; </lable>  
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 row justify-content-center">
                             <strong>
-                                4875484521
+                                {{ request()->ref }}
                             </strong>
                         </div>
                         <div class="col-md-6 row justify-content-center">
-                        <lable>Regster Date&nbsp;: &nbsp; </lable>
                             <strong>
-                                4875484521
+                            {{ request()->date }}
                             </strong>
                         </div>
                     </div>
-                    
                 </div>   
             </div>  
         </div>
