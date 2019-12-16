@@ -263,17 +263,30 @@
                                 </div>
                             </div>
                         </div> 
-                        <div id="dcaptcha-field" style="display:none;">
-                            <div class="container-fluid">
-                                <div class="form-group row">
+                    </div>
+                    <div id="dcaptcha-field" style="display:none;">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12" >
+                                    <strong>Retype the Characters from the Image</strong>
+                                    <div class="captcha-image" id="captcha" ></div>
+                                    <span id="captcha-error" class="registration-error"></span><br/>
+                                    <button type="button" class="btn btn-outline-info btn-sm" onClick="createCaptcha_diploma()">
+                                        <span class="btn-label"><i class="fas fa-sync-alt"></i></span>
+                                    </button>
                                 </div>
                             </div>
-                        </div> 
-                    </div>
-                    <div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Captcha" class="form-control" id="cpatchaTextBox"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="row justify-content-center">
                         <input class="btnAction" type="button" name="dback" id="dback" value="Back" style="display:none;">
                         <input class="btnAction" type="button" name="dnext" id="dnext" value="Next" >
-                        <input class="btnAction" type="button" name="dfinish" id="dfinish" value="Finish" style="display:none;">
+                        <input class="btnAction" type="button" onClick="validateCaptcha_diploma()" name="dfinish" id="dfinish" value="Finish" style="display:none;">
                     </div>
                 </form>
         </div>  
