@@ -319,3 +319,6 @@ canvas{
     /*prevent interaction with the canvas*/
     pointer-events:none;
   }
+.captcha-image{
+    margin: 20px !important;
+}
