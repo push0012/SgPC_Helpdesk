@@ -277,6 +277,7 @@ $(document).ready(function() {
 				$(".highlight").removeClass("highlight");
 				next.addClass("highlight");
 				if($(".highlight").attr("id") == "dcaptcha") {
+					createCaptcha_diploma();
 					$("#dnext").hide();
 					$("#dfinish").show();				
 				}
