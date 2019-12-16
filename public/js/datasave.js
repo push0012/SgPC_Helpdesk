@@ -56,9 +56,10 @@ function degree_save(){
         });
     }
 
-$(document).ready(function() {
+
     //Diploma Data Store
-    $("#dfinish").click(function(){
+ //   $("#dfinish").click(function(){
+function diploma_save(){
         var posts = []; 
         $('#languageTable > tbody  > tr').each(function() {
             var postData = {
@@ -108,8 +109,9 @@ $(document).ready(function() {
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
             }
         });
-    });
+}
 
+$(document).ready(function() {
     //Store Colleges
     $("#clg_store").click(function(){
         var output = form_validate();
@@ -127,13 +129,13 @@ $(document).ready(function() {
                 url: '/admin/masterdata/college',
                 data: savedata,
                 success: function( msg ) {
-                    callNotification('fas fa-check-circle','Information','Data Save Successfully','success','/college' );
+                    callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     setTimeout(function(){
                         window.location = '/college';
                     },4000); 
                 },
                 error: function(msg) {
-                    callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
+                    callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                     window.location = '/college';
                 }
             });
