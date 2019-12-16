@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="col-md-9">
                                     <label for="stu_name">Name with Initials</label><span id="stu_name-error" class="registration-error"></span>
-                                    <div><input type="text" name="stu_name" id="stu_name" class="form-control" length="250" placeholder="Name with Initials" required/></div>
+                                    <div><input type="text" name="stu_name" id="stu_name" class="form-control textonly" length="250" placeholder="Name with Initials" required/></div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -48,18 +48,18 @@
                                 </div>
                                 <div class="col-md-3">
                                     <label for="dob">Date of Birth</label><span id="dob-error" class="registration-error"></span>
-                                    <div><input type="date" name="dob" id="dob" min="1960-01-01" max="2050-12-31" class="form-control"/></div>
+                                    <div><input type="date" name="dob" id="dob" min="1960-01-01" max="2050-12-31" class="form-control earlydate"/></div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="nic">National Identity Card Number</label><span id="nic-error" class="registration-error"></span>
-                                    <div><input type="text" name="nic" id="nic" class="form-control" minlength="9" maxlength="12" length="250" placeholder="National Identity Card Number"/></div>
+                                    <div><input type="text" name="nic" id="nic" class="form-control numberonly" minlength="9" maxlength="12" length="250" placeholder="National Identity Card Number"/></div>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6">
                                     <label for="stu_address">Address</label><span id="stu_address-error" class="registration-error"></span>
                                     <div>
-                                        <textarea class="form-control" name="stu_address" id="stu_address" ></textarea>
+                                        <textarea class="form-control textonly" name="stu_address" id="stu_address" ></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -85,11 +85,11 @@
                             <div class="form-group row">
                                 <div class="col-md-3">
                                     <label for="stu_mobile">Mobile</label><span id="stu_mobile-error" class="registration-error"></span>
-                                    <div><input type="text" name="stu_mobile" id="stu_mobile" minlength="10" maxlength="10" class="form-control" placeholder="Mobile"/></div>
+                                    <div><input type="text" name="stu_mobile" id="stu_mobile" minlength="10" maxlength="10" class="form-control numberonly" placeholder="Mobile"/></div>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="stu_telephone">Telephone</label><span id="stu_telephone-error" class="registration-error"></span>
-                                    <div><input type="text" name="stu_telephone" id="stu_telephone" minlength="10" maxlength="10" class="form-control" placeholder="Telephone"/></div>
+                                    <div><input type="text" name="stu_telephone" id="stu_telephone" minlength="10" maxlength="10" class="form-control numberonly" placeholder="Telephone"/></div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="stu_email">Email</label><span id="stu_email-error" class="registration-error"></span>
@@ -129,7 +129,7 @@
                                 <div class="col-md-12">
                                     <label for="new_cos">Insert New Degree</label><span id="new_cos-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="text" name="new_cos" id="new_cos" class="form-control" placeholder="Specify" disabled/></div>
+                                        <div><input type="text" name="new_cos" id="new_cos" class="form-control textonly" placeholder="Specify" disabled/></div>
                                     </div>
                                 </div>
                             </div>
@@ -137,16 +137,16 @@
                                 <div class="col-md-6">
                                     <label for="spc_id">Speciality</label>
                                     <div>
-                                        <select class="form-control" name="spc_id" id="spc_id">
+                                        <select class="form-control" name="spc_id" id="spc_id"><span id="spc_id-error" class="registration-error"></span>
                                             <option value="None" disabled selected>Select Speciality</option>
                                             <option value="0">New</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="speciality_in_word">Speciality in Words</label>	
+                                    <label for="speciality_in_word">Speciality in Words</label><span id="speciality_in_word-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify" disabled/></div>
+                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control textonly" placeholder="Specify" disabled/></div>
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +176,7 @@
                                 <div class="col-md-4">
                                     <label for="effective_date">Effective Date</label><span id="effective_date-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="date" name="effective_date" id="effective_date" class="form-control"/></div>
+                                        <div><input type="date" name="effective_date" id="effective_date" class="form-control earlydate"/></div>
                                     </div>
                                 </div>
                             </div>
@@ -184,11 +184,11 @@
                                 <div class="col-md-12">
                                     <label for="other_details">Others (Postgraduate, Diploma, etc)</label>
                                     <div>
-                                        <textarea class="form-control" name="other_details" id="other_details" ></textarea>
+                                        <textarea class="form-control textonly" name="other_details" id="other_details" ></textarea>
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <!--<div class="form-group row">
                                 <div class="col-md-4">
                                     <label for="transcript_front">Transcript Front Page</label>
                                     <div>
@@ -207,7 +207,7 @@
                                         <input type="file" class="form-control-file" id="degree_certificate" name="degree_certificate">
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div id="gprofessional-field" style="display:none;">
@@ -239,7 +239,7 @@
                                 <div class="col-md-12">
                                     <label for="job_preference">Job Preference</label>	
                                     <div>
-                                        <textarea class="form-control" name="job_preference" id="job_preference" ></textarea>
+                                        <textarea class="form-control textonly" name="job_preference" id="job_preference" ></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -283,7 +283,7 @@
                                 <div class="col-md-9">
                                     <label for="it_skill_detail">If "Yes", Provide Details</label><span id="it_skill_detail-error" class="registration-error"></span>
                                     <div>
-                                        <textarea class="form-control" name="it_skill_detail" id="it_skill_detail" disabled></textarea>
+                                        <textarea class="form-control textonly" name="it_skill_detail" id="it_skill_detail" disabled></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -291,7 +291,7 @@
                                 <div class="col-md-12">
                                     <label for="extra_activity">Extra-Curricular Activities</label>
                                     <div>
-                                        <textarea class="form-control" name="extra_activity" id="extra_activity" ></textarea>
+                                        <textarea class="form-control textonly" name="extra_activity" id="extra_activity" ></textarea>
                                     </div>
                                 </div>
                             </div>
