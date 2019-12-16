@@ -1,5 +1,5 @@
 //For Graduation Detail Record
-var code;
+var codeg;
 function createCaptcha_degree() {
   //clear the contents of captcha div first 
   document.getElementById('captcha').innerHTML = "";
@@ -23,19 +23,19 @@ function createCaptcha_degree() {
   ctx.font = "25px Shadows Into Light, cursive";
   ctx.strokeText(captcha.join(""), 0, 30);
   //storing captcha so that can validate you can save it somewhere else according to your specific requirements
-  code = captcha.join("");
+  codeg = captcha.join("");
   document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
 }
 function validateCaptcha_degree() {
   event.preventDefault();
   debugger
-  if (document.getElementById("cpatchaTextBox").value == code) {
+  if (document.getElementById("cpatchaTextBox").value == codeg) {
     alert("Valid Captcha")
     degree_save();
   }else{
     alert("Invalid Captcha. try Again");
     $("#captcha-error").html("Invalid Captcha. try Again");
-    createCaptcha();
+    createCaptcha_degree();
   }
 }
 
