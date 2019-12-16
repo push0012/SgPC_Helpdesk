@@ -1,5 +1,6 @@
+//For Graduation Detail Record
 var code;
-function createCaptcha() {
+function createCaptcha_degree() {
   //clear the contents of captcha div first 
   document.getElementById('captcha').innerHTML = "";
   var charsArray =
@@ -15,22 +16,25 @@ function createCaptcha() {
   }
   var canv = document.createElement("canvas");
   canv.id = "captcha";
-  canv.width = 100;
+  canv.width = 200;
   canv.height = 50;
+  
   var ctx = canv.getContext("2d");
-  ctx.font = "25px Georgia";
+  ctx.font = "25px Shadows Into Light, cursive";
   ctx.strokeText(captcha.join(""), 0, 30);
   //storing captcha so that can validate you can save it somewhere else according to your specific requirements
   code = captcha.join("");
   document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
 }
-function validateCaptcha() {
+function validateCaptcha_degree() {
   event.preventDefault();
   debugger
   if (document.getElementById("cpatchaTextBox").value == code) {
     alert("Valid Captcha")
+    degree_save();
   }else{
     alert("Invalid Captcha. try Again");
+    $("#captcha-error").html("Invalid Captcha. try Again");
     createCaptcha();
   }
 }
