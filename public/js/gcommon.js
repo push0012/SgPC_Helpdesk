@@ -213,6 +213,11 @@ function dvalidate() {
 			output = false;
 			$("#effective_date-error").html("Required");
 		}
+		//speciality_in_word enable true
+		if($('#speciality_in_word').is(':disabled') == false && $("#speciality_in_word").val() == "") {
+			output = false;
+			$("#speciality_in_word-error").html("Required");
+		}
 		
 	}
 	if($("#dprofessional-field").css('display') != 'none') {
