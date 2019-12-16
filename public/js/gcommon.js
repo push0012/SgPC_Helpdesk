@@ -106,10 +106,11 @@ function gvalidate() {
 	}
 	return output;
 }
+//college save data form
 function form_validate(){
 	var output = true;
 	$(".registration-error").html('');
-	/*if($("#clg_name").val() == "") {
+	if($("#clg_name").val() == "") {
 		output = false;
 		$("#clg_name-error").html("Required");
 	}
@@ -121,10 +122,10 @@ function form_validate(){
 		output = false;
 		$("#clg_address-error").html("Required");
 	}
-	if($("#clg_telephone").val() == "") {
+	/*if($("#clg_telephone").val() == "") {
 		output = false;
 		$("#clg_telephone-error").html("Required");
-	}
+	}*/
 	if($("#clg_email").val() == "") {
 		output = false;
 		$("#clg_email-error").html("Required");
@@ -133,11 +134,11 @@ function form_validate(){
 		output = false;
 		$("#clg_website-error").html("Required");
 	}
-	if($("#it_skill").val() == "") {
+	/*if($("#it_skill").val() == "") {
 		output = false;
 		$("#it_skill-error").html("Required");
 	}
-*/
+
 	if($("#e_clg_id").val() == null) {
 		output = false;
 		$("#e_clg_id-error").html("Required");
@@ -146,7 +147,7 @@ function form_validate(){
 	if($("#cos_id").val() == null) {
 		output = false;
 		$("#cos_id-error").html("Required");
-	}
+	}*/
 	return output;
 }
 function dvalidate() {
