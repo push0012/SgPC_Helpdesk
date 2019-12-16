@@ -240,6 +240,7 @@ $(document).ready(function() {
 				$(".highlight").removeClass("highlight");
 				next.addClass("highlight");
 				if($(".highlight").attr("id") == "gcaptcha") {
+					createCaptcha_degree();
 					$("#next").hide();
 					$("#finish").show();				
 				}
@@ -297,7 +298,5 @@ $(document).ready(function() {
 			}
 		}
 	});
-		
 	
-
 });
