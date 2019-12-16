@@ -155,7 +155,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group row">
+                           <!-- <div class="form-group row">
                                 <div class="col-md-4">
                                     <label for="diploma_front">Diploma Certificate Front Page</label>
                                     <div>
@@ -174,7 +174,7 @@
                                         <input type="file" class="form-control-file" id="diploma_additional" name="diploma_additional">
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div id="dprofessional-field" style="display:none;">
