@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\College;
-
+use DB;
 class CollegeController extends Controller
 {
     /**
@@ -35,9 +35,24 @@ class CollegeController extends Controller
      */
     public function store(Request $request)
     {
+        DB::beginTransaction();
+  
+        try 
+        {
+            
         $college = College::create($request->all());
-
+        
+        // Commit Transaction
+        DB::commit();
         return response()->json($college, 201);
+        } catch (\Exception $e) {
+
+        // Rollback Transaction
+        DB::rollback();
+        return response()->json($e, 500);
+        }
+
+       
     }
 
     /**

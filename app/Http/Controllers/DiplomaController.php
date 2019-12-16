@@ -23,33 +23,44 @@ class DiplomaController extends Controller
 
     public function store(Request $request)
     {
-        $student = Student::create($request->all());
-        $request->request->add(['stu_id' => $student->stu_id]);
- 
-        if($request->cos_id == 0)
+        DB::beginTransaction();
+  
+        try 
         {
-            $newCourse = Course::create(['cos_title'=> $request->speciality_in_word,'cos_type' =>'Diploma']);
-            CollegeCourse::create(['clg_id'=>$request->clg_id,'cos_id'=>$newCourse->cos_id,'spc_id'=>2]);
-            $request->merge(['cos_id' => $newCourse->cos_id]);
+            $student = Student::create($request->all());
+            $request->request->add(['stu_id' => $student->stu_id]);
+    
+            if($request->cos_id == 0)
+            {
+                $newCourse = Course::create(['cos_title'=> $request->speciality_in_word,'cos_type' =>'Diploma']);
+                CollegeCourse::create(['clg_id'=>$request->clg_id,'cos_id'=>$newCourse->cos_id,'spc_id'=>2]);
+                $request->merge(['cos_id' => $newCourse->cos_id]);
 
+            }
+
+            $students = StudentEducationDiploma::create($request->all());
+            $studentss = StudentProfessional::create($request->all());
+
+            $languages = $request->language;
+
+            foreach ($languages as $language){ 
+                StudentLanguage::create([
+                    'language_name' => $language['language_name'],
+                    'write_skill' => $language['write_skill'],
+                    'read_skill' => $language['read_skill'],
+                    'speech_skill' => $language['speech_skill'],
+                    'stu_id' => $student->stu_id
+                    ]);
+            }
+        DB::commit();
+        return response()->json("Data Saving Completed", 201);
+        } catch (\Exception $e) {
+
+        // Rollback Transaction
+        DB::rollback();
+        return response()->json($e, 500);
         }
-
-        $students = StudentEducationDiploma::create($request->all());
-        $studentss = StudentProfessional::create($request->all());
-
-        $languages = $request->language;
-
-        foreach ($languages as $language){ 
-            StudentLanguage::create([
-                'language_name' => $language['language_name'],
-                'write_skill' => $language['write_skill'],
-                'read_skill' => $language['read_skill'],
-                'speech_skill' => $language['speech_skill'],
-                'stu_id' => $student->stu_id
-                ]);
-        }
-
-        return response()->json($studentss, 201);
+        //return response()->json($studentss, 201);
     }
 
     public function pending()
@@ -66,6 +77,10 @@ class DiplomaController extends Controller
 
     public function approving(Request $request)
     {
+        DB::beginTransaction();
+        try 
+        {
+
         $confirm = StudentConfirmDiploma::create($request->all());
 
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '1'));
@@ -75,12 +90,23 @@ class DiplomaController extends Controller
                                         ->update(array('sep_confirm_data' => '1'));
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '1'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
-        return response()->json($goss, 201);
+        DB::commit();
+        return response()->json("Data Saving Completed", 201);
+        } catch (\Exception $e) {
+
+        // Rollback Transaction
+        DB::rollback();
+        return response()->json($e, 500);
+        }
+        //return response()->json($goss, 201);
     }
 
     public function rejecting(Request $request)
     {
-        
+        DB::beginTransaction();
+        try 
+        {
+
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '2'));
         $gos = StudentEducationDiploma::where('stu_id', $request->stu_id)
                                         ->where('clg_id', $request->clg_id)
@@ -88,6 +114,15 @@ class DiplomaController extends Controller
                                         ->update(array('sep_confirm_data' => '2'));
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '2'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '2'));
+        
+        DB::commit();
+        return response()->json("Data Saving Completed", 201);
+        } catch (\Exception $e) {
+
+        // Rollback Transaction
+        DB::rollback();
+        return response()->json($e, 500);
+        }
         return response()->json($goss, 201);
     }
 }

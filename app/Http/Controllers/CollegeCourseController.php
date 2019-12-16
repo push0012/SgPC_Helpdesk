@@ -41,10 +41,12 @@ class CollegeCourseController extends Controller
      */
     public function store(Request $request)
     {
-        //speciality
-        //clg_id
-        //cos_id
+        
         $specialities = $request->speciality;
+
+        DB::beginTransaction();
+        try 
+        {
 
         foreach($specialities as $speciality){ 
             $special = DegreeSpecial::create([
@@ -58,10 +60,14 @@ class CollegeCourseController extends Controller
                 
             CollegeCourse::create($request->all());
         }
+        DB::commit();
+        return response()->json("data Saved Successfully", 201);
+        } catch (\Exception $e) {
 
-        $collegecourse = "data saved";
-
-        return response()->json($collegecourse, 201);
+        // Rollback Transaction
+        DB::rollback();
+        return response()->json($e, 500);
+        }
     }
 
     /**
