@@ -297,22 +297,29 @@
                             </div>
                         </div> 
                     </div>
-                    <div id="gcaptcha-field" style="display:none;">
-                            <div class="container-fluid">
-                                <div class=" row">
-
-                                    <div id="captcha">
-                                    </div>
-                                    <input type="text" placeholder="Captcha" id="cpatchaTextBox"/>
-                                    <button type="submit">Submit</button>
-                                    <button type="button" onClick="createCaptcha()">get</button>
+                    <div id="gcaptcha-field" style="display:none; padding:20px;">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="col-md-12" >
+                                    <strong>Retype the Characters from the Image</strong>
+                                    <div class="captcha-image" id="captcha" ></div>
+                                    <span id="captcha-error" class="registration-error"></span><br/>
+                                    <button type="button" class="btn btn-outline-info btn-sm" onClick="createCaptcha_degree()">
+                                        <span class="btn-label"><i class="fas fa-sync-alt"></i></span>
+                                    </button>
                                 </div>
                             </div>
+                            <div class="row justify-content-center">
+                                <div class="col-md-12">
+                                    <input type="text" placeholder="Captcha" class="form-control" id="cpatchaTextBox"/>
+                                </div>
+                            </div>
+                        </div>
                     </div> 
                     <div class="row justify-content-center">
                         <input class="btnAction" type="button" name="back" id="back" value="Back" style="display:none;">
                         <input class="btnAction" type="button" name="next" id="next" value="Next" >
-                        <input class="btnAction" type="button" name="finish" id="finish" value="Finish" style="display:none;">
+                        <input class="btnAction" type="button" onClick="validateCaptcha_degree()" name="finish" id="finish" value="Finish" style="display:none;">
                     </div>
                 </form>
                    
