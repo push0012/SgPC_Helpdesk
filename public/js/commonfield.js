@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	//Prevent name filed from special charecters
-	$("#stu_name").keypress(function(e) {
-		$("#stu_name-error").remove();
+	$(".textonly").keypress(function(e) {
+		//$("#stu_name-error").remove();
 		var error = "";
 		var k = e.keyCode,
 		$return = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32  || (k >= 48 && k <= 57));
@@ -10,30 +10,12 @@ $(document).ready(function() {
 		}
 	});
 	//Prevent inserting dob after today
-	$('#dob').prop('max', function(){
+	$('.earlydate').prop('max', function(){
 		return new Date().toJSON().split('T')[0];
 	});
 	//Nic Field
-	$("#nic").keypress(function(e) {
-		$("#nic-error").remove();
-		var k = e.keyCode,
-		$return = ((k >= 48 && k <= 57));
-		if(!$return) {
-			  return false;
-		}
-	});
-	//get mobile as number
-	$("#stu_mobile").keypress(function(e) {
-		$("#stu_mobile-error").remove();
-		var k = e.keyCode,
-		$return = ((k >= 48 && k <= 57));
-		if(!$return) {
-			  return false;
-		}
-	});
-	//get telephone as number
-	$("#stu_telephone").keypress(function(e) {
-		$("#stu_telephone-error").remove();
+	$(".numberonly").keypress(function(e) {
+		//$("#nic-error").remove();
 		var k = e.keyCode,
 		$return = ((k >= 48 && k <= 57));
 		if(!$return) {
@@ -166,11 +148,6 @@ $(document).ready(function() {
 		}else{
 			$("#new_cos").attr('disabled',true);
 		}
-	});
-
-	//prevent later dates entering
-	$('#effective_date').prop('max', function(){
-		return new Date().toJSON().split('T')[0];
 	});
 
 	//jobavailability doprdown eneble
