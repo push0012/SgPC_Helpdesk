@@ -40,7 +40,7 @@ Route::get('/speciality_request', 'DegreeSpecialController@speciality');
 Route::get('collegecourse_diploma/{id}', 'CollegeCourseController@show_diploma');
 
 
-
+Route::get('/confirm', function(){ return view('insert_form.register_confirm'); });
 
 
 Route::group(['prefix' => 'application','as'=>'application.'], function () {
