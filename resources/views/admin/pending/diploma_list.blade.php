@@ -26,7 +26,7 @@
             <td>{{ $diploma_list->nic}}</td>
             <td>{{ $diploma_list->cos_title}} </td>
             <td>{{ $diploma_list->clg_name}}</td>
-            <td><a class="btn btn-transparent" href="/views/{{$diploma_list->stu_id}}" ><i class="fas fa-bars"></i></a></td>
+            <td><a class="btn btn-transparent" href="views/{{$diploma_list->stu_id}}" ><i class="fas fa-bars"></i></a></td>
           </tr>
           @endforeach
           </tbody>
