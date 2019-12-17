@@ -15,9 +15,8 @@ class DegreeSpecialController extends Controller
      */
     public function index()
     {
-        $speciality = DegreeSpecial::all();
-
-        return response()->json($speciality, 201);
+        $specialities = DegreeSpecial::all();
+        return view('admin.speciality.speciality_list', compact(['specialities']));
     }
 
     /**
@@ -27,7 +26,7 @@ class DegreeSpecialController extends Controller
      */
     public function create()
     {
-        //
+        //return view('admin.speciality.insert_college');
     }
 
     /**
@@ -85,14 +84,5 @@ class DegreeSpecialController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function speciality(Request $request)
-    {
-        $cozbycollege = DB::table('collegecoursespecialview')
-            ->where('clg_id', $request['clg_id'])
-            ->where('cos_id', $request['cos_id'])->get();
-
-        return response()->json($cozbycollege, 201);
     }
 }
