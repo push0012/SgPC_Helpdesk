@@ -36,8 +36,14 @@ Route::post('/sendinquiry', 'ContactUsController@sendInquiry');
 //Backend Routes
 
 //ajax request routes
-Route::get('/speciality_request', 'DegreeSpecialController@speciality');
-Route::get('collegecourse_diploma/{id}', 'CollegeCourseController@show_diploma');
+
+Route::group(['prefix' => 'ajax','as'=>'ajax.'], function () {
+    Route::get('specialities', 'AjaxController@all_specialities');
+    Route::get('speciality_by', 'AjaxController@speciality_by');
+    Route::get('get_degree/{id}', 'AjaxController@get_degree_courses');
+    Route::get('get_diploma/{id}', 'AjaxController@get_diploma_courses');
+});
+
 
 
 Route::get('/confirm', function(){ return view('insert_form.register_confirm'); });
