@@ -157,4 +157,7 @@ $('#removeLanguage').click( function () {
     
     //course list table
     var d = $('#courseslistTable').DataTable();
+
+    //speciality list table
+    var d = $('#specialitylistTable').DataTable();
 });
