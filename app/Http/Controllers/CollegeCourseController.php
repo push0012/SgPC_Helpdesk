@@ -78,17 +78,9 @@ class CollegeCourseController extends Controller
      */
     public function show($id)
     {
-        $cozbycollege = DB::table('collegecourseview')
-        ->where('clg_id', $id)
-        ->where('cos_type','Degree')->get();
-        return response()->json($cozbycollege, 201);
+        
     }
 
-    public function show_diploma($id)
-    {
-        $cozbycollege = DB::table('collegecourseview')->where('clg_id', $id)->where('cos_type','Diploma')->get();
-        return response()->json($cozbycollege, 201);
-    }
     /**
      * Show the form for editing the specified resource.
      *
