@@ -199,6 +199,9 @@ $(document).ready(function() {
     $("#g_reg_app").click(function(){
         var savedata = {
             'stu_id': $('#stu_id').val(),
+            'stu_mobile': $('#stu_mobile').val(),
+            'stu_email': $('#stu_email').val(),
+            'reg_date': $('#reg_date').text(),
             'clg_id': $('#clg_id').val(),
             'cos_id': $('#cos_id').val(),
             'spc_id': $('#spc_id').val(),
@@ -214,10 +217,10 @@ $(document).ready(function() {
                 setTimeout(function(){
                     window.location = '/admin/pending/degree/';
                 },4000);
-                console.log(msg);
+                //console.log(msg);
             },
             error: function(msg) {
-                console.log(msg);
+                //console.log(msg);
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                 setTimeout(function(){
                     window.location = '/admin/pending/degree/';
