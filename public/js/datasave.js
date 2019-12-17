@@ -190,6 +190,64 @@ $(document).ready(function() {
         }
     });
 
+    //store course Titles
+    $("#cos_title_store").click(function(){
+        /*var output = form_validate();
+        if(output){*/
+            var savedata = {
+                'cos_title': $('#cos_title').val(),
+                'cos_type': $('#cos_type').val(),
+            }
+            $.ajax({
+                type: "POST",
+                url: '/admin/masterdata/course',
+                data: savedata,
+                success: function( msg ) {
+                    callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/course';
+                    },4000);
+                    
+                },
+                error: function(msg) {
+                    callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
+                    window.location = '/admin/masterdata/course';
+                }
+            });
+        //}
+    });
+    //Edit course Titles
+    $("#cos_title_edit").click(function(){
+        /*var output = form_validate();
+        if(output){*/
+            var savedata = {
+                'cos_title': $('#cos_title').val(),
+                'cos_type': $('#cos_type').val(),
+            }
+            $.ajax({
+                type: "PUT",
+                url: '/admin/masterdata/course/'+ $('#cos_id').val(),
+                data: savedata,
+                success: function( msg ) {
+                    callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/course';
+                    },4000);
+
+                    
+                },
+                error: function(msg) {
+                    console.log(msg)
+                    callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
+                    setTimeout(function(){
+                    window.location = '/admin/masterdata/course';
+                    },4000);
+                }
+            });
+        //}
+    });
+
+
     //store Courses
     $("#cos_store").click(function(){
         var output = form_validate();

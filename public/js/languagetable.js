@@ -155,4 +155,6 @@ $('#removeLanguage').click( function () {
     //college list table
     var s = $('#collegelistTable').DataTable();
     
+    //course list table
+    var d = $('#courseslistTable').DataTable();
 });

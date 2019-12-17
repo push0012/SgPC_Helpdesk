@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Course;
+use DB;
 
 class CourseController extends Controller
 {
@@ -14,9 +15,8 @@ class CourseController extends Controller
      */
     public function index()
     {
-        $course = Course::where('cos_type','Degree')->get();
-
-        return response()->json($course, 201);
+        $courses = Course::all();
+        return view('admin.course.course_list', compact(['courses']));
     }
 
     /**
@@ -26,7 +26,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.course.insert_course');
     }
 
     /**
@@ -61,7 +61,8 @@ class CourseController extends Controller
      */
     public function edit($id)
     {
-        //
+        $course = Course::where('cos_id',$id)->first();
+        return view('admin.course.edit_course', compact(['course']));
     }
 
     /**
@@ -73,7 +74,22 @@ class CourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::beginTransaction();
+  
+        try 
+        {
+
+        $updated = Course::where('cos_id', $id)->update($request->all());
+        
+        // Commit Transaction
+        DB::commit();
+        return response()->json($updated, 201);
+        } catch (\Exception $e) {
+
+        // Rollback Transaction
+        DB::rollback();
+        return response()->json($e, 500);
+        }
     }
 
     /**

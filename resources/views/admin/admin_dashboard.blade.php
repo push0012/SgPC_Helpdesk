@@ -40,7 +40,7 @@
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <a type="button" class="btn btn-labeled btn-success" href="/admin/masterdata/collegecourse/">
+                        <a type="button" class="btn btn-labeled btn-success" href="/admin/masterdata/course/">
                             <span class="btn-labeling"><i class="fas fa-certificate"></i></span>
                                 Course
                             <span class="btn-labeling btn-right">0</span>
