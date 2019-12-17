@@ -18,6 +18,8 @@
                     <div class="col-md-9">
                         <lable>{{ $diplomaholder->stu_name}}</lable>
                         <input type="hidden" name="stu_id" id="stu_id" value="{{ $diplomaholder->stu_id }}"/>
+                        <input type="hidden" name="stu_mobile" id="stu_mobile" value="{{ $diplomaholder->stu_mobile }}"/>
+                        <input type="hidden" name="stu_email" id="stu_email" value="{{ $diplomaholder->stu_email }}"/>
                     </div>
                 </div>
                 <div class="row digdetail">
@@ -77,7 +79,7 @@
                         <lable>Registered Date:</lable>
                     </div>
                     <div class="col-md-9">
-                        <lable>{{ Carbon\Carbon::parse($diplomaholder->created_at)->format('Y-m-d')}}</lable>
+                        <lable name="reg_date" id="reg_date">{{ Carbon\Carbon::parse($diplomaholder->created_at)->format('Y-m-d')}}</lable>
                     </div>
                 </div>
                 <div class="row digdetail">
