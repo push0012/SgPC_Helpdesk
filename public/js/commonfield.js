@@ -43,7 +43,7 @@ $(document).ready(function() {
 		var clgid = $(this).val();
 		$.ajax({
 			type: "GET",
-			url: '/admin/masterdata/collegecourse/' + clgid,
+			url: '/ajax/get_degree/' + clgid,
 			success: function( msg ) {
 				$('#cos_id :gt(0)').remove();
 				$("#cos_id").append($("<option>").attr("value", 0).text('New'));
@@ -65,7 +65,7 @@ $(document).ready(function() {
 		if(postData.cos_id == 0){
 			$.ajax({
 				type: "GET",
-				url: '/admin/masterdata/special/',
+				url: '/ajax/specialities/',
 				data: postData,
 				success: function( msg ) {
 					$('#spc_id :gt(0)').remove();
@@ -78,7 +78,7 @@ $(document).ready(function() {
 		}else{
 			$.ajax({
 				type: "GET",
-				url: '/speciality_request/',
+				url: '/ajax/speciality_by/',
 				data: postData,
 				success: function( msg ) {
 					$('#spc_id :gt(0)').remove();
@@ -99,7 +99,7 @@ $(document).ready(function() {
 		console.log(clgid)
 		$.ajax({
 			type: "GET",
-			url: '/collegecourse_diploma/' + clgid,
+			url: '/ajax/get_diploma/' + clgid,
 			success: function( msg ) {
 				$('#d_cos_id :gt(0)').remove();
 				$("#d_cos_id").append($("<option>").attr("value", 0).text('New'));
