@@ -156,6 +156,39 @@ $(document).ready(function() {
             });
         }
     });
+    //update college
+    $("#clg_edit").click(function(){
+        var output = form_validate();
+        if(output){
+            var savedata = {
+                'clg_name': $('#clg_name').val(),
+                'clg_type': $('#clg_type').val(),
+                'clg_address': $('#clg_address').val(),
+                'clg_telephone': $('#clg_telephone').val(),
+                'clg_email': $('#clg_email').val(),
+                'clg_website': $('#clg_website').val(),
+            }
+            $.ajax({
+                type: "PUT",
+                url: '/admin/masterdata/college/'+ $('#clg_id').val(),
+                data: savedata,
+                success: function( msg ) {
+                    callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
+                    console.log(msg);
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/college';
+                    },4000); 
+                },
+                error: function(msg) {
+                    callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
+                    console.log(msg);
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/college';
+                    },4000); 
+                }
+            });
+        }
+    });
 
     //store Courses
     $("#cos_store").click(function(){

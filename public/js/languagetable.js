@@ -152,5 +152,7 @@ $('#removeLanguage').click( function () {
         s.row('.selected').remove().draw( false );
     } );
 
-
+    //college list table
+    var s = $('#collegelistTable').DataTable();
+    
 });

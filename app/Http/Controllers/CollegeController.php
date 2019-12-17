@@ -14,7 +14,8 @@ class CollegeController extends Controller
      */
     public function index()
     {
-        return view('admin.insert_college');
+        $colleges = College::all();
+        return view('admin.college.college_list', compact(['colleges']));
     }
 
     /**
@@ -24,7 +25,7 @@ class CollegeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.college.insert_college');
     }
 
     /**
@@ -74,7 +75,8 @@ class CollegeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $college = College::where('clg_id',$id)->first();
+        return view('admin.college.edit_college', compact(['college']));
     }
 
     /**
@@ -86,7 +88,22 @@ class CollegeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::beginTransaction();
+  
+        try 
+        {
+
+        $updated = College::where('clg_id', $id)->update($request->all());
+        
+        // Commit Transaction
+        DB::commit();
+        return response()->json($updated, 201);
+        } catch (\Exception $e) {
+
+        // Rollback Transaction
+        DB::rollback();
+        return response()->json($e, 500);
+        }
     }
 
     /**

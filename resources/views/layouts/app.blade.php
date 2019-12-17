@@ -20,12 +20,13 @@
     <link href="{{ asset('css/style1.css') }}" rel="stylesheet"> 
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">  
     <link href="{{ asset('css/fontawesome/css/all.css') }}" rel="stylesheet"> 
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">  
+
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" defer></script>
     <script src="{{ asset('js/bootstrap-notify.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap-notify.min.js') }}" defer></script>
     <script src="{{ asset('js/commonfield.js') }}" defer></script>
@@ -34,6 +35,9 @@
     <script src="{{ asset('js/datasave.js') }}" defer></script>
     <script src="{{ asset('js/notification.js') }}" defer></script>
     <script src="{{ asset('js/captcha.js') }}" defer></script>
+    
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" defer></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" defer></script>
     <style>
         .left-menus{
             display: none !important;
