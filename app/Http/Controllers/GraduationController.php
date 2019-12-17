@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\StudentRegister;
-use App\DsDivision;
 use App\College;
 use App\Student;
 use App\StudentEducationDegree;
@@ -127,7 +126,7 @@ class GraduationController extends Controller
         Mail::send(new StudentRegister($result));
 
         DB::commit();
-        return response()->json($result, 201);
+        return response()->json("Data Saved Successfully", 201);
         } catch (\Exception $e) {
 
         // Rollback Transaction
