@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\StudentRegister;
 use App\DsDivision;
 use App\College;
 use App\Student;
@@ -98,6 +100,7 @@ class GraduationController extends Controller
   
         try 
         {
+        $degreeholder = DB::table('degreestudentlist')->where('stu_id', $request->stu_id)->first();    
         $confirm = StudentConfirmDegree::create($request->all());
 
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '1'));
@@ -108,8 +111,23 @@ class GraduationController extends Controller
                                         ->update(array('srg_confirm_data' => '1'));
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '1'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
+
+        
+
+        $result = collect([
+                'email'=> $request->stu_email,
+                'mobile'=>$request->stu_mobile,
+                'reg_no'=>$request->degree_reg_no,
+                'reg_date'=>$request->reg_date,
+                'clg_name'=>$degreeholder->clg_name,
+                'cos_title'=>$degreeholder->cos_title,
+                'spc_name'=>$degreeholder->spc_name,
+        ]);
+
+        Mail::send(new StudentRegister($result));
+
         DB::commit();
-        return response()->json("Data Saved Successfully", 201);
+        return response()->json($result, 201);
         } catch (\Exception $e) {
 
         // Rollback Transaction
