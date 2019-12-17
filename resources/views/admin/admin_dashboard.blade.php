@@ -47,6 +47,13 @@
                         </a>
                     </div>
                     <div class="col-md-4">
+                        <a type="button" class="btn btn-labeled btn-success" href="/admin/masterdata/special/">
+                            <span class="btn-labeling"><i class="fas fa-certificate"></i></span>
+                                Speciality
+                            <span class="btn-labeling btn-right">0</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4">
                        
                     </div>
                 </div>
