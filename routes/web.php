@@ -42,6 +42,7 @@ Route::group(['prefix' => 'ajax','as'=>'ajax.'], function () {
     Route::get('speciality_by', 'AjaxController@speciality_by');
     Route::get('get_degree/{id}', 'AjaxController@get_degree_courses');
     Route::get('get_diploma/{id}', 'AjaxController@get_diploma_courses');
+    Route::get('get_all/{id}', 'AjaxController@get_all_courses');
 });
 
 
@@ -69,7 +70,8 @@ Route::group(['prefix' => 'admin','as'=>'admin.'], function () {
         Route::resource('dsdivision', 'DsDivisionController');
         Route::resource('college', 'CollegeController');
         Route::resource('course', 'CourseController');
-        Route::resource('collegecourse', 'CollegeCourseController');
+        Route::resource('collegecourse', 'CollegeCourseController', ['except' => ['edit']]);
+        Route::get('collegecourse/{spc_id}/{cos_id}/{clg_id}/edit', 'CollegeCourseController@edit');
         Route::resource('special', 'DegreeSpecialController');
         Route::resource('student', 'StudentController');
     });

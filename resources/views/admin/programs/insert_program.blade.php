@@ -46,6 +46,7 @@
                             <button type="button" class="btn btn-outline-danger btn-sm float-right" id="removeSPC">
                                 <span class="btn-label"><i class="fas fa-times"></i></span>
                             </button>
+                            <br/>
                             <table id="courseTable" class="display courseTable" style="width:900px">
                                 <thead>
                                     <tr>
@@ -59,10 +60,10 @@
                     <div class="form-group row">
                         <div class="col-md-12">
                             <div>
-                                <input class="btnAction store" type="button" name="cos_store" id="cos_store" value="Store Courses" >
+                                <input class="btnAction store" type="button" name="cos_store" id="cos_store" value="Store Courses by University or Institute" >
                             </div>
                         </div>  
-                    </div> 
+                    </div>  
                 </div>
             </form>
         </div>  

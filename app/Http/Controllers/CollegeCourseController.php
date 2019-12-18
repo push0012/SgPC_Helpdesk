@@ -19,8 +19,7 @@ class CollegeCourseController extends Controller
     public function index()
     {
         $colleges = College::all();
-        $courses = Course::all();
-        return view('admin.insert_course', compact(['colleges', 'courses']));
+        return view('admin.programs.program_list', compact(['colleges']));
     }
 
     /**
@@ -30,7 +29,9 @@ class CollegeCourseController extends Controller
      */
     public function create()
     {
-        //
+        $colleges = College::all();
+        $courses = Course::all();
+        return view('admin.programs.insert_program', compact(['colleges', 'courses']));
     }
 
     /**
@@ -43,15 +44,20 @@ class CollegeCourseController extends Controller
     {
         
         $specialities = $request->speciality;
-
         DB::beginTransaction();
         try 
         {
 
-        foreach($specialities as $speciality){ 
-            $special = DegreeSpecial::create([
-                'spc_name' => $speciality['spc_name'],
-            ]);
+        foreach($specialities as $speciality){
+            
+            $getspec = DegreeSpecial::where('spc_name','like','%'.$speciality['spc_name'].'%')->count();
+            if($getspec == 0){
+                $special = DegreeSpecial::create([
+                    'spc_name' => $speciality['spc_name'],
+                ]);
+            }else{
+                $special = DegreeSpecial::where('spc_name','like','%'.$speciality['spc_name'].'%')->first();
+            }
 
             $request->request->add([
                 'spc_id' => $special->spc_id,
@@ -87,9 +93,14 @@ class CollegeCourseController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($spc_id,$cos_id,$clg_id)
     {
-        //
+        $program = DB::table('collegecoursespecialview')
+            ->where('clg_id', $clg_id)
+            ->where('cos_id', $cos_id)
+            ->where('spc_id',$spc_id)
+            ->first();
+        return view('admin.programs.edit_program', compact(['program']));
     }
 
     /**
@@ -101,7 +112,25 @@ class CollegeCourseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::beginTransaction();
+  
+        try 
+        {
+
+        $updated = CollegeCourse::where('spc_id', $id)
+        ->where('clg_id', $request->clg_id)
+        ->where('cos_id',$request->cos_id)
+        ->update($request->all());
+        
+        // Commit Transaction
+        DB::commit();
+        return response()->json($updated, 201);
+        } catch (\Exception $e) {
+
+        // Rollback Transaction
+        DB::rollback();
+        return response()->json($e, 500);
+        }
     }
 
     /**

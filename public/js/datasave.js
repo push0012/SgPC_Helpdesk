@@ -250,9 +250,9 @@ $(document).ready(function() {
 
     //store Courses
     $("#cos_store").click(function(){
-        var output = form_validate();
-        console.log(output);
-        if(output){
+        //var output = form_validate();
+        //console.log(output);
+        //if(output){
         var posts = []; 
         $('#courseTable > tbody  > tr').each(function() {
             var postData = {
@@ -273,17 +273,49 @@ $(document).ready(function() {
                 data: savedata,
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
-                    /*setTimeout(function(){
-                        window.location = '/admin/masterdata//collegecourse';
-                    },4000);*/
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/collegecourse';
+                    },4000);
                     
                 },
                 error: function(msg) {
                     callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
-                    window.location = '/collegecourse';
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/collegecourse';
+                    },4000);
                 }
             });
-        }
+        //}
+    });
+
+    //Edit Courses
+    $("#program_edit").click(function(){
+            var savedata = {
+                'clg_id': $('#clg_id').val(),
+                'cos_id': $('#cos_id').val(),
+                'spc_id': $('#spc_id').val(),
+                'cos_duration': $('#cos_duration').val(),
+                'cos_coor_name': $('#cos_coor_name').val(),
+                'cos_coor_mobile': $('#cos_coor_mobile').val(),
+            }
+            $.ajax({
+                type: "PUT",
+                url: '/admin/masterdata/collegecourse/'+ $('#spc_id').val(),
+                data: savedata,
+                success: function( msg ) {
+                    callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/collegecourse';
+                    },2500);
+                },
+                error: function(msg) {
+                    callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/collegecourse';
+                    },2500);
+                }
+            });
+        //}
     });
 
     //graduation approve

@@ -10,6 +10,14 @@ use DB;
 
 class AjaxController extends Controller
 {
+    public function get_all_courses($id)
+    {
+        $cozbycollege = DB::table('collegecourseview')
+        ->where('clg_id', $id)
+        ->get();
+        return response()->json($cozbycollege, 201);
+    }
+
     public function get_degree_courses($id)
     {
         $cozbycollege = DB::table('collegecourseview')
