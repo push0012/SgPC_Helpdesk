@@ -26,7 +26,7 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+    <script src="{{ asset('js/jquery-3.3.1.min.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap-notify.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap-notify.min.js') }}" defer></script>
     <script src="{{ asset('js/commonfield.js') }}" defer></script>
