@@ -119,7 +119,7 @@ $('#removeLanguage').click( function () {
 
 
 //add course Speciality things within DataTable
-    var s = $('#courseTable').DataTable({
+    var h = $('#courseTable').DataTable({
         paging: false,
         searching: false,
         ordering:  false,
@@ -128,7 +128,7 @@ $('#removeLanguage').click( function () {
     });
 
     $('#addSPC').on( 'click', function () {
-        s.row.add( [
+        h.row.add( [
             '<input type=\"text\" id=\"spc_name\" name=\"spc_name\" size=\"70\" required/>',
             '<input type=\"text\" id=\"cos_duration\" name=\"cos_duration\" size=\"10\" required/>',
         ] ).draw( false );
@@ -143,13 +143,13 @@ $('#removeLanguage').click( function () {
             $(this).removeClass('selected');
         }
         else {
-            s.$('tr.selected').removeClass('selected');
+            h.$('tr.selected').removeClass('selected');
             $(this).addClass('selected');
         }
     } );
     //remove selected row when click on remove button
     $('#removeSPC').click( function () {
-        s.row('.selected').remove().draw( false );
+        h.row('.selected').remove().draw( false );
     } );
 
     //college list table
