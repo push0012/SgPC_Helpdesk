@@ -23,7 +23,7 @@
                             @foreach($specialities as $speciality)
                             <tr>
                                 <td>{{ $speciality->spc_name}}</td>
-                                <td><a href="{{$speciality->spc_id}}/edit"><i class="fas fa-edit"></a></i></td>
+                                <td><a href="{{ url('admin/masterdata/collegecourse/'.$speciality->spc_id.'/edit') }}"><i class="fas fa-edit"></a></i></td>
                             </tr>
                             @endforeach
                         </tbody>

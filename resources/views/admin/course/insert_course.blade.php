@@ -10,7 +10,7 @@
                     <div class="form-group row">
                         <div class="col-md-12">
                             <label for="cos_title">Course Title</label><span id="cos_title-error" class="registration-error"></span>
-                            <div><input type="text" name="cos_title" id="cos_title" class="form-control" length="250" placeholder="Course Title" required/></div>
+                            <div><input type="text" name="cos_title" id="cos_title" class="form-control textonly" length="250" placeholder="Course Title" required/></div>
                         </div>  
                     </div>
                     <div class="form-group row">

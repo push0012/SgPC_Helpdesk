@@ -38,7 +38,7 @@
                         <div class="col-md-4">
                             <label for="clg_telephone">Telephone</label><span id="clg_telephone-error" class="registration-error"></span>
                             <div>
-                            <input type="text" name="clg_telephone" id="clg_telephone" class="form-control" length="250" placeholder="College Telephone" value="{{ $college->clg_telephone }}" required/>
+                            <input type="text" name="clg_telephone" id="clg_telephone" class="form-control numberonly" length="250" placeholder="College Telephone" value="{{ $college->clg_telephone }}" required/>
                             </div>
                         </div>
                         <div class="col-md-8">

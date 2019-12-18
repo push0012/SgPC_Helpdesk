@@ -36,7 +36,7 @@
                         <div class="col-md-3">
                             <label for="cos_duration">Duration</label>
                             <div>
-                                <input type="text" name="cos_duration" id="cos_duration" class="form-control" value="{{ $program->cos_duration}}"/>
+                                <input type="text" name="cos_duration" id="cos_duration" class="form-control textonly" value="{{ $program->cos_duration}}"/>
                             </div>
                         </div> 
                     </div>
@@ -44,13 +44,13 @@
                         <div class="col-md-6">
                             <label for="cos_coor_name">Course Coordinator</label>
                             <div>
-                                <input type="text" name="cos_coor_name" id="cos_coor_name" class="form-control"  value="{{ $program->cos_coor_name}}"/>
+                                <input type="text" name="cos_coor_name" id="cos_coor_name" class="form-control textonly"  value="{{ $program->cos_coor_name}}"/>
                             </div>
                         </div> 
                         <div class="col-md-6">
                             <label for="cos_coor_name">Course Coordinator Mobile</label>
                             <div>
-                                <input type="text" name="cos_coor_mobile" id="cos_coor_mobile" class="form-control" value="{{ $program->cos_coor_mobile}}"/>
+                                <input type="text" name="cos_coor_mobile" id="cos_coor_mobile" class="form-control numberonly" value="{{ $program->cos_coor_mobile}}"/>
                             </div>
                         </div> 
                     </div>

@@ -122,10 +122,10 @@ function form_validate(){
 		output = false;
 		$("#clg_address-error").html("Required");
 	}
-	/*if($("#clg_telephone").val() == "") {
+	if($("#clg_telephone").val() == "") {
 		output = false;
 		$("#clg_telephone-error").html("Required");
-	}*/
+	}
 	if($("#clg_email").val() == "") {
 		output = false;
 		$("#clg_email-error").html("Required");

@@ -93,7 +93,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <label for="stu_email">Email</label><span id="stu_email-error" class="registration-error"></span>
-                                    <div><input type="email" name="stu_email" id="stu_email" class="form-control" placeholder="E-mail"/></div>
+                                    <div><input type="email" name="stu_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="stu_email" class="form-control" placeholder="E-mail"/></div>
                                 </div>
                             </div>
                         </div>

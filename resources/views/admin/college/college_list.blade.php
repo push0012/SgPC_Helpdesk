@@ -4,14 +4,18 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="form-group row">
-            <div style="font-size:1.5em;">{{ __('විද්‍යාල විස්තර') }}</div>
+            <div class="row">
+                <div class="col-md-11">
+                    <div style="font-size:1.5em;">{{ __('විද්‍යාල විස්තර') }}</div>
+                </div>
+                <div class="col-md-1 float-right">
+                    <a type="button" alt="Add New College" class="btn btn-outline-success btn-sm float-right" href="{{ url('admin/masterdata/college/create') }}" id="addCollege">
+                        <span class="btn-label"><i class="fas fa-plus"></i></span>
+                    </a>
+                </div>
             </div>
             <div class="form-group row">
                 <div class="col-md-12" style="font-size:0.8em;">
-                    <a type="button" class="btn btn-outline-success btn-sm float-right" href="college/create" id="addCollege">
-                        <span class="btn-label"><i class="fas fa-plus"></i></span>
-                    </a>
                     <table id="collegelistTable" class="table table-striped table-bordered display collegelistTable" style="width:105%">
                         <thead>
                             <tr>
@@ -31,7 +35,7 @@
                                 <td>{{$college->clg_telephone}}</td>
                                 <td>{{$college->clg_email}}</td>
                                 <td>{{$college->clg_website}}</td>
-                                <td><a href="college/{{$college->clg_id}}/edit"><i class="fas fa-edit"></a></i></td>
+                                <td><a href="{{ url('admin/masterdata/college/'.$college->clg_id.'/edit') }}"><i class="fas fa-edit"></a></i></td>
                             </tr>
                             @endforeach
                         </tbody>

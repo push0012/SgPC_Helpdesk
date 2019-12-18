@@ -9,7 +9,7 @@
                 <div class="container-fluid">
                     <div class="form-group row">
                         <div class="col-md-12 float-right">
-                            <a type="button" class="btn btn-outline-success btn-sm float-right" href="collegecourse/create" id="addProgram">
+                            <a type="button" class="btn btn-outline-success btn-sm float-right" href="{{ url('admin/masterdata/collegecourse/create') }}" id="addProgram">
                                 <span class="btn-label"><i class="fas fa-plus"></i></span>
                             </a>
                         </div>  
