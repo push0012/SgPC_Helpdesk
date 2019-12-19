@@ -64,7 +64,7 @@ Route::group(['prefix' => 'application','as'=>'application.'], function () {
 
 Route::group(['prefix' => 'admin','as'=>'admin.'], function () {
 
-    Route::get('/', function(){ return view('admin.admin_dashboard'); });
+    Route::get('/', 'AdminController@OpenDashboard');
 
     Route::group(['prefix' => 'masterdata','as'=>'masterdata'], function () {
         Route::resource('dsdivision', 'DsDivisionController');
