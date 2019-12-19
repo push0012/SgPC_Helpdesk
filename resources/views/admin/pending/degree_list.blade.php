@@ -30,7 +30,7 @@
             <td>{{ $degree_list->cos_title}}(Special) in {{$degree_list->spc_name}}</td>
             @endif
             <td>{{ $degree_list->clg_name}}</td>
-            <td><a class="btn btn-transparent" href="views/{{$degree_list->stu_id}}" ><i class="fas fa-bars"></i></a></td>
+            <td><a class="btn btn-transparent" href="{{ url('admin/pending/degree/views/'.$degree_list->stu_id.'') }}" ><i class="fas fa-bars"></i></a></td>
           </tr>
           @endforeach
           </tbody>
