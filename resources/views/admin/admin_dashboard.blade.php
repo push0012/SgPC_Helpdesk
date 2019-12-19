@@ -14,14 +14,14 @@
                         <a type="button" class="btn btn-labeled btn-success" href="/admin/pending/degree/">
                             <span class="btn-labeling"><i class="fas fa-graduation-cap"></i></span>
                             Pending - Degree
-                            <span class="btn-labeling btn-right">0</span>
+                            <span class="btn-labeling btn-right">{{ $degree }}</span>
                         </a>
                     </div>
                     <div class="col-md-4">
                         <a type="button" class="btn btn-labeled btn-success" href="/admin/pending/diploma/">
                             <span class="btn-labeling"><i class="fas fa-certificate"></i></span>
                             Pending - Diploma
-                            <span class="btn-labeling btn-right">0</span>
+                            <span class="btn-labeling btn-right">{{ $diploma }}</span>
                         </a>
                     </div>
                     <div class="col-md-4">
@@ -36,21 +36,21 @@
                         <a type="button" class="btn btn-labeled btn-success" href="/admin/masterdata/college/">
                             <span class="btn-labeling"><i class="fas fa-school"></i></span>
                                 College
-                            <span class="btn-labeling btn-right">0</span>
+                            <span class="btn-labeling btn-right">{{ $college }}</span>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a type="button" class="btn btn-labeled btn-success" href="/admin/masterdata/course/">
                             <span class="btn-labeling"><i class="fas fa-certificate"></i></span>
                                 Course
-                            <span class="btn-labeling btn-right">0</span>
+                            <span class="btn-labeling btn-right">{{ $course }}</span>
                         </a>
                     </div>
                     <div class="col-md-3">
                         <a type="button" class="btn btn-labeled btn-success" href="/admin/masterdata/special/">
                             <span class="btn-labeling"><i class="fas fa-certificate"></i></span>
                                 Speciality
-                            <span class="btn-labeling btn-right">0</span>
+                            <span class="btn-labeling btn-right">{{ $speciality }}</span>
                         </a>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                         <a type="button" class="btn btn-labeled btn-success" href="/admin/masterdata/collegecourse">
                             <span class="btn-labeling"><i class="fas fa-certificate"></i></span>
                                 Course by University or Institute
-                            <span class="btn-labeling btn-right">0</span>
+                            <span class="btn-labeling btn-right">{{ $program }}</span>
                         </a>
                     </div>
                 </div>
