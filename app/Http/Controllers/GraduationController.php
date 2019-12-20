@@ -15,6 +15,7 @@ use App\CollegeCourse;
 use App\Course;
 use App\DegreeSpecial;
 use DB;
+use App\LastRegNo;
 
 
 class GraduationController extends Controller
@@ -69,7 +70,7 @@ class GraduationController extends Controller
                         ]);
                 }       
         $refs = $student->stu_id."".$request->clg_id."".$request->cos_id."".$request->spc_id;
-        $date = $student->created_at;
+        $date = $student->created_at->format('Y-m-d');
         DB::commit();
         return response()->json(['ref'=>$refs,'date'=>$date], 201);
         } catch (\Exception $e) {
@@ -89,8 +90,10 @@ class GraduationController extends Controller
 
     public function detail_pending($id)
     {
-        $degreeholder = DB::table('degreestudentlist')->where('stu_id', $id)->first();
-        return view('admin.pending.degree_holder')->with('degreeholders',$degreeholder);
+        $degreeholders = DB::table('degreestudentlist')->where('stu_id', $id)->first();
+        $last_degree = LastRegNo::select('last_degree')->first();
+        $refs = $degreeholders->stu_id."".$degreeholders->clg_id."".$degreeholders->cos_id."".$degreeholders->spc_id;
+        return view('admin.pending.degree_holder', compact(['degreeholders','last_degree', 'refs']));
     }
 
     public function approving(Request $request)
@@ -112,6 +115,7 @@ class GraduationController extends Controller
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
 
         
+        $con = LastRegNo::where('last_reg_id',1)->update(array('last_degree'=> $request->degree_reg_no));
 
         $result = collect([
                 'email'=> $request->stu_email,
