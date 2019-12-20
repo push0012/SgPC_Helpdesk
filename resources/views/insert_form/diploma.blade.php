@@ -30,7 +30,7 @@
                                 </div>
                                 <div class="col-md-9">
                                     <label for="stu_name">Name with Initials</label><span id="stu_name-error" class="registration-error"></span>
-                                    <div><input type="text" name="stu_name" id="stu_name" class="form-control" length="250" placeholder="Name with Initials" required/></div>
+                                    <div><input type="text" name="stu_name" id="stu_name" class="form-control textonly" length="250" placeholder="Name with Initials" required/></div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -46,11 +46,11 @@
                                 </div>
                                 <div class="col-md-3">
                                     <label for="dob">Date of Birth</label><span id="dob-error" class="registration-error"></span>
-                                    <div><input type="date" name="dob" id="dob" min="1960-01-01" max="2050-12-31" class="form-control"/></div>
+                                    <div><input type="date" name="dob" id="dob" min="1960-01-01" max="2050-12-31" class="form-control earlydate"/></div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="nic">National Identity Card Number</label><span id="nic-error" class="registration-error"></span>
-                                    <div><input type="text" name="nic" id="nic" class="form-control" minlength="9" maxlength="12" length="250" placeholder="National Identity Card Number"/></div>
+                                    <div><input type="text" name="nic" id="nic" class="form-control numberonly" minlength="9" maxlength="12" length="250" placeholder="National Identity Card Number"/></div>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -83,11 +83,11 @@
                             <div class="form-group row">
                                 <div class="col-md-3">
                                     <label for="stu_mobile">Mobile</label><span id="stu_mobile-error" class="registration-error"></span>
-                                    <div><input type="text" name="stu_mobile" id="stu_mobile" minlength="10" maxlength="10" class="form-control" placeholder="Mobile"/></div>
+                                    <div><input type="text" name="stu_mobile" id="stu_mobile" minlength="10" maxlength="10" class="form-control numberonly" placeholder="Mobile"/></div>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="stu_telephone">Telephone</label><span id="stu_telephone-error" class="registration-error"></span>
-                                    <div><input type="text" name="stu_telephone" id="stu_telephone" minlength="10" maxlength="10" class="form-control" placeholder="Telephone"/></div>
+                                    <div><input type="text" name="stu_telephone" id="stu_telephone" minlength="10" maxlength="10" class="form-control numberonly" placeholder="Telephone"/></div>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="stu_email">Email</label><span id="stu_email-error" class="registration-error"></span>

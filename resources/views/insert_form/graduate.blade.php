@@ -59,7 +59,7 @@
                                 <div class="col-md-6">
                                     <label for="stu_address">Address</label><span id="stu_address-error" class="registration-error"></span>
                                     <div>
-                                        <textarea class="form-control textonly" name="stu_address" id="stu_address" ></textarea>
+                                        <textarea class="form-control" name="stu_address" id="stu_address" ></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
