@@ -14,6 +14,7 @@ use App\StudentProfessional;
 use App\StudentLanguage;
 use DB;
 use App\StudentConfirmDiploma;
+use App\LastRegNo;
 
 class DiplomaController extends Controller
 {
@@ -54,8 +55,10 @@ class DiplomaController extends Controller
                     'stu_id' => $student->stu_id
                     ]);
             }
+        $refs = $student->stu_id."".$request->clg_id."".$request->cos_id;
+        $date = $student->created_at->format('Y-m-d');
         DB::commit();
-        return response()->json("Data Saving Completed", 201);
+        return response()->json(['ref'=>$refs,'date'=>$date], 201);
         } catch (\Exception $e) {
 
         // Rollback Transaction
@@ -74,7 +77,9 @@ class DiplomaController extends Controller
     public function detail_pending($id)
     {
         $diplomaholder = DB::table('diplomastudentlist')->where('stu_id', $id)->first();
-        return view('admin.pending.diploma_holder')->with('diplomaholder',$diplomaholder);
+        $last_diploma = LastRegNo::select('last_diploma')->first();
+        $refs = $diplomaholder->stu_id."".$diplomaholder->clg_id."".$diplomaholder->cos_id;
+        return view('admin.pending.diploma_holder', compact(['diplomaholder','last_diploma', 'refs']));
     }
 
     public function approving(Request $request)
@@ -92,6 +97,8 @@ class DiplomaController extends Controller
                                         ->update(array('sep_confirm_data' => '1'));
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '1'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
+
+        $con = LastRegNo::where('last_reg_id',1)->update(array('las_diploma'=> $request->diploma_reg_no));
 
         $result = collect([
             'email'=> $request->stu_email,
