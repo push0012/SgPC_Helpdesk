@@ -4,7 +4,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -62,10 +62,12 @@ Route::group(['prefix' => 'application','as'=>'application.'], function () {
 });
 
 
-Route::group(['prefix' => 'admin','as'=>'admin.'], function () {
+Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>'auth'], function () {
 
     Route::get('/', 'AdminController@OpenDashboard');
-
+    Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+    Route::post('register', 'Auth\RegisterController@register');
+    
     Route::group(['prefix' => 'masterdata','as'=>'masterdata'], function () {
         Route::resource('dsdivision', 'DsDivisionController');
         Route::resource('college', 'CollegeController');
