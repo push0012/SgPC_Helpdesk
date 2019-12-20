@@ -15,7 +15,7 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                @guest
+                
                 <!--<li class="nav-item bg-primary" style="">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('සංඛ්‍යාන දත්ත') }}</a>
                 </li>-->
@@ -32,13 +32,14 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                 <li class="nav-item bg-danger" style="">
                     <a class="nav-link" href="{{ url('rti') }}">{{ __('තොරතුරු පනත') }}</a>
                 </li>
-               <!-- <li class="nav-item bg-info" style="">
+               <!-- @guest
+                <li class="nav-item bg-info" style="">
                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                 </li>
                 @if (Route::has('register'))
                 <li class="nav-item  bg-primary" style="">
                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                </li>-->
+                </li>
                 @endif
                 @else
                 <li class="nav-item dropdown">
@@ -58,7 +59,7 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                     </form>
                 </div>
             </li>
-            @endguest
+            @endguest-->
         </ul>
     </div>
 </div>
