@@ -84,6 +84,22 @@
                 </div>
                 <div class="row digdetail">
                     <div class="col-md-3">
+                        <lable>Reference Number:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable name="ref_no" id="ref_no">{{ $refs }}</lable>
+                    </div>
+                </div>
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Last Registered Number:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable name="last_reg_no" id="last_reg_no">{{ $last_diploma->last_diploma }}</lable>
+                    </div>
+                </div>
+                <div class="row digdetail">
+                    <div class="col-md-3">
                         <lable>Register Number:</lable>
                     </div>
                     <div class="col-md-9">

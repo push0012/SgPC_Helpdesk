@@ -103,6 +103,25 @@
                         <lable name="reg_date" id="reg_date">{{ Carbon\Carbon::parse($degreeholders->created_at)->format('Y-m-d')}}</lable>
                     </div>
                 </div>
+
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Reference Number:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable name="ref_no" id="ref_no">{{ $refs }}</lable>
+                    </div>
+                </div>
+
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Last Registered Number:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable name="last_reg_no" id="last_reg_no">{{ $last_degree->last_degree }}</lable>
+                    </div>
+                </div>
+
                 <div class="row digdetail">
                     <div class="col-md-3">
                         <lable>Register Number:</lable>
