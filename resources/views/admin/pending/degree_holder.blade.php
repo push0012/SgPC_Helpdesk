@@ -39,6 +39,22 @@
                         <lable>{{ $degreeholders->stu_address}}</lable>
                     </div>
                 </div>
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Mobile:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable>{{ $degreeholders->stu_mobile}}</lable>
+                    </div>
+                </div>
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Email:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable>{{ $degreeholders->stu_email}}</lable>
+                    </div>
+                </div>
                 <input type="hidden" name="cos_id" id="cos_id" value="{{ $degreeholders->cos_id }}"/>
                 <input type="hidden" name="spc_id" id="spc_id" value="{{ $degreeholders->spc_id }}"/>
                 @if($degreeholders->spc_name == 'General')

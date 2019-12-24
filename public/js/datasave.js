@@ -25,6 +25,7 @@ function degree_save(){
             'stu_email' : $('#stu_email').val(),
 
             'clg_id':$('#clg_id').val(),
+            'new_clg':$('#new_clg').val(),
             'cos_id' : $('#cos_id').val(),
             'new_cos':$('#new_cos').val(),
             'spc_id':$('#spc_id').val(),
@@ -50,13 +51,13 @@ function degree_save(){
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
                     window.location = '/confirm/?ref=' + msg.ref+'&date='+msg.date;
-                },4000); 
+                },2500); 
             },
             error: function(msg) {
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                 setTimeout(function(){
                     window.location = '/failure';
-                },4000); 
+                },2500); 
             }
         });
     }
@@ -89,6 +90,7 @@ function diploma_save(){
             'stu_email' : $('#stu_email').val(),
 
             'clg_id':$('#d_clg_id').val(),
+            'new_clg':$('#new_clg').val(),
             'cos_id' : $('#d_cos_id').val(),
             'speciality_in_word':$('#speciality_in_word').val(),
             'medium' : $('#medium').val(),
@@ -111,13 +113,13 @@ function diploma_save(){
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
                     window.location = '/confirm/?ref=' + msg.ref+'&date='+msg.date;
-                },4000); 
+                },2500); 
             },
             error: function(msg) {
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                 setTimeout(function(){
                     window.location = '/failure';
-                },4000); 
+                },2500); 
             }
         });
 }
@@ -129,7 +131,6 @@ $(document).ready(function() {
         if(output){
             var savedata = {
                 'clg_name': $('#clg_name').val(),
-                'clg_type': $('#clg_type').val(),
                 'clg_address': $('#clg_address').val(),
                 'clg_telephone': $('#clg_telephone').val(),
                 'clg_email': $('#clg_email').val(),
@@ -144,14 +145,14 @@ $(document).ready(function() {
                     console.log(msg);
                     setTimeout(function(){
                         window.location = '/admin/masterdata/college';
-                    },4000); 
+                    },2500); 
                 },
                 error: function(msg) {
                     callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                     console.log(msg);
                     setTimeout(function(){
                         window.location = '/admin/masterdata/college';
-                    },4000); 
+                    },2500); 
                 }
             });
         }
@@ -177,14 +178,14 @@ $(document).ready(function() {
                     console.log(msg);
                     setTimeout(function(){
                         window.location = '/admin/masterdata/college';
-                    },4000); 
+                    },2500); 
                 },
                 error: function(msg) {
                     callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                     console.log(msg);
                     setTimeout(function(){
                         window.location = '/admin/masterdata/college';
-                    },4000); 
+                    },2500); 
                 }
             });
         }
@@ -206,12 +207,14 @@ $(document).ready(function() {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     setTimeout(function(){
                         window.location = '/admin/masterdata/course';
-                    },4000);
+                    },2500);
                     
                 },
                 error: function(msg) {
                     callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
-                    window.location = '/admin/masterdata/course';
+                    setTimeout(function(){
+                        window.location = '/admin/masterdata/course';
+                    },2500);
                 }
             });
         //}
@@ -232,7 +235,7 @@ $(document).ready(function() {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     setTimeout(function(){
                         window.location = '/admin/masterdata/course';
-                    },4000);
+                    },2500);
 
                     
                 },
@@ -241,7 +244,7 @@ $(document).ready(function() {
                     callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                     setTimeout(function(){
                     window.location = '/admin/masterdata/course';
-                    },4000);
+                    },2500);
                 }
             });
         //}
@@ -275,14 +278,14 @@ $(document).ready(function() {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     setTimeout(function(){
                         window.location = '/admin/masterdata/collegecourse';
-                    },4000);
+                    },2500);
                     
                 },
                 error: function(msg) {
                     callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                     setTimeout(function(){
                         window.location = '/admin/masterdata/collegecourse';
-                    },4000);
+                    },2500);
                 }
             });
         //}
@@ -339,7 +342,7 @@ $(document).ready(function() {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
                     window.location = '/admin/pending/degree/';
-                },4000);
+                },2500);
                 //console.log(msg);
             },
             error: function(msg) {
@@ -347,7 +350,7 @@ $(document).ready(function() {
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                 setTimeout(function(){
                     window.location = '/admin/pending/degree/';
-                },4000);
+                },2500);
             }
         });
     });
@@ -369,7 +372,7 @@ $(document).ready(function() {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                 setTimeout(function(){
                     window.location = '/admin/pending/degree/';
-                },4000);
+                },2500);
                 console.log(msg);
             },
             error: function(msg) {
@@ -377,7 +380,7 @@ $(document).ready(function() {
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                 setTimeout(function(){
                     window.location = '/admin/pending/degree/';
-                },4000);
+                },2500);
                 console.log(msg);
             }
         });
@@ -403,7 +406,7 @@ $(document).ready(function() {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
                     window.location = '/admin/pending/diploma/';
-                },4000);
+                },2500);
                 //console.log(msg)
                 
             },
@@ -412,7 +415,7 @@ $(document).ready(function() {
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                 setTimeout(function(){
                     window.location = '/admin/pending/diploma/';
-                },4000);
+                },2500);
             }
         });
     });
@@ -433,7 +436,7 @@ $(document).ready(function() {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
                     window.location = '/admin/pending/diploma/';
-                },4000);
+                },2500);
                 console.log(msg);
             },
             error: function(msg) {
@@ -441,7 +444,7 @@ $(document).ready(function() {
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','error' );
                 setTimeout(function(){
                     window.location = '/admin/pending/diploma/';
-                },4000);
+                },2500);
                 console.log(msg);
             }
         });

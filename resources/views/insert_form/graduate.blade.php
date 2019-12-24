@@ -106,6 +106,7 @@
                                     <div>
                                         <select class="form-control" name="clg_id" id="clg_id">
                                             <option value="None" disabled selected>Select University</option>
+                                            <option value="0">New</option>
                                             @foreach($colleges as $college)
                                                 <option value="{{ $college->clg_id}}">{{ $college->clg_name }}</option>
                                             @endforeach
@@ -114,6 +115,14 @@
                                     </div>
                                 </div>
                             </div> 
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="new_clg">Insert New University</label><span id="new_clg-error" class="registration-error"></span>
+                                    <div>
+                                        <div><input type="text" name="new_clg" id="new_clg" class="form-control textonly" placeholder="Specify" disabled/></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
                                     <label for="cos_id">Degree</label><span id="cos_id-error" class="registration-error"></span>

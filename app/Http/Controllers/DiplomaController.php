@@ -3,12 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Services\NewData;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\StudentRegisterDiploma;
 use App\College;
 use App\Student;
-use App\Course;
-use App\CollegeCourse;
 use App\StudentEducationDiploma;
 use App\StudentProfessional;
 use App\StudentLanguage;
@@ -24,22 +23,17 @@ class DiplomaController extends Controller
         return view('insert_form.diploma')->with('colleges',$colleges);
     }
 
-    public function store(Request $request)
+    public function store(Request $requests)
     {
         DB::beginTransaction();
   
         try 
         {
-            $student = Student::create($request->all());
-            $request->request->add(['stu_id' => $student->stu_id]);
+            $student = Student::create($requests->all());
+            $requests->request->add(['stu_id' => $student->stu_id]);
     
-            if($request->cos_id == 0)
-            {
-                $newCourse = Course::create(['cos_title'=> $request->speciality_in_word,'cos_type' =>'Diploma']);
-                CollegeCourse::create(['clg_id'=>$request->clg_id,'cos_id'=>$newCourse->cos_id,'spc_id'=>2]);
-                $request->merge(['cos_id' => $newCourse->cos_id]);
-
-            }
+            $diplomaNewData = new NewData();
+            $request = $diplomaNewData->DiplomaNewData($requests);
 
             $students = StudentEducationDiploma::create($request->all());
             $studentss = StudentProfessional::create($request->all());
@@ -98,7 +92,7 @@ class DiplomaController extends Controller
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '1'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
 
-        $con = LastRegNo::where('last_reg_id',1)->update(array('las_diploma'=> $request->diploma_reg_no));
+        $con = LastRegNo::where('last_reg_id',1)->update(array('last_diploma'=> $request->diploma_reg_no));
 
         $result = collect([
             'email'=> $request->stu_email,

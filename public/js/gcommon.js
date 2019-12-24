@@ -38,9 +38,13 @@ function gvalidate() {
 			output = false;
 			$("#stu_mobile-error").html("Required");
 		}
+		var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
 		if($("#stu_email").val() == "") {
 			output = false;
 			$("#stu_email-error").html("Required");
+		}else if (!(testEmail.test($("#stu_email").val()))){
+			output = false;
+			$("#stu_email-error").html("Invalid Email");
 		}
 	}
 	
@@ -69,6 +73,11 @@ function gvalidate() {
 		if($("#effective_date").val() == "") {
 			output = false;
 			$("#effective_date-error").html("Required");
+		}
+		//new clg enable true
+		if($('#new_clg').is(':disabled') == false && $("#new_clg").val() == "") {
+			output = false;
+			$("#new_clg-error").html("Required");
 		}
 		//new cos enable true
 		if($('#new_cos').is(':disabled') == false && $("#new_cos").val() == "") {
@@ -114,10 +123,6 @@ function form_validate(){
 		output = false;
 		$("#clg_name-error").html("Required");
 	}
-	if($("#clg_type").val() == null) {
-		output = false;
-		$("#clg_type-error").html("Required");
-	}
 	if($("#clg_address").val() == "") {
 		output = false;
 		$("#clg_address-error").html("Required");
@@ -134,20 +139,6 @@ function form_validate(){
 		output = false;
 		$("#clg_website-error").html("Required");
 	}
-	/*if($("#it_skill").val() == "") {
-		output = false;
-		$("#it_skill-error").html("Required");
-	}
-
-	if($("#e_clg_id").val() == null) {
-		output = false;
-		$("#e_clg_id-error").html("Required");
-	}
-
-	if($("#cos_id").val() == null) {
-		output = false;
-		$("#cos_id-error").html("Required");
-	}*/
 	return output;
 }
 function dvalidate() {
@@ -190,9 +181,13 @@ function dvalidate() {
 			output = false;
 			$("#stu_mobile-error").html("Required");
 		}
+		var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
 		if($("#stu_email").val() == "") {
 			output = false;
 			$("#stu_email-error").html("Required");
+		}else if (!(testEmail.test($("#stu_email").val()))){
+			output = false;
+			$("#stu_email-error").html("Invalid Email");
 		}
 	}
 	
@@ -213,6 +208,11 @@ function dvalidate() {
 		if($("#effective_date").val() == "") {
 			output = false;
 			$("#effective_date-error").html("Required");
+		}
+		//new clg enable true
+		if($('#new_clg').is(':disabled') == false && $("#new_clg").val() == "") {
+			output = false;
+			$("#new_clg-error").html("Required");
 		}
 		//speciality_in_word enable true
 		if($('#speciality_in_word').is(':disabled') == false && $("#speciality_in_word").val() == "") {

@@ -38,6 +38,22 @@
                         <lable>{{ $diplomaholder->stu_address}}</lable>
                     </div>
                 </div>
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Mobile:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable>{{ $diplomaholder->stu_mobile}}</lable>
+                    </div>
+                </div>
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Email:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable>{{ $diplomaholder->stu_email}}</lable>
+                    </div>
+                </div>
                 <input type="hidden" name="cos_id" id="cos_id" value="{{ $diplomaholder->cos_id }}"/>
                 <div class="row digdetail">
                     <div class="col-md-3">

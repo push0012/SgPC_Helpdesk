@@ -43,6 +43,8 @@ Route::group(['prefix' => 'ajax','as'=>'ajax.'], function () {
     Route::get('get_degree/{id}', 'AjaxController@get_degree_courses');
     Route::get('get_diploma/{id}', 'AjaxController@get_diploma_courses');
     Route::get('get_all/{id}', 'AjaxController@get_all_courses');
+    Route::get('get_all_degree', 'AjaxController@get_all_degree');
+    Route::get('get_all_diploma', 'AjaxController@get_all_diploma');
 });
 
 

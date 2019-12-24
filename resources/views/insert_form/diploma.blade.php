@@ -103,7 +103,8 @@
                                     <label for="d_clg_id">Institute</label><span id="d_clg_id-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="d_clg_id" id="d_clg_id">
-                                            <option value="None" disabled selected>Select University</option>
+                                            <option value="None" disabled selected>Select Institute</option>
+                                            <option value="0">New</option>
                                             @foreach($colleges as $college)
                                                 <option value="{{ $college->clg_id}}">{{ $college->clg_name }}</option>
                                             @endforeach
@@ -111,6 +112,14 @@
                                     </div>
                                 </div>
                             </div> 
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="new_clg">Insert New Institute</label><span id="new_clg-error" class="registration-error"></span>
+                                    <div>
+                                        <div><input type="text" name="new_clg" id="new_clg" class="form-control textonly" placeholder="Specify" disabled/></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <div class="col-md-9">
                                     <label for="d_cos_id">Diploma</label><span id="d_cos_id-error" class="registration-error"></span>

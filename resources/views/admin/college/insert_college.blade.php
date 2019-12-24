@@ -14,17 +14,7 @@
                         </div>  
                     </div>
                     <div class="form-group row">
-                        <div class="col-md-4">
-                            <label for="clg_type">College Type</label><span id="clg_type-error" class="registration-error"></span>
-                            <div>
-                                <select class="form-control" name="clg_type" id="clg_type" required>
-                                   <option value="None" disabled selected>Select type</option>
-                                   <option value="University">University</option>
-                                   <option value="Institute">Institute</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <label for="clg_address">Address</label><span id="clg_address-error" class="registration-error"></span>
                             <div><input type="text" name="clg_address" id="clg_address" class="form-control textonly" length="250" placeholder="College Address" required/></div>
                         </div>    

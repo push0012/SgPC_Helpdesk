@@ -41,19 +41,38 @@ $(document).ready(function() {
 	//for graduation detail form
 	$('#clg_id').change(function(e) {
 		var clgid = $(this).val();
-		$.ajax({
-			type: "GET",
-			url: '/ajax/get_degree/' + clgid,
-			success: function( msg ) {
-				$('#cos_id :gt(0)').remove();
-				$("#cos_id").append($("<option>").attr("value", 0).text('New'));
-				console.log('fkk')
-				$.each(msg, function(value,key) {  
-					$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title)); 
-					  
-				});
-			}
-		});
+
+		if(clgid == 0){
+			$.ajax({
+				type: "GET",
+				url: '/ajax/get_all_degree/',
+				success: function( msg ) {
+					$('#cos_id :gt(0)').remove();
+					$("#cos_id").append($("<option>").attr("value", 0).text('New'));
+					console.log('fkk')
+					$.each(msg, function(value,key) {  
+						$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title)); 
+						
+					});
+				}
+			});
+		}
+		else
+		{
+			$.ajax({
+				type: "GET",
+				url: '/ajax/get_degree/' + clgid,
+				success: function( msg ) {
+					$('#cos_id :gt(0)').remove();
+					$("#cos_id").append($("<option>").attr("value", 0).text('New'));
+					console.log('fkk')
+					$.each(msg, function(value,key) {  
+						$("#cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title)); 
+						
+					});
+				}
+			});
+		}
 	});
 	
 	$('#cos_id').change(function(e) {
@@ -97,17 +116,33 @@ $(document).ready(function() {
 	$('#d_clg_id').change(function(e) {
 		var clgid = $(this).val();
 		console.log(clgid)
-		$.ajax({
-			type: "GET",
-			url: '/ajax/get_diploma/' + clgid,
-			success: function( msg ) {
-				$('#d_cos_id :gt(0)').remove();
-				$("#d_cos_id").append($("<option>").attr("value", 0).text('New'));
-				$.each(msg, function(value,key) {  
-					$("#d_cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title));   
-				});
-			}
-		});
+		if(clgid == 0){
+			$.ajax({
+				type: "GET",
+				url: '/ajax/get_all_diploma/',
+				success: function( msg ) {
+					$('#d_cos_id :gt(0)').remove();
+					$("#d_cos_id").append($("<option>").attr("value", 0).text('New'));
+					$.each(msg, function(value,key) {  
+						$("#d_cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title));   
+					});
+				}
+			});
+		}
+		else
+		{
+			$.ajax({
+				type: "GET",
+				url: '/ajax/get_diploma/' + clgid,
+				success: function( msg ) {
+					$('#d_cos_id :gt(0)').remove();
+					$("#d_cos_id").append($("<option>").attr("value", 0).text('New'));
+					$.each(msg, function(value,key) {  
+						$("#d_cos_id").append($("<option>").attr("value", key.cos_id).text(key.cos_title));   
+					});
+				}
+			});
+		}
 	});
 
 	//enable with new type speciallity
@@ -133,6 +168,16 @@ $(document).ready(function() {
 	//within degree register form open new field
 	//new University
 	$('#clg_id').change(function(e) {
+
+		if($(this).val() ==0){
+			$("#new_clg").attr('disabled',false);
+		}else{
+			$("#new_clg").attr('disabled',true);
+		}
+	});
+
+	//new Institute
+	$('#d_clg_id').change(function(e) {
 
 		if($(this).val() ==0){
 			$("#new_clg").attr('disabled',false);
