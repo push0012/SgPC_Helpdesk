@@ -13,6 +13,7 @@
                     <li id="dcaptcha">Verify Human</li>
                 </ul>
                 <form name="frmRegistration" id="registration-form" method="post" style="font-size:0.8em !important;">
+                @csrf
                     <div id="dpersonal-field">
                         <div class="container-fluid">
                             <div class="form-group row">

@@ -47,6 +47,9 @@ function degree_save(){
             type: "POST",
             url: '/application/graduate/register',
             data: savedata,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
@@ -109,6 +112,9 @@ function diploma_save(){
             type: "POST",
             url: '/application/diploma/register',
             data: savedata,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
@@ -140,6 +146,9 @@ $(document).ready(function() {
                 type: "POST",
                 url: '/admin/masterdata/college',
                 data: savedata,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     console.log(msg);
@@ -172,6 +181,9 @@ $(document).ready(function() {
             $.ajax({
                 type: "PUT",
                 url: '/admin/masterdata/college/'+ $('#clg_id').val(),
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 data: savedata,
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
@@ -203,6 +215,9 @@ $(document).ready(function() {
                 type: "POST",
                 url: '/admin/masterdata/course',
                 data: savedata,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     setTimeout(function(){
@@ -231,6 +246,9 @@ $(document).ready(function() {
                 type: "PUT",
                 url: '/admin/masterdata/course/'+ $('#cos_id').val(),
                 data: savedata,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     setTimeout(function(){
@@ -274,6 +292,9 @@ $(document).ready(function() {
                 type: "POST",
                 url: '/admin/masterdata/collegecourse',
                 data: savedata,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     setTimeout(function(){
@@ -305,6 +326,9 @@ $(document).ready(function() {
                 type: "PUT",
                 url: '/admin/masterdata/collegecourse/'+ $('#spc_id').val(),
                 data: savedata,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
                 success: function( msg ) {
                     callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                     setTimeout(function(){
@@ -338,6 +362,9 @@ $(document).ready(function() {
             type: "POST",
             url: '/admin/pending/degree/approving',
             data: savedata,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
@@ -368,6 +395,9 @@ $(document).ready(function() {
             type: "POST",
             url: '/admin/pending/degree/rejecting',
             data: savedata,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success');
                 setTimeout(function(){
@@ -402,6 +432,9 @@ $(document).ready(function() {
             type: "POST",
             url: '/admin/pending/diploma/approving',
             data: savedata,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
@@ -432,6 +465,9 @@ $(document).ready(function() {
             type: "POST",
             url: '/admin/pending/diploma/rejecting',
             data: savedata,
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){

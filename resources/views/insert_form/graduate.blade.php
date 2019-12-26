@@ -16,6 +16,7 @@
                     <li id="gcaptcha">Verify Human</li>
                 </ul>
                 <form name="frmRegistration" id="registration-form" method="post" style="font-size:0.8em !important;">
+                @csrf
                     <div id="gpersonal-field">
                         <div class="container-fluid">
                             <div class="form-group row">

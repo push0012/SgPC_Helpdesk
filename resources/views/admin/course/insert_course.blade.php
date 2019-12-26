@@ -6,6 +6,7 @@
         <div class="col-md-12">
             <div style="font-size:1.5em;">{{ __('පාඨමාලා නාම ලියාපදිංචිය') }}</div>
             <form name="frmCollegeStore" id="registration-form" style="font-size:0.8em !important;">
+            @csrf
                 <div class="container-fluid">
                     <div class="form-group row">
                         <div class="col-md-12">
