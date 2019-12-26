@@ -45,22 +45,24 @@ function degree_save(){
         }
         $.ajax({
             type: "POST",
-            url: '/application/graduate/register',
+            url: '/resource/application/graduate/register',
             data: savedata,
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
             success: function( msg ) {
+                console.log(msg)
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
                     window.location = '/confirm/?ref=' + msg.ref+'&date='+msg.date;
-                },2500); 
+                },2500);
             },
             error: function(msg) {
+                console.log(msg)
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                 setTimeout(function(){
                     window.location = '/failure';
-                },2500); 
+                },2500);
             }
         });
     }
@@ -110,7 +112,7 @@ function diploma_save(){
         }
         $.ajax({
             type: "POST",
-            url: '/application/diploma/register',
+            url: '/resource/application/diploma/register',
             data: savedata,
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')

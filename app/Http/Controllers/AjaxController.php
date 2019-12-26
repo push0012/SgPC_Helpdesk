@@ -13,14 +13,18 @@ class AjaxController extends Controller
     public function get_all_degree()
     {
         $cozbycollege = DB::table('collegecourseview')
-        ->where('cos_type','Degree')->get();
+        ->where('cos_type','Degree')
+        ->groupby('cos_id') 
+        ->get();
         return response()->json($cozbycollege, 201);
     }
 
     public function get_all_diploma()
     {
         $cozbycollege = DB::table('collegecourseview')
-        ->where('cos_type','Diploma')->get();
+        ->where('cos_type','Diploma')
+        ->groupby('cos_id') 
+        ->get();
         return response()->json($cozbycollege, 201);
     }
 
@@ -28,6 +32,7 @@ class AjaxController extends Controller
     {
         $cozbycollege = DB::table('collegecourseview')
         ->where('clg_id', $id)
+        ->groupby('cos_id') 
         ->get();
         return response()->json($cozbycollege, 201);
     }
@@ -37,14 +42,18 @@ class AjaxController extends Controller
     {
         $cozbycollege = DB::table('collegecourseview')
         ->where('clg_id', $id)
-        ->where('cos_type','Degree')->get();
+        ->where('cos_type','Degree')
+        ->groupby('cos_id') 
+        ->get();
         return response()->json($cozbycollege, 201);
     }
     public function get_diploma_courses($id)
     {
         $cozbycollege = DB::table('collegecourseview')
         ->where('clg_id', $id)
-        ->where('cos_type','Diploma')->get();
+        ->where('cos_type','Diploma')
+        ->groupby('cos_id') 
+        ->get();
         return response()->json($cozbycollege, 201);
     }
 

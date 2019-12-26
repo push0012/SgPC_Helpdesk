@@ -28,7 +28,7 @@ class GraduationController extends Controller
         DB::beginTransaction();
   
         try 
-        {
+        { 
                 $student = Student::create($requests->all());
                 $requests->request->add(['stu_id' => $student->stu_id]);
 

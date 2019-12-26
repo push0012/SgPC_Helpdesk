@@ -81,7 +81,7 @@ $(document).ready(function() {
 			'cos_id' :$(this).val(),
 			'clg_id' :$("#clg_id").val()
 		}
-		if(postData.cos_id == 0){
+		if(postData.cos_id == 0 || postData.clg_id == 0){
 			$.ajax({
 				type: "GET",
 				url: '/ajax/specialities/',

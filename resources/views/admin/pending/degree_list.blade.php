@@ -20,19 +20,25 @@
            <th></th>
          </thead>
          <tbody>
-        @foreach($degree_lists as $degree_list)
-          <tr style="font-size:0.85em !important;">
-            <td>{{ $degree_list->stu_name}}</td>
-            <td>{{ $degree_list->nic}}</td>
-            @if($degree_list->spc_name == 'General')
-            <td>{{ $degree_list->cos_title}} ({{$degree_list->spc_name}}) </td>
-            @else
-            <td>{{ $degree_list->cos_title}}(Special) in {{$degree_list->spc_name}}</td>
-            @endif
-            <td>{{ $degree_list->clg_name}}</td>
-            <td><a class="btn btn-transparent" href="{{ url('admin/pending/degree/views/'.$degree_list->stu_id.'') }}" ><i class="fas fa-bars"></i></a></td>
-          </tr>
-          @endforeach
+         @if($degree_lists->count() > 0 )
+            @foreach($degree_lists as $degree_list)
+            <tr style="font-size:0.85em !important;">
+              <td>{{ $degree_list->stu_name}}</td>
+              <td>{{ $degree_list->nic}}</td>
+              @if($degree_list->spc_name == 'General')
+              <td>{{ $degree_list->cos_title}} ({{$degree_list->spc_name}}) </td>
+              @else
+              <td>{{ $degree_list->cos_title}}(Special) in {{$degree_list->spc_name}}</td>
+              @endif
+              <td>{{ $degree_list->clg_name}}</td>
+              <td><a class="btn btn-transparent" href="{{ url('admin/pending/degree/views/'.$degree_list->stu_id.'') }}" ><i class="fas fa-bars"></i></a></td>
+            </tr>
+            @endforeach
+          @else
+            <tr height="150">
+              <td colspan="5"><i class="fas fa-bars"></i> No Results Found</td>
+            </tr>
+          @endif
           </tbody>
           </table>
         </div>
