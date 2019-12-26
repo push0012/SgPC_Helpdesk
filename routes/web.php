@@ -10,8 +10,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //detail list routes
 Route::get('/business_list', function(){ return view('data_list.business_list')->with('category',"Agriculture"); });
-Route::get('/job_list', function(){ return view('data_list.job_list'); });
-Route::get('/training_list', function(){ return view('data_list.training_list'); });
+
 Route::get('/training_institutes', function(){ return view('data_list.training_institutes'); });
 
 //insert form routes
@@ -19,8 +18,8 @@ Route::get('/business_ins', function(){ return view('insert_form.business'); });
 
 //sub category page routes
 Route::get('/business', function(){ return view('sub_cat.sub_business'); });
-Route::get('/human_reso', function(){ return view('sub_cat.sub_humans'); });
-Route::get('/stu_regi', function(){ return view('sub_cat.sub_stu_registration'); });
+
+
 
 //detail page routes
 Route::get('/business_info', function(){ return view('detail_page.business_info')->with('category',"Agriculture"); });
@@ -52,15 +51,33 @@ Route::group(['prefix' => 'ajax','as'=>'ajax.'], function () {
 Route::get('/confirm', function(){ return view('insert_form.register_confirm'); });
 Route::get('/failure', function(){ return view('insert_form.register_fail'); });
 
-Route::group(['prefix' => 'application','as'=>'application.'], function () {
-    Route::group(['prefix' => 'graduate','as'=>'graduate.'], function () {
-        Route::get('/', 'GraduationController@index');
-        Route::post('/register', 'GraduationController@store');
+
+Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
+
+    Route::get('/', function(){ return view('sub_cat.sub_humans'); });
+
+    Route::group(['prefix' => 'job','as'=>'job.'], function () {
+        Route::get('/', function(){ return view('data_list.job_list'); });
     });
-    Route::group(['prefix' => 'diploma','as'=>'diploma.'], function () {
-        Route::get('/', 'DiplomaController@index');
-        Route::post('/register', 'DiplomaController@store');
+    Route::group(['prefix' => 'training','as'=>'training.'], function () {
+        Route::get('/', function(){ return view('data_list.training_list'); });
     });
+
+    Route::group(['prefix' => 'application','as'=>'application.'], function () {
+
+        Route::get('/', function(){ return view('sub_cat.sub_stu_registration'); });
+
+        Route::group(['prefix' => 'graduate','as'=>'graduate.'], function () {
+            Route::get('/', 'GraduationController@index');
+            Route::post('/register', 'GraduationController@store');
+        });
+
+        Route::group(['prefix' => 'diploma','as'=>'diploma.'], function () {
+            Route::get('/', 'DiplomaController@index');
+            Route::post('/register', 'DiplomaController@store');
+        });
+    });
+
 });
 
 

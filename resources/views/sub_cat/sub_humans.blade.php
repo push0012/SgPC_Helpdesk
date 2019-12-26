@@ -8,7 +8,7 @@
     <hr>
     <div class="row justify-content-center">
         <div class="containers">
-            <a href="{{ url('/job_list')}}" class="img4 box bg-info">
+            <a href="{{ url('/resource/job')}}" class="img4 box bg-info">
                 <div class="row">
                     <div class="col-md-4">
                         <img  src="{{ asset('image/job.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ url('/training_list')}}" class="img5 box bg-info">
+            <a href="{{ url('/resource/training')}}" class="img5 box bg-info">
                 
                 <div class="row">
                     <div class="col-md-4">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ url('/stu_regi')}}" class="img6 box bg-warning">
+            <a href="{{ url('/resource/application')}}" class="img6 box bg-warning">
                 
                 <div class="row">
                     <div class="col-md-4">

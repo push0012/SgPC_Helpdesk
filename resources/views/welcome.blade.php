@@ -106,7 +106,7 @@
                         <div class="row" >
                             <div class="contents" align="center">
                                 <div class="containers-dashboard" >
-                                    <a href="{{ url('/human_reso')}}" class="img1 box bg-info">
+                                    <a href="{{ url('/resource')}}" class="img1 box bg-info">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img src="{{ asset('image/hrm.png') }}" style="border-radius: 18px; width: 100px; height: 100px;">
