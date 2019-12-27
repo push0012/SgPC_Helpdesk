@@ -32,7 +32,7 @@
                             <label for="show_cos_id">Degree or Diploma</label><span id="show_cos_id-error" class="registration-error"></span>
                             <div>
                                 <select class="form-control" name="show_cos_id" id="show_cos_id">
-                                    <option value="None" disabled selected>Select...</option>
+                                    <option value="None" selected>Select...</option>
                                 </select>
                             </div>
                         </div>  
