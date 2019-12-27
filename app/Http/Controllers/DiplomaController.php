@@ -12,6 +12,7 @@ use App\StudentEducationDiploma;
 use App\StudentProfessional;
 use App\StudentLanguage;
 use DB;
+use Auth;
 use App\StudentConfirmDiploma;
 use App\LastRegNo;
 
@@ -82,6 +83,9 @@ class DiplomaController extends Controller
         try 
         {
         $diplomaholder = DB::table('diplomastudentlist')->where('stu_id', $request->stu_id)->first();
+
+        $request->request->add(['user_data' => Auth::user()->email]); 
+
         $confirm = StudentConfirmDiploma::create($request->all());
 
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '1'));

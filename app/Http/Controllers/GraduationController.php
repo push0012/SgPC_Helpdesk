@@ -13,6 +13,7 @@ use App\StudentProfessional;
 use App\StudentLanguage;
 use App\StudentConfirmDegree;
 use DB;
+use Auth;
 use App\LastRegNo;
 
 
@@ -82,7 +83,9 @@ class GraduationController extends Controller
   
         try 
         {
-        $degreeholder = DB::table('degreestudentlist')->where('stu_id', $request->stu_id)->first();    
+
+        $degreeholder = DB::table('degreestudentlist')->where('stu_id', $request->stu_id)->first();
+        $request->request->add(['user_data' => Auth::user()->email]);    
         $confirm = StudentConfirmDegree::create($request->all());
 
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '1'));
