@@ -250,7 +250,7 @@
                                 <div class="col-md-12">
                                     <label for="job_preference">Job Preference</label>	
                                     <div>
-                                        <textarea class="form-control textonly" name="job_preference" id="job_preference" ></textarea>
+                                        <textarea class="form-control" name="job_preference" id="job_preference" ></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -294,7 +294,7 @@
                                 <div class="col-md-9">
                                     <label for="it_skill_detail">If "Yes", Provide Details</label><span id="it_skill_detail-error" class="registration-error"></span>
                                     <div>
-                                        <textarea class="form-control textonly" name="it_skill_detail" id="it_skill_detail" disabled></textarea>
+                                        <textarea class="form-control" name="it_skill_detail" id="it_skill_detail" disabled></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -302,7 +302,7 @@
                                 <div class="col-md-12">
                                     <label for="extra_activity">Extra-Curricular Activities</label>
                                     <div>
-                                        <textarea class="form-control textonly" name="extra_activity" id="extra_activity" ></textarea>
+                                        <textarea class="form-control" name="extra_activity" id="extra_activity" ></textarea>
                                     </div>
                                 </div>
                             </div>
