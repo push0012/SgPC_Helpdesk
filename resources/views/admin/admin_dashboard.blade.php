@@ -93,7 +93,7 @@
                             </a>
                         </div>
                         <div class="col-md-8">
-                            <a type="button" class="btn btn-labeled btn-success" href="/admin/masterdata/collegecourse">
+                            <a type="button" class="btn btn-labeled btn-success" href="/admin">
                                 <span class="btn-labeling"><i class="fas fa-user-friends"></i></span>
                                     All Students
                                 <span class="btn-labeling btn-right">{{ $program }}</span>
