@@ -143,7 +143,7 @@
                                     
                                     <label for="speciality_in_word">Specify Diploma</label><span id="speciality_in_word-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control" placeholder="Specify" disabled/></div>
+                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control textonly" placeholder="Specify" disabled/></div>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
