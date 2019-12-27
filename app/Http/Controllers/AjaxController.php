@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Course;
 use App\DegreeSpecial;
+use App\DsDivision;
 use DB;
+
 
 
 class AjaxController extends Controller
@@ -70,5 +72,11 @@ class AjaxController extends Controller
             ->where('cos_id', $request['cos_id'])->get();
 
         return response()->json($cozbycollege, 201);
+    }
+
+    public function get_ds_area($id)
+    {
+        $dsa_by_district = DsDivision::where('dsa_district',$id)->get();
+        return response()->json($dsa_by_district, 201);
     }
 }
