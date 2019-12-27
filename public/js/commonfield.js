@@ -4,7 +4,14 @@ $(document).ready(function() {
 		//$("#stu_name-error").remove();
 		var error = "";
 		var k = e.keyCode,
-		$return = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32  || (k >= 48 && k <= 57));
+		$return = (
+			(k > 64 && k < 91) || 
+			(k > 96 && k < 123) || 
+			k == 8 || 
+			k == 32  || 
+			k == 13 ||
+			(k >= 48 && k <= 57)
+			);
 		if(!$return) {
 			  return false;
 		}
@@ -27,7 +34,7 @@ $(document).ready(function() {
 		var distr = $(this).val();
 		$.ajax({
 			type: "GET",
-			url: '/admin/masterdata/dsdivision/' + distr,
+			url: '/ajax/get_ds_area/' + distr,
 			success: function( msg ) {
 				//$("#dsa_id").empty();
 				$('#dsa_id :gt(0)').remove();
