@@ -12,7 +12,12 @@ class StudentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index_degree()
+    {
+        $students = Student::where('stu_confirm_data',1)->get();
+        return view('admin.student.apg_student_list', compact(['students']));
+    }
+    public function index_diploma()
     {
         //
     }

@@ -74,6 +74,10 @@ function gvalidate() {
 			output = false;
 			$("#effective_date-error").html("Required");
 		}
+		if($('input[type=file]')[0].files.length === 0) {
+			output = false;
+			$("#certificate_image-error").html("Required");
+		}
 		//new clg enable true
 		if($('#new_clg').is(':disabled') == false && $("#new_clg").val() == "") {
 			output = false;
@@ -218,6 +222,10 @@ function dvalidate() {
 		if($('#speciality_in_word').is(':disabled') == false && $("#speciality_in_word").val() == "") {
 			output = false;
 			$("#speciality_in_word-error").html("Required");
+		}
+		if($('input[type=file]')[0].files.length === 0) {
+			output = false;
+			$("#certificate_image-error").html("Required");
 		}
 		
 	}

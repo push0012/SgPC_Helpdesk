@@ -15,12 +15,37 @@ class CreateImageSavesTable extends Migration
     {
         Schema::create('image_saves', function (Blueprint $table) {
             $table->bigIncrements('img_id');
-            $table->string('img_type',10);
-            $table->date('img_date');
-            $table->string('img_url',100);
-            $table->integer('ref_no');
-            $table->string('extension',6);
+            $table->string('img_url',255);
+            $table->boolean('deleted');
             $table->timestamps();
+        });
+        Schema::table('image_saves', function (Blueprint $table) {
+            $table->unsignedBigInteger('stu_id');
+        
+            $table->foreign('stu_id')->references('stu_id')->on('students')
+                                    ->onDelete('cascade')
+                                    ->onUpdate('cascade');
+        });
+        Schema::table('image_saves', function (Blueprint $table) {
+            $table->unsignedBigInteger('clg_id');
+        
+            $table->foreign('clg_id')->references('clg_id')->on('colleges')
+                                    ->onDelete('cascade')
+                                    ->onUpdate('cascade');
+        });
+        Schema::table('image_saves', function (Blueprint $table) {
+            $table->unsignedBigInteger('cos_id');
+        
+            $table->foreign('cos_id')->references('cos_id')->on('courses')
+                                    ->onDelete('cascade')
+                                    ->onUpdate('cascade');
+        });
+        Schema::table('image_saves', function (Blueprint $table) {
+            $table->unsignedBigInteger('spc_id');
+        
+            $table->foreign('spc_id')->references('spc_id')->on('degree_specials')
+                                    ->onDelete('cascade')
+                                    ->onUpdate('cascade');
         });
     }
 

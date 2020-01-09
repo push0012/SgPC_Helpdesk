@@ -44,7 +44,9 @@
 
                             <div class="col-md-6">
                                 <select id="role_rank" class="form-control" name="role_rank">
+                                    @if(Auth::user()->role_rank == 1 )
                                     <option value="1">Developper</option>
+                                    @endif
                                     <option value="2">Administrator</option>
                                     <option value="3">Manager</option>
                                 </select>

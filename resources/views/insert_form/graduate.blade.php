@@ -15,7 +15,7 @@
                     <li id="gprofessional">Professional Information</li>
                     <li id="gcaptcha">Verify Human</li>
                 </ul>
-                <form name="frmRegistration" id="registration-form" method="post" style="font-size:0.8em !important;">
+                <form name="frmRegistration" enctype="multipart/form-data" id="registration-form" method="post" style="font-size:0.8em !important;">
                 @csrf
                     <div id="gpersonal-field">
                         <div class="container-fluid">
@@ -199,26 +199,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--<div class="form-group row">
-                                <div class="col-md-4">
-                                    <label for="transcript_front">Transcript Front Page</label>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="certificate_image">Certificate Image</label><span id="certificate_image-error" class="registration-error"></span>
                                     <div>
-                                        <input type="file" class="form-control-file" id="transcript_front" name="transcript_front">
+                                        <input type="file" accept=".jpg, .jpeg, .png, .gif" class="form-control-file" id="certificate_image[]" name="certificate_image[]" multiple>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <label for="transcript_back">Transcript Back Page</label>
-                                    <div>
-                                        <input type="file" class="form-control-file" id="transcript_back" name="transcript_back">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="degree_certificate">Degree Certificate</label>
-                                    <div>
-                                        <input type="file" class="form-control-file" id="degree_certificate" name="degree_certificate">
-                                    </div>
-                                </div>
-                            </div>-->
+                            </div>
                         </div>
                     </div>
                     <div id="gprofessional-field" style="display:none;">

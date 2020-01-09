@@ -21,23 +21,27 @@
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">  
     <link href="{{ asset('css/fontawesome/css/all.css') }}" rel="stylesheet"> 
     <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">  
-
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    @stack('styles')
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}" defer></script>
+    <script src="{{ asset('js/bootstrap.min.js')}}" defer></script>
     <script src="{{ asset('js/bootstrap-notify.js') }}" defer></script>
     <script src="{{ asset('js/bootstrap-notify.min.js') }}" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" defer></script>
     <script src="{{ asset('js/commonfield.js') }}" defer></script>
     <script src="{{ asset('js/gcommon.js') }}" defer></script>
     <script src="{{ asset('js/languagetable.js') }}" defer></script>
     <script src="{{ asset('js/datasave.js') }}" defer></script>
     <script src="{{ asset('js/notification.js') }}" defer></script>
     <script src="{{ asset('js/captcha.js') }}" defer></script>
-    
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" defer></script>
     <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" defer></script>
+    
     <style>
         .left-menus{
             display: none !important;
@@ -46,6 +50,7 @@
             background-color:#b3cbcb;
         }
     </style>
+    
     <script type="text/JavaScript">
             window.onscroll = function() {myFunction()};
             var header = document.getElementById("myHeader");
@@ -60,7 +65,8 @@
                     document.getElementById("nav-brand").style.fontSize = "30px";
                 }
             }
-        </script>
+            
+    </script>
 </head>
 <body>
  <div class="container bg-light">
@@ -111,6 +117,7 @@
         </div>
         @include('footer')
     </div>
+    @stack('scripts')
 </body>
 
 </html>

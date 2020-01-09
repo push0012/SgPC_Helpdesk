@@ -10,8 +10,7 @@
     <br/>
     <div class="row justify-content-center">
     <div class="table-responsive">
-        <table id="mytable" class="table-bordred table-striped data-list" >
-         
+        <table id="mytable" class="table table-striped table-bordered display data-list mytable" >
          <thead>           
            <th >Name</th>
            <th>NIC</th>
@@ -20,7 +19,6 @@
            <th></th>
          </thead>
          <tbody>
-         @if($diploma_lists->count() > 0 )
             @foreach($diploma_lists as $diploma_list)
               <tr style="font-size:0.85em !important;">
                 <td>{{ $diploma_list->stu_name}}</td>
@@ -30,11 +28,6 @@
                 <td><a class="btn btn-transparent" href="{{ url('admin/pending/diploma/views/'.$diploma_list->stu_id.'') }}" ><i class="fas fa-bars"></i></a></td>
               </tr>
               @endforeach
-          @else
-            <tr height="150">
-              <td colspan="5"><i class="fas fa-bars"></i> No Results Found</td>
-            </tr>
-          @endif
           </tbody>
           </table>
         </div>

@@ -154,7 +154,9 @@ $('#removeLanguage').click( function () {
 
     //college list table
     var l = $('#collegelistTable').DataTable();
-    
+    var r = $('#mytable').DataTable();
+    var j = $('#userlistTable').DataTable();
+     var e = $('#studentlistTable').DataTable();
     //course list table
     var q = $('#courseslistTable').DataTable();
 

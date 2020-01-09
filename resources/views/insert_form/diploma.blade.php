@@ -12,7 +12,7 @@
                     <li id="dprofessional">Professional Information</li>
                     <li id="dcaptcha">Verify Human</li>
                 </ul>
-                <form name="frmRegistration" id="registration-form" method="post" style="font-size:0.8em !important;">
+                <form name="frmRegistration" enctype="multipart/form-data" id="registration-form" method="post" style="font-size:0.8em !important;">
                 @csrf
                     <div id="dpersonal-field">
                         <div class="container-fluid">
@@ -165,26 +165,14 @@
                                     </div>
                                 </div>
                             </div>
-                           <!-- <div class="form-group row">
-                                <div class="col-md-4">
-                                    <label for="diploma_front">Diploma Certificate Front Page</label>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <label for="certificate_image">Certificate Image</label><span id="certificate_image-error" class="registration-error"></span>
                                     <div>
-                                        <input type="file" class="form-control-file" id="diploma_front" name="diploma_front">
+                                        <input type="file" accept=".jpg, .jpeg, .png, .gif" class="form-control-file" id="certificate_image[]" name="certificate_image[]" multiple>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <label for="diploma_back">Diploma Certificate Back Page</label>
-                                    <div>
-                                        <input type="file" class="form-control-file" id="diploma_back" name="diploma_back">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <label for="diploma_additional">Diploma Certificate Additional Page</label>
-                                    <div>
-                                        <input type="file" class="form-control-file" id="diploma_additional" name="diploma_additional">
-                                    </div>
-                                </div>
-                            </div>-->
+                            </div>
                         </div>
                     </div>
                     <div id="dprofessional-field" style="display:none;">

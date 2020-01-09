@@ -40,7 +40,11 @@ class RegisterController extends Controller
     {
         $this->middleware('auth');
     }
-
+    public function index()
+    {
+        $users = User::all();
+        return view('admin.user.user_list', compact(['users']));
+    }
     /**
      * Get a validator for an incoming registration request.
      *

@@ -28,3 +28,15 @@ $.notify({
     '</div>' 
 });
 }
+
+//open large image box
+$( document ).ready(function() {
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+        console.log("hell")
+        event.preventDefault();
+        $(this).ekkoLightbox({
+            
+            showArrows: true,
+        });
+    });   
+});

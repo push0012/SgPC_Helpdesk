@@ -61,7 +61,7 @@ class AjaxController extends Controller
 
     public function all_specialities()
     {
-        $speciality = DegreeSpecial::all();
+        $speciality = DegreeSpecial::where('spc_id','<>',2)->get();
         return response()->json($speciality, 201);
     }
 

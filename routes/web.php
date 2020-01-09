@@ -85,6 +85,7 @@ Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
 Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>'auth'], function () {
 
     Route::get('/', 'AdminController@OpenDashboard');
+    Route::get('users', 'Auth\RegisterController@index');
     Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('register', 'Auth\RegisterController@register');
     
@@ -115,6 +116,12 @@ Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>'auth'], function
             Route::post('/rejecting', 'DiplomaController@rejecting');
         });
 
+    });
+    
+    Route::group(['prefix' => 'report','as'=>'report'], function () {
+        Route::group(['prefix' => 'student','as'=>'student'], function () {
+            Route::get('degree', 'StudentController@index_degree');
+        });
     });
     
 });

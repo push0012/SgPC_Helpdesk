@@ -11,6 +11,6 @@ class ImageSave extends Model
     protected $primaryKey = 'img_id';
 
     protected $fillable = [
-        'img_type','img_date','img_url','ref_no','extension'
+        'img_url','stu_id','clg_id','cos_id','spc_id'
     ];
 }

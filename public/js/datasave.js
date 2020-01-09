@@ -1,6 +1,8 @@
 //Graduate Data Store
 //$("#finish").click(function(){
 function degree_save(){
+        //console.log($( '#certificate_image' )[0].files[0])
+        var savedata = new FormData();
         var posts = []; 
         $('#languageTable > tbody  > tr').each(function() {
             var postData = {
@@ -11,38 +13,43 @@ function degree_save(){
             };
             posts.push(postData);
         });
-        var savedata = {
-            'title' : $('#title').val(),
-            'stu_name':$('#stu_name').val(),
-            'sex' : $('#sex').val(),
-            'dob':$('#dob').val(),
-            'nic' : $('#nic').val(),
-            'stu_address':$('#stu_address').val(),
-            'district' : $('#district').val(),
-            'dsa_id':$('#dsa_id').val(),
-            'stu_mobile' : $('#stu_mobile').val(),
-            'stu_telephone':$('#stu_telephone').val(),
-            'stu_email' : $('#stu_email').val(),
+        
+            savedata.append('title' , $('#title').val());
+            savedata.append('stu_name',$('#stu_name').val());
+            savedata.append('sex' , $('#sex').val());
+            savedata.append('dob',$('#dob').val());
+            savedata.append('nic' , $('#nic').val());
+            savedata.append('stu_address',$('#stu_address').val());
+            savedata.append('district' , $('#district').val());
+            savedata.append('dsa_id',$('#dsa_id').val());
+            savedata.append('stu_mobile' , $('#stu_mobile').val());
+            savedata.append('stu_telephone',$('#stu_telephone').val());
+            savedata.append('stu_email' , $('#stu_email').val());
 
-            'clg_id':$('#clg_id').val(),
-            'new_clg':$('#new_clg').val(),
-            'cos_id' : $('#cos_id').val(),
-            'new_cos':$('#new_cos').val(),
-            'spc_id':$('#spc_id').val(),
-            'speciality_in_word':$('#speciality_in_word').val(),
-            'medium' : $('#medium').val(),
-            'degree_class':$('#degree_class').val(),
-            'effective_date':$('#effective_date').val(),
-            'other_details' : $('#other_details').val(),
+            savedata.append('clg_id',$('#clg_id').val());
+            savedata.append('new_clg',$('#new_clg').val());
+            savedata.append('cos_id' , $('#cos_id').val());
+            savedata.append('new_cos',$('#new_cos').val());
+            savedata.append('spc_id',$('#spc_id').val());
+            savedata.append('speciality_in_word',$('#speciality_in_word').val());
+            savedata.append('medium' , $('#medium').val());
+            savedata.append('degree_class',$('#degree_class').val());
+            savedata.append('effective_date',$('#effective_date').val());
+            savedata.append('other_details' , $('#other_details').val());
 
-            'job_availability':$('#job_availability').val(),
-            'job_sector':$('#job_sector').val(),
-            'job_preference' : $('#job_preference').val(),
-            'language' : posts,
-            'it_skill':$('#it_skill').val(),
-            'it_skill_detail':$('#it_skill_detail').val(),
-            'extra_activity' : $('#extra_activity').val(),
-        }
+            savedata.append('job_availability',$('#job_availability').val());
+            savedata.append('job_sector',$('#job_sector').val());
+            savedata.append('job_preference' , $('#job_preference').val());
+            savedata.append('language' , JSON.stringify(posts));
+            savedata.append('it_skill',$('#it_skill').val());
+            savedata.append('it_skill_detail',$('#it_skill_detail').val());
+            savedata.append('extra_activity' , $('#extra_activity').val());
+    
+        
+        //savedata.append('certificate_image' , $( '' )[0].files[0]);
+        $.each($('input[type=file]')[0].files, function(i, value){
+            savedata.append('certificate_image['+i+']', value); // change this to value
+        });
         $.ajax({
             type: "POST",
             url: '/resource/application/graduate/register',
@@ -50,6 +57,9 @@ function degree_save(){
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
+            processData: false,
+            contentType: false,
+            enctype: 'multipart/form-data',
             success: function( msg ) {
                 console.log(msg)
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
@@ -71,6 +81,7 @@ function degree_save(){
     //Diploma Data Store
  //   $("#dfinish").click(function(){
 function diploma_save(){
+        var savedata = new FormData();
         var posts = []; 
         $('#languageTable > tbody  > tr').each(function() {
             var postData = {
@@ -81,35 +92,37 @@ function diploma_save(){
             };
             posts.push(postData);
         });
-        var savedata = {
-            'title' : $('#title').val(),
-            'stu_name':$('#stu_name').val(),
-            'sex' : $('#sex').val(),
-            'dob':$('#dob').val(),
-            'nic' : $('#nic').val(),
-            'stu_address':$('#stu_address').val(),
-            'district' : $('#district').val(),
-            'dsa_id':$('#dsa_id').val(),
-            'stu_mobile' : $('#stu_mobile').val(),
-            'stu_telephone':$('#stu_telephone').val(),
-            'stu_email' : $('#stu_email').val(),
+            savedata.append('title' , $('#title').val());
+            savedata.append('stu_name',$('#stu_name').val());
+            savedata.append('sex' , $('#sex').val());
+            savedata.append('dob',$('#dob').val());
+            savedata.append('nic' , $('#nic').val());
+            savedata.append('stu_address',$('#stu_address').val());
+            savedata.append('district' , $('#district').val());
+            savedata.append('dsa_id',$('#dsa_id').val());
+            savedata.append('stu_mobile' , $('#stu_mobile').val());
+            savedata.append('stu_telephone',$('#stu_telephone').val());
+            savedata.append('stu_email' , $('#stu_email').val());
 
-            'clg_id':$('#d_clg_id').val(),
-            'new_clg':$('#new_clg').val(),
-            'cos_id' : $('#d_cos_id').val(),
-            'speciality_in_word':$('#speciality_in_word').val(),
-            'medium' : $('#medium').val(),
-            'effective_date':$('#effective_date').val(),
-            'other_details' : $('#other_details').val(),
+            savedata.append('clg_id',$('#clg_id').val());
+            savedata.append('new_clg',$('#new_clg').val());
+            savedata.append('cos_id' , $('#cos_id').val());
+            savedata.append('speciality_in_word',$('#speciality_in_word').val());
+            savedata.append('medium' , $('#medium').val());
+            savedata.append('effective_date',$('#effective_date').val());
+            savedata.append('other_details' , $('#other_details').val());
 
-            'job_availability':$('#job_availability').val(),
-            'job_sector':$('#job_sector').val(),
-            'job_preference' : $('#job_preference').val(),
-            'language' : posts,
-            'it_skill':$('#it_skill').val(),
-            'it_skill_detail':$('#it_skill_detail').val(),
-            'extra_activity' : $('#extra_activity').val(),
-        }
+            savedata.append('job_availability',$('#job_availability').val());
+            savedata.append('job_sector',$('#job_sector').val());
+            savedata.append('job_preference' , $('#job_preference').val());
+            savedata.append('language' , JSON.stringify(posts));
+            savedata.append('it_skill',$('#it_skill').val());
+            savedata.append('it_skill_detail',$('#it_skill_detail').val());
+            savedata.append('extra_activity' , $('#extra_activity').val());
+
+            $.each($('input[type=file]')[0].files, function(i, value){
+                savedata.append('certificate_image['+i+']', value); // change this to value
+            });
         $.ajax({
             type: "POST",
             url: '/resource/application/diploma/register',
@@ -117,6 +130,9 @@ function diploma_save(){
             headers: {
                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
+            processData: false,
+            contentType: false,
+            enctype: 'multipart/form-data',
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
