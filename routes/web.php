@@ -121,6 +121,8 @@ Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>'auth'], function
     Route::group(['prefix' => 'report','as'=>'report'], function () {
         Route::group(['prefix' => 'student','as'=>'student'], function () {
             Route::get('degree', 'StudentController@index_degree');
+            Route::get('diploma', 'StudentController@index_diploma');
+            Route::get('degree/{id}', 'StudentController@detail_degree');
         });
     });
     

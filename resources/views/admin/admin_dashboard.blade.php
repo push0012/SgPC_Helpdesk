@@ -92,11 +92,20 @@
                                     Register User
                             </a>
                         </div>
-                        <div class="col-md-8">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
                             <a type="button" class="btn btn-labeled btn-success" href="/admin/report/student/degree">
                                 <span class="btn-labeling"><i class="fas fa-user-friends"></i></span>
-                                    All Students
-                                <span class="btn-labeling btn-right"></span>
+                                    Registered Students in Degree
+                                <span class="btn-labeling btn-right">{{ $student_g }}</span>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            <a type="button" class="btn btn-labeled btn-success" href="/admin/report/student/diploma">
+                                <span class="btn-labeling"><i class="fas fa-user-friends"></i></span>
+                                    Registered Students in Diploma
+                                <span class="btn-labeling btn-right">{{ $student_d }}</span>
                             </a>
                         </div>
                     </div>

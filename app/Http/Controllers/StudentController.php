@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Student;
+use DB;
 
 class StudentController extends Controller
 {
@@ -14,12 +15,20 @@ class StudentController extends Controller
      */
     public function index_degree()
     {
-        $students = Student::where('stu_confirm_data',1)->get();
+        //$students = Student::where('stu_confirm_data',1)->get();
+        $students = DB::table('degreestudentreport')->get();
         return view('admin.student.apg_student_list', compact(['students']));
     }
     public function index_diploma()
     {
-        //
+        $students = DB::table('diplomastudentreport')->get();
+        return view('admin.student.apd_student_list', compact(['students']));
+    }
+    public function detail_degree($id)
+    {
+        //$students = Student::where('stu_confirm_data',1)->get();
+        $students = DB::table('degreestudentreport')->where('stu_id',$id)->first();
+        return view('admin.student.apg_student_detail', compact(['students']));
     }
 
     /**

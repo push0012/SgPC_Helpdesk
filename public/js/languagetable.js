@@ -156,7 +156,15 @@ $('#removeLanguage').click( function () {
     var l = $('#collegelistTable').DataTable();
     var r = $('#mytable').DataTable();
     var j = $('#userlistTable').DataTable();
-     var e = $('#studentlistTable').DataTable();
+     var e = $('#studentlistTable').DataTable(
+        /*{
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'excel', 'pdf'
+            ]
+        } */
+     );
+     
     //course list table
     var q = $('#courseslistTable').DataTable();
 
