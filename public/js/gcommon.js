@@ -54,6 +54,10 @@ function gvalidate() {
 			output = false;
 			$("#clg_id-error").html("Required");
 		}
+		if($("#stream").val() == null) {
+			output = false;
+			$("#stream-error").html("Required");
+		}
 		if($("#cos_id").val() == null) {
 			output = false;
 			$("#cos_id-error").html("Required");

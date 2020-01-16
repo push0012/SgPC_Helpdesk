@@ -27,6 +27,7 @@ function degree_save(){
             savedata.append('stu_email' , $('#stu_email').val());
 
             savedata.append('clg_id',$('#clg_id').val());
+            savedata.append('stream',$('#stream').val());
             savedata.append('new_clg',$('#new_clg').val());
             savedata.append('cos_id' , $('#cos_id').val());
             savedata.append('new_cos',$('#new_cos').val());

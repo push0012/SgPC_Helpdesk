@@ -11,7 +11,7 @@ class StudentEducationDegree extends Model
     //protected $primaryKey = 'dsa_id';
 
     protected $fillable = [
-        'medium','degree_class','effective_date','other_details',
+        'stream','medium','degree_class','effective_date','other_details',
         'stu_id','clg_id','cos_id','spc_id','seg_confirm_data'
     ];
 

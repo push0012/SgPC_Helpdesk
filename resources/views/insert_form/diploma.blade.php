@@ -115,7 +115,7 @@
                             </div> 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="new_clg">Insert New Institute</label><span id="new_clg-error" class="registration-error"></span>
+                                    <label for="new_clg">If not in above List, Please Insert Your Institute</label><span id="new_clg-error" class="registration-error"></span>
                                     <div>
                                         <div><input type="text" name="new_clg" id="new_clg" class="form-control textonly" placeholder="Specify" disabled/></div>
                                     </div>
@@ -141,7 +141,7 @@
                             <div class="form-group row">
                                 <div class="col-md-9">
                                     
-                                    <label for="speciality_in_word">Specify Diploma</label><span id="speciality_in_word-error" class="registration-error"></span>
+                                    <label for="speciality_in_word">If Your Diploma not in above List, Please Specify Diploma</label><span id="speciality_in_word-error" class="registration-error"></span>
                                     <div>
                                         <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control textonly" placeholder="Specify" disabled/></div>
                                     </div>
@@ -152,6 +152,7 @@
                                         <select class="form-control" name="medium" id="medium">
                                             <option value="None" disabled selected>Select Medium</option>
                                             <option value="Sinhala">Sinhala</option>
+                                            <option value="Tamil">Tamil</option>
                                             <option value="English">English</option>
                                         </select>
                                     </div>
@@ -167,7 +168,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="certificate_image">Certificate Image</label><span id="certificate_image-error" class="registration-error"></span>
+                                    <label for="certificate_image">Certificate Images (.jpg, .jpeg, .png, .gif formats are Only Accepted)</label><span id="certificate_image-error" class="registration-error"></span>
                                     <div>
                                         <input type="file" accept=".jpg, .jpeg, .png, .gif" class="form-control-file" id="certificate_image[]" name="certificate_image[]" multiple>
                                     </div>

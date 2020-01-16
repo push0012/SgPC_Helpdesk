@@ -119,15 +119,47 @@
                             </div> 
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="new_clg">Insert New University</label><span id="new_clg-error" class="registration-error"></span>
+                                    <label for="new_clg">If not in above List, Please Insert Your University</label><span id="new_clg-error" class="registration-error"></span>
                                     <div>
                                         <div><input type="text" name="new_clg" id="new_clg" class="form-control textonly" placeholder="Specify" disabled/></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="stream">Degree Stream</label><span id="stream-error" class="registration-error"></span>
+                                    <div>
+                                        <select class="form-control" name="stream" id="stream">
+                                            <option value="None" disabled selected>Select Degree Stream</option>
+                                            <option value="Art">Art</option>
+                                            <option value="Commerce">Commerce</option>
+                                            <option value="Science">Science</option>
+                                            <option value="Engineering">Engineering</option>
+                                            <option value="Management">Management</option>
+                                            <option value="Technology">Technology</option>
+                                            <option value="Law">Law</option>
+                                            <option value="Nursing">Nursing</option>
+                                            <option value="Pharmacy">Pharmacy</option>
+                                            <option value="Performing Art">Performing Art</option>
+                                            <option value="Ayurveda">Ayurveda</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="dig_type">Degree Stream</label><span id="dig_type-error" class="registration-error"></span>
+                                    <div>
+                                        <select class="form-control" name="dig_type" id="dig_type">
+                                            <option value="None" disabled selected>Select Degree Type</option>
+                                            <option value="Special">Special</option>
+                                            <option value="General">General</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="cos_id">Degree</label><span id="cos_id-error" class="registration-error"></span>
+                                    <label for="cos_id">Degree (eg:- BSc, BA, BCom, BTech)</label><span id="cos_id-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="cos_id" id="cos_id">
                                             <option value="None" disabled selected>Select Degree</option>
@@ -138,7 +170,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="new_cos">Insert New Degree</label><span id="new_cos-error" class="registration-error"></span>
+                                    <label for="new_cos">If not in above List, Please Insert Your Degree</label><span id="new_cos-error" class="registration-error"></span>
                                     <div>
                                         <div><input type="text" name="new_cos" id="new_cos" class="form-control textonly" placeholder="Specify" disabled/></div>
                                     </div>
@@ -146,7 +178,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6">
-                                    <label for="spc_id">Speciality</label>
+                                    <label for="spc_id">Speciality or General</label>
                                     <div>
                                         <select class="form-control" name="spc_id" id="spc_id"><span id="spc_id-error" class="registration-error"></span>
                                             <option value="None" disabled selected>Select Speciality</option>
@@ -155,7 +187,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="speciality_in_word">Speciality in Words</label><span id="speciality_in_word-error" class="registration-error"></span>
+                                    <label for="speciality_in_word">If Not in the Speciality List, Specify</label><span id="speciality_in_word-error" class="registration-error"></span>
                                     <div>
                                         <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control textonly" placeholder="Specify" disabled/></div>
                                     </div>
@@ -168,6 +200,7 @@
                                         <select class="form-control" name="medium" id="medium">
                                             <option value="None" disabled selected>Select Medium</option>
                                             <option value="Sinhala">Sinhala</option>
+                                            <option value="Tamil">Tamil</option>
                                             <option value="English">English</option>
                                         </select>
                                     </div>
