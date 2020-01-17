@@ -1,10 +1,10 @@
 @extends('layouts.app')
-@section('pageTitle', 'උපාධිදාරී විස්තරාත්මක වාර්තා')
+@section('pageTitle', 'ඩිප්ලෝමාධාරී විස්තරාත්මක වාර්තා')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div style="font-size:1.5em;">{{ __('උපාධිදාරී ලියාපදිංචිය විස්තරාත්මක වාර්තා') }}</div>
+            <div style="font-size:1.5em;">{{ __('ඩිප්ලෝමාධාරී ලියාපදිංචිය විස්තරාත්මක වාර්තා') }}</div>
         </div>
     </div>
     <hr/>
@@ -16,7 +16,7 @@
                 <lable >Registration No:</lable>
             </div>
             <div class="col-md-10">
-                <lable>{{$students->degree_reg_no }}</lable>
+                <lable>{{$students->diploma_reg_no }}</lable>
             </div>
         </div>
         <div class="row form-group">
@@ -118,7 +118,7 @@
     <div class="container">
         <div class="row form-group">
             <div class="col-md-2 bg-success">
-                <lable >University:</lable>
+                <lable >Institute:</lable>
             </div>
             <div class="col-md-10">
                 <lable>{{$students->clg_name }}</lable>
@@ -126,57 +126,31 @@
         </div>
         <div class="row form-group">
             <div class="col-md-2 bg-success">
-                <lable>Degree:</lable>
+                <lable>Diploma:</lable>
             </div>
-            @if($students->spc_name == 'General')
-                <div class="col-md-10">
-                    <lable>{{ $students->cos_title}} ({{$students->spc_name}})</lable>
-                </div>
-            @else
-                <div class="col-md-10">
-                    <lable>{{ $students->cos_title}} (Special) in {{$students->spc_name}}</lable>
-                </div>
-            @endif
-        </div>
-        <div class="row form-group">
-            <div class="col-md-2 bg-success">
-                <lable>Stream:</lable>
-            </div>
-            <div class="col-md-4">
-                <lable>{{$students->stream }}</lable>
-            </div>
-            <div class="col-md-2 bg-success">
-                <lable>Type:</lable>
-            </div>
-            <div class="col-md-4">
-                <lable>{{$students->dig_type }}</lable>
+            <div class="col-md-10">
+                <lable>{{ $students->cos_title}}</lable>
             </div>
         </div>
         <div class="row form-group">
-            <div class="col-md-2 bg-success">
-                <lable>Result:</lable>
-            </div>
-            <div class="col-md-4">
-                <lable>{{$students->degree_class }}</lable>
-            </div>
             <div class="col-md-2 bg-success">
                 <lable>Medium:</lable>
             </div>
             <div class="col-md-4">
                 <lable>{{$students->medium }}</lable>
             </div>
-        </div>
-        <div class="row form-group">
             <div class="col-md-2 bg-success">
                 <lable>Effective Date:</lable>
             </div>
             <div class="col-md-4">
                 <lable>{{$students->effective_date }}</lable>
             </div>
+        </div>
+        <div class="row form-group">
             <div class="col-md-2 bg-success">
                 <lable>Certificate:</lable>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-10">
                 <lable>Click Here</lable>
             </div>
         </div>
@@ -185,7 +159,7 @@
                 <lable>Other Details:</lable>
             </div>
             <div class="col-md-10">
-                <lable>{{$students->other_details }}</lable>
+                <lable>{{ }}</lable>
             </div>
         </div>
         </div>

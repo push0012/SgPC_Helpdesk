@@ -30,6 +30,12 @@ class StudentController extends Controller
         $students = DB::table('degreestudentreport')->where('stu_id',$id)->first();
         return view('admin.student.apg_student_detail', compact(['students']));
     }
+    public function detail_diploma($id)
+    {
+        //$students = Student::where('stu_confirm_data',1)->get();
+        $students = DB::table('diplomastudentreport')->where('stu_id',$id)->first();
+        return view('admin.student.apd_student_detail', compact(['students']));
+    }
 
     /**
      * Show the form for creating a new resource.

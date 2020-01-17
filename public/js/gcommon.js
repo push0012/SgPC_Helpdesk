@@ -58,6 +58,10 @@ function gvalidate() {
 			output = false;
 			$("#stream-error").html("Required");
 		}
+		if($("#dig_type").val() == null) {
+			output = false;
+			$("#dig_type-error").html("Required");
+		}
 		if($("#cos_id").val() == null) {
 			output = false;
 			$("#cos_id-error").html("Required");

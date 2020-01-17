@@ -147,7 +147,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="dig_type">Degree Stream</label><span id="dig_type-error" class="registration-error"></span>
+                                    <label for="dig_type">Degree Type</label><span id="dig_type-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="dig_type" id="dig_type">
                                             <option value="None" disabled selected>Select Degree Type</option>
@@ -162,7 +162,7 @@
                                     <label for="cos_id">Degree (eg:- BSc, BA, BCom, BTech)</label><span id="cos_id-error" class="registration-error"></span>
                                     <div>
                                         <select class="form-control" name="cos_id" id="cos_id">
-                                            <option value="None" disabled selected>Select Degree</option>
+                                            <option value="None" disabled selected>Select Degree Name</option>
                                             <option value="0">New</option>
                                         </select>
                                     </div>
@@ -178,7 +178,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-6">
-                                    <label for="spc_id">Speciality or General</label>
+                                    <label for="spc_id">Speciality (eg:- Bachlor of Science (Special) in &lt;Speciality&gt;)</label>
                                     <div>
                                         <select class="form-control" name="spc_id" id="spc_id"><span id="spc_id-error" class="registration-error"></span>
                                             <option value="None" disabled selected>Select Speciality</option>

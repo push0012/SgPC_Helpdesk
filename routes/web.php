@@ -123,6 +123,7 @@ Route::group(['prefix' => 'admin','as'=>'admin.','middleware'=>'auth'], function
             Route::get('degree', 'StudentController@index_degree');
             Route::get('diploma', 'StudentController@index_diploma');
             Route::get('degree/{id}', 'StudentController@detail_degree');
+            Route::get('diploma/{id}', 'StudentController@detail_diploma');
         });
     });
     
