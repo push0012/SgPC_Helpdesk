@@ -24,10 +24,14 @@ class DiplomaController extends Controller
     use UploadTrait;
     public function index()
     {
+        return view('insert_form.introductiond');
+    }
+
+    public function form()
+    {
         $colleges = College::all();
         return view('insert_form.diploma')->with('colleges',$colleges);
     }
-
     public function store(Request $requests)
     {
         DB::beginTransaction();

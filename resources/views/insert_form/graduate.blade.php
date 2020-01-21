@@ -234,7 +234,7 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="certificate_image">Certificate Image</label><span id="certificate_image-error" class="registration-error"></span>
+                                    <label for="certificate_image">Certificate Image (.jpg, .jpeg, .png, .gif formats are Only Accepted)</label><span id="certificate_image-error" class="registration-error"></span>
                                     <div>
                                         <input type="file" accept=".jpg, .jpeg, .png, .gif" class="form-control-file" id="certificate_image[]" name="certificate_image[]" multiple>
                                     </div>

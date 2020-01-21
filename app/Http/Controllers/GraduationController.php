@@ -26,6 +26,11 @@ class GraduationController extends Controller
 
     public function index()
     {
+
+        return view('insert_form.introductiong');
+    }
+    public function form()
+    {
         $universities = College::all();
         return view('insert_form.graduate')->with('colleges',$universities);
     }

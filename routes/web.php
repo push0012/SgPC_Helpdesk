@@ -70,11 +70,13 @@ Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
 
         Route::group(['prefix' => 'graduate','as'=>'graduate.'], function () {
             Route::get('/', 'GraduationController@index');
+            Route::get('/form', 'GraduationController@form');
             Route::post('/register', 'GraduationController@store');
         });
 
         Route::group(['prefix' => 'diploma','as'=>'diploma.'], function () {
             Route::get('/', 'DiplomaController@index');
+            Route::get('/form', 'DiplomaController@form');
             Route::post('/register', 'DiplomaController@store');
         });
     });
