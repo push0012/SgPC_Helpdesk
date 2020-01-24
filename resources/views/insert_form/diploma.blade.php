@@ -122,28 +122,19 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-9">
-                                    <label for="d_cos_id">Diploma</label><span id="d_cos_id-error" class="registration-error"></span>
+                                <div class="col-md-12">
+                                    
+                                    <label for="cos_title">Diploma Name</label><span id="cos_title-error" class="registration-error"></span>
                                     <div>
-                                        <select class="form-control" name="d_cos_id" id="d_cos_id">
-                                            <option value="None" disabled selected>Select Diploma</option>
-                                            <option value="0">New</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <label for="effective_date">Effective Date</label><span id="effective_date-error" class="registration-error"></span>
-                                    <div>
-                                        <div><input type="date" name="effective_date" id="effective_date" class="form-control"/></div>
+                                        <div><input type="text" name="cos_title" id="cos_title" class="form-control" placeholder="Specify" disabled/></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="col-md-9">
-                                    
-                                    <label for="speciality_in_word">If Your Diploma not in above List, Please Specify Diploma</label><span id="speciality_in_word-error" class="registration-error"></span>
+                                <div class="col-md-3">
+                                    <label for="effective_date">Effective Date</label><span id="effective_date-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control textonly" placeholder="Specify" disabled/></div>
+                                        <div><input type="date" name="effective_date" id="effective_date" class="form-control"/></div>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -215,12 +206,12 @@
                                 </div>
                                 <div class="col-md-10">
                                     
-                                    <button type="button" class="btn btn-outline-success btn-sm float-right" id="addLanguage">
+                                   <!-- <button type="button" class="btn btn-outline-success btn-sm float-right" id="addLanguage">
                                         <span class="btn-label"><i class="fas fa-plus"></i></span>
                                     </button>
                                     <button type="button" class="btn btn-outline-danger btn-sm float-right" id="removeLanguage">
                                         <span class="btn-label"><i class="fas fa-times"></i></span>
-                                    </button>
+                                    </button>-->
 
                                     <table id="languageTable" class="display languageTable" style="width:500px">
                                         <thead>

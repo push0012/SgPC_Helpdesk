@@ -25,11 +25,7 @@
             <tr style="font-size:0.85em !important;">
               <td>{{ $degree_list->stu_name}}</td>
               <td>{{ $degree_list->nic}}</td>
-              @if($degree_list->spc_name == 'General')
-              <td>{{ $degree_list->cos_title}} ({{$degree_list->spc_name}}) </td>
-              @else
-              <td>{{ $degree_list->cos_title}}(Special) in {{$degree_list->spc_name}}</td>
-              @endif
+              <td>{{ $degree_list->cos_title}}</td>
               <td>{{ $degree_list->clg_name}}</td>
               <td><a class="btn btn-transparent" href="{{ url('admin/pending/degree/views/'.$degree_list->stu_id.'') }}" ><i class="fas fa-bars"></i></a></td>
             </tr>

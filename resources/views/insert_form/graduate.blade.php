@@ -159,37 +159,9 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="cos_id">Degree (eg:- BSc, BA, BCom, BTech)</label><span id="cos_id-error" class="registration-error"></span>
+                                    <label for="cos_title">Degree Name</label><span id="cos_title-error" class="registration-error"></span>
                                     <div>
-                                        <select class="form-control" name="cos_id" id="cos_id">
-                                            <option value="None" disabled selected>Select Degree Name</option>
-                                            <option value="0">New</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-12">
-                                    <label for="new_cos">If not in above List, Please Insert Your Degree</label><span id="new_cos-error" class="registration-error"></span>
-                                    <div>
-                                        <div><input type="text" name="new_cos" id="new_cos" class="form-control textonly" placeholder="Specify" disabled/></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-md-6">
-                                    <label for="spc_id">Speciality (eg:- Bachlor of Science (Special) in &lt;Speciality&gt;)</label>
-                                    <div>
-                                        <select class="form-control" name="spc_id" id="spc_id"><span id="spc_id-error" class="registration-error"></span>
-                                            <option value="None" disabled selected>Select Speciality</option>
-                                            <option value="0">New</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="speciality_in_word">If Not in the Speciality List, Specify</label><span id="speciality_in_word-error" class="registration-error"></span>
-                                    <div>
-                                        <div><input type="text" name="speciality_in_word" id="speciality_in_word" class="form-control textonly" placeholder="Specify" disabled/></div>
+                                        <div><input type="text" name="cos_title" id="cos_title" class="form-control" placeholder=""/></div>
                                     </div>
                                 </div>
                             </div>
@@ -281,12 +253,12 @@
                                 </div>
                                 <div class="col-md-10">
                                     
-                                    <button type="button" class="btn btn-outline-success btn-sm float-right" id="addLanguage">
+                                   <!-- <button type="button" class="btn btn-outline-success btn-sm float-right" id="addLanguage">
                                         <span class="btn-label"><i class="fas fa-plus"></i></span>
                                     </button>
                                     <button type="button" class="btn btn-outline-danger btn-sm float-right" id="removeLanguage">
                                         <span class="btn-label"><i class="fas fa-times"></i></span>
-                                    </button>
+                                    </button>-->
 
                                     <table id="languageTable" class="display languageTable" style="width:500px">
                                         <thead>

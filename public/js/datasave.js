@@ -30,10 +30,10 @@ function degree_save(){
             savedata.append('stream',$('#stream').val());
             savedata.append('dig_type',$('#dig_type').val());
             savedata.append('new_clg',$('#new_clg').val());
-            savedata.append('cos_id' , $('#cos_id').val());
-            savedata.append('new_cos',$('#new_cos').val());
+            savedata.append('cos_title' , $('#cos_title').val());
+            /*savedata.append('new_cos',$('#new_cos').val());
             savedata.append('spc_id',$('#spc_id').val());
-            savedata.append('speciality_in_word',$('#speciality_in_word').val());
+            savedata.append('speciality_in_word',$('#speciality_in_word').val());*/
             savedata.append('medium' , $('#medium').val());
             savedata.append('degree_class',$('#degree_class').val());
             savedata.append('effective_date',$('#effective_date').val());
@@ -63,14 +63,14 @@ function degree_save(){
             contentType: false,
             enctype: 'multipart/form-data',
             success: function( msg ) {
-                console.log(msg)
+                console.log("go "+msg)
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
                 setTimeout(function(){
                     window.location = '/confirm/?ref=' + msg.ref+'&date='+msg.date;
                 },2500);
             },
             error: function(msg) {
-                console.log(msg)
+                console.log("error " + msg)
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
                 setTimeout(function(){
                     window.location = '/failure';
@@ -108,8 +108,8 @@ function diploma_save(){
 
             savedata.append('clg_id',$('#clg_id').val());
             savedata.append('new_clg',$('#new_clg').val());
-            savedata.append('cos_id' , $('#cos_id').val());
-            savedata.append('speciality_in_word',$('#speciality_in_word').val());
+            savedata.append('cos_title' , $('#cos_title').val());
+           /* savedata.append('speciality_in_word',$('#speciality_in_word').val());*/
             savedata.append('medium' , $('#medium').val());
             savedata.append('effective_date',$('#effective_date').val());
             savedata.append('other_details' , $('#other_details').val());
@@ -224,10 +224,10 @@ $(document).ready(function() {
     });
 
     //store course Titles
-    $("#cos_title_store").click(function(){
+    /*$("#cos_title_store").click(function(){
         /*var output = form_validate();
         if(output){*/
-            var savedata = {
+            /*var savedata = {
                 'cos_title': $('#cos_title').val(),
                 'cos_type': $('#cos_type').val(),
             }
@@ -253,12 +253,12 @@ $(document).ready(function() {
                 }
             });
         //}
-    });
+    });*/
     //Edit course Titles
-    $("#cos_title_edit").click(function(){
+    /*$("#cos_title_edit").click(function(){
         /*var output = form_validate();
         if(output){*/
-            var savedata = {
+           /* var savedata = {
                 'cos_title': $('#cos_title').val(),
                 'cos_type': $('#cos_type').val(),
             }
@@ -286,11 +286,11 @@ $(document).ready(function() {
                 }
             });
         //}
-    });
+    });*/
 
 
     //store Courses
-    $("#cos_store").click(function(){
+    /*$("#cos_store").click(function(){
         //var output = form_validate();
         //console.log(output);
         //if(output){
@@ -330,10 +330,10 @@ $(document).ready(function() {
                 }
             });
         //}
-    });
+    });*/
 
     //Edit Courses
-    $("#program_edit").click(function(){
+    /*$("#program_edit").click(function(){
             var savedata = {
                 'clg_id': $('#clg_id').val(),
                 'cos_id': $('#cos_id').val(),
@@ -363,7 +363,7 @@ $(document).ready(function() {
                 }
             });
         //}
-    });
+    });*/
 
     //graduation approve
     $("#g_reg_app").click(function(){
@@ -373,8 +373,8 @@ $(document).ready(function() {
             'stu_email': $('#stu_email').val(),
             'reg_date': $('#reg_date').text(),
             'clg_id': $('#clg_id').val(),
-            'cos_id': $('#cos_id').val(),
-            'spc_id': $('#spc_id').val(),
+            /*'cos_id': $('#cos_id').val(),
+            'spc_id': $('#spc_id').val(),*/
             'degree_reg_no': $('#g_reg_no').val(),
         }
         console.log(savedata);
@@ -387,17 +387,17 @@ $(document).ready(function() {
             },
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
-                setTimeout(function(){
+               /* setTimeout(function(){
                     window.location = '/admin/pending/degree/';
-                },2500);
+                },2500);*/
                 //console.log(msg);
             },
             error: function(msg) {
-                //console.log(msg);
+                console.log(msg);
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
-                setTimeout(function(){
+                /*setTimeout(function(){
                     window.location = '/admin/pending/degree/';
-                },2500);
+                },2500);*/
             }
         });
     });
@@ -407,8 +407,8 @@ $(document).ready(function() {
         var savedata = {
             'stu_id': $('#stu_id').val(),
             'clg_id': $('#clg_id').val(),
-            'cos_id': $('#cos_id').val(),
-            'spc_id': $('#spc_id').val(),
+            /*'cos_id': $('#cos_id').val(),
+            'spc_id': $('#spc_id').val(),*/
         }
         console.log(savedata);
         $.ajax({
@@ -444,7 +444,7 @@ $(document).ready(function() {
             'stu_email': $('#stu_email').val(),
             'reg_date': $('#reg_date').text(),
             'clg_id': $('#clg_id').val(),
-            'cos_id': $('#cos_id').val(),
+            /*'cos_id': $('#cos_id').val(),*/
             'diploma_reg_no': $('#d_reg_no').val(),
         }
         console.log(savedata);
@@ -478,7 +478,7 @@ $(document).ready(function() {
         var savedata = {
             'stu_id': $('#stu_id').val(),
             'clg_id': $('#clg_id').val(),
-            'cos_id': $('#cos_id').val(),
+            /*'cos_id': $('#cos_id').val(),*/
         }
         console.log(savedata);
         $.ajax({

@@ -12,6 +12,6 @@ class StudentConfirmDegree extends Model
 
     protected $fillable = [
         'degree_reg_no','reg_confirm_dig',
-        'stu_id','clg_id','cos_id','deleted','user_data'
+        'stu_id','clg_id','deleted','user_data'
     ];
 }

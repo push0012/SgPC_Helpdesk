@@ -55,29 +55,43 @@
                         <lable>{{ $degreeholders->stu_email}}</lable>
                     </div>
                 </div>
-                <input type="hidden" name="cos_id" id="cos_id" value="{{ $degreeholders->cos_id }}"/>
-                <input type="hidden" name="spc_id" id="spc_id" value="{{ $degreeholders->spc_id }}"/>
-                @if($degreeholders->spc_name == 'General')
+                
                 <div class="row digdetail">
                     <div class="col-md-3">
-                        <lable>Degree:</lable>
+                        <lable>Degree Title:</lable>
                     </div>
                     <div class="col-md-9">
-                        <lable>{{ $degreeholders->cos_title}} ({{$degreeholders->spc_name}})</lable>
+                        <lable>{{ $degreeholders->cos_title}}</lable>
                         
                     </div>
                 </div>
-                @else
                 <div class="row digdetail">
                     <div class="col-md-3">
-                        <lable>Degree:</lable>
+                        <lable>Degree Type:</lable>
                     </div>
                     <div class="col-md-9">
-                        <lable>{{ $degreeholders->cos_title}} (Special) in {{$degreeholders->spc_name}}</lable>
+                        <lable>{{ $degreeholders->dig_type}}</lable>
+                        
                     </div>
                 </div>
-                @endif
-
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Stream:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable>{{ $degreeholders->stream}}</lable>
+                        
+                    </div>
+                </div>
+                <div class="row digdetail">
+                    <div class="col-md-3">
+                        <lable>Degree Title:</lable>
+                    </div>
+                    <div class="col-md-9">
+                        <lable>{{ $degreeholders->cos_title}}</lable>
+                        
+                    </div>
+                </div>
                 <div class="row digdetail">
                     <div class="col-md-3">
                         <lable>University:</lable>
@@ -119,16 +133,6 @@
                         <lable name="reg_date" id="reg_date">{{ Carbon\Carbon::parse($degreeholders->created_at)->format('Y-m-d')}}</lable>
                     </div>
                 </div>
-
-                <div class="row digdetail">
-                    <div class="col-md-3">
-                        <lable>Reference Number:</lable>
-                    </div>
-                    <div class="col-md-9">
-                        <lable name="ref_no" id="ref_no">{{ $refs }}</lable>
-                    </div>
-                </div>
-
                 <div class="row digdetail">
                     <div class="col-md-3">
                         <lable>Last Registered Number:</lable>

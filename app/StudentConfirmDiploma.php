@@ -12,6 +12,6 @@ class StudentConfirmDiploma extends Model
 
     protected $fillable = [
         'diploma_reg_no','reg_confirm_dip',
-        'stu_id','clg_id','cos_id','deleted','user_data'
+        'stu_id','clg_id','deleted','user_data'
     ];
 }

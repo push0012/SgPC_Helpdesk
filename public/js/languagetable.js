@@ -175,7 +175,7 @@ $('#removeLanguage').click( function () {
     var b = $('#programlistTable').DataTable();
 
     //for graduation detail form
-	$('#show_clg_id').change(function(e) {
+	/*$('#show_clg_id').change(function(e) {
         var clgid = $(this).val();
         console.log(clgid)
 		$.ajax({
@@ -215,5 +215,5 @@ $('#removeLanguage').click( function () {
 				}
 			});
 		
-	    });
+	    });*/
 });

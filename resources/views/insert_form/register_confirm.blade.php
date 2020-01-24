@@ -11,28 +11,24 @@
                     <div class="row justify-content-center">
                         <div class="col-md-12">
                             <strong>
-                            <p>ඔබගේ උපාධිධාරී/ඩිප්ලෝමාධාරී ලියාපදිංචි අයදුම්පත සාර්ථකව අප ගබඩා කරගන්නා ලදී.</p> 
-                            <p>එයට අදාල ඔබගේ ලියාපදිංචි අංකය දින 5ක් තුල ඔබගේ ලියාපදිංචි අංකය ඔබවෙත Email 
-                            මාර්ගයෙන් ලැබීමට සලස්වනු ලැබේ.</p> 
+                            <p>ඔබ විසින් යොමු කරණ ලද තොරතුරු 
+                                අපගේ දත්ත පද්ධතියට සාර්ථකවඇතුලත් වී ඇත. 
+                                තොරතුර පරීක්ෂා කිරීමෙන් අනතුරුව ලියාපදිංචි විස්තර 
+                                ඔබ වෙත යොමු කරණු ඇත.</p> 
                             </strong>
+                            <p align="center">තොරතුරු, පරියේෂණ හා විශේෂ ව්‍යාපෘති දෙපාර්තමේන්තුව<br/>
+                            නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කාර්යාලය<br/>
+                            සබරගමුව පළාත් සභාව</p>
                         </div>
                     </div>
                     <hr>
                     <div class="row justify-content-center">
-                        <div class="col-md-6 row justify-content-center">
-                            <lable>Reference Number&nbsp;:  &nbsp;</lable>
-                        </div>
-                        <div class="col-md-6 row justify-content-center">
+                        <div class="col-md-12 row justify-content-center">
                             <lable>Regstered Date&nbsp;: &nbsp; </lable>  
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-md-6 row justify-content-center">
-                            <strong>
-                                {{ request()->ref }}
-                            </strong>
-                        </div>
-                        <div class="col-md-6 row justify-content-center">
+                        <div class="col-md-12 row justify-content-center">
                             <strong>
                             {{ request()->date }}
                             </strong>

@@ -63,8 +63,8 @@ class DiplomaController extends Controller
                 $image_upload = new ImageSave(); 
                 $image_upload->stu_id = $request->stu_id;
                 $image_upload->clg_id = $request->clg_id;
-                $image_upload->cos_id = $request->cos_id;
-                $image_upload->spc_id = 2;
+                /*$image_upload->cos_id = $request->cos_id;
+                $image_upload->spc_id = 2;*/
 
                 // Check if a profile image has been uploaded
                 //echo  $request->file('certificate_image');
@@ -91,7 +91,7 @@ class DiplomaController extends Controller
                 $image_upload->img_url = json_encode($data);
                 $image_upload->save();
 
-        $refs = $student->stu_id."".$request->clg_id."".$request->cos_id;
+        $refs = $student->stu_id."".$request->clg_id/*."".$request->cos_id*/;
         $date = $student->created_at->format('Y-m-d');
         DB::commit();
         return response()->json(['ref'=>$refs,'date'=>$date], 201);
@@ -117,9 +117,9 @@ class DiplomaController extends Controller
         $imagesave = ImageSave::select('img_url')
                                 ->where('stu_id', $diplomaholder->stu_id)
                                 ->where('clg_id',$diplomaholder->clg_id)
-                                ->where('cos_id',$diplomaholder->cos_id)
+                                /*->where('cos_id',$diplomaholder->cos_id)*/
                                 ->first();
-        $refs = $diplomaholder->stu_id."".$diplomaholder->clg_id."".$diplomaholder->cos_id;
+        $refs = $diplomaholder->stu_id."".$diplomaholder->clg_id/*."".$diplomaholder->cos_id*/;
         return view('admin.pending.diploma_holder', compact(['diplomaholder','last_diploma', 'refs','imagesave']));
     }
 
@@ -137,7 +137,7 @@ class DiplomaController extends Controller
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '1'));
         $gos = StudentEducationDiploma::where('stu_id', $request->stu_id)
                                         ->where('clg_id', $request->clg_id)
-                                        ->where('cos_id', $request->cos_id)
+                                        /*->where('cos_id', $request->cos_id)*/
                                         ->update(array('sep_confirm_data' => '1'));
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '1'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
@@ -176,7 +176,7 @@ class DiplomaController extends Controller
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '2'));
         $gos = StudentEducationDiploma::where('stu_id', $request->stu_id)
                                         ->where('clg_id', $request->clg_id)
-                                        ->where('cos_id', $request->cos_id)
+                                        /*->where('cos_id', $request->cos_id)*/
                                         ->update(array('sep_confirm_data' => '2'));
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '2'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '2'));

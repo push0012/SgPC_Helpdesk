@@ -84,8 +84,8 @@
                                             <h5 class="align-self-center box-head" align="center" 
                                             style="font-size:1.2em; font-weight:bold; padding: 5px 0 5px 0;">
                                             සබරගමුව උපකාරක කවුළුව : වෘත්තීය මංපෙත
-                                        </h5>
-                                    </div>
+                                            </h5>
+                                        </div>
                                     <div style="padding: 0 15px; 0 15px;" class="">
                                         <p style="font-size:0.9em;" align="center">සබරගමුව පළාතේ තිරසාර සංවර්ධනයත්, ජනතාවගේ උසස් ජීවන මට්ටමත් ළඟාකරගැනීමේ අරමුණ පෙරදැරිව, 
                                             පවතින සම්පත් කාර්‍යක්ෂමව හා සඵලමත්ව යොදාගැනීම උදෙසා ක්‍රමවත් ක්‍රමසම්පාදන ක්‍රියාවලියක් තුළින් ප්‍රතිපත්ති තීරකයන්ට 
@@ -102,10 +102,10 @@
                     </div>
                     <hr>
                     <div class="container-fluid">
-                        
                         <div class="row" >
                             <div class="contents" align="center">
                                 <div class="containers-dashboard" >
+
                                     <a href="{{ url('/resource')}}" class="img1 box bg-info">
                                         <div class="row">
                                             <div class="col-md-4">
@@ -144,10 +144,43 @@
                                             </div>
                                         </div>
                                     </a>
+
                                 </div> 
                             </div>
-                        </div>     
+                        </div> 
                     </div>
+                    <!--- newly added section in 2020.01.21 -->
+                    <hr>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12" style="padding: unset;">
+                                <div class="" style="margin:5px;">
+                                    <h5 class="align-self-center bg-info text-black" align="center" 
+                                        style="font-size:1.2em; font-weight:bold; padding: 5px 0 5px 0;">
+                                        වාර්තා හා විශේෂාංග
+                                    </h5>
+                                </div>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-md-3" style="text-align:center;">
+                                        
+                                            <a href="{{ asset('file/sabaragamuplan.pdf') }}" target="_blank" class="page_links">
+                                                <img src="{{ asset('image/sabaragamuplancover.jpg') }}" style="width: 75%;">
+                                                <p>Sabaragamuwa Plan <br/>2019-2023</p>
+                                            </a>
+                                    
+                                        </div>
+                                        <div class="col-md-3" style="margin:auto;"></div>
+                                        <div class="col-md-3" style="margin:auto;"></div>
+                                        <div class="col-md-3" style="margin:auto;"></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- newly added section over-->
+
                 </div>
                 <hr>
                 @include('footer')

@@ -46,7 +46,7 @@ $(document).ready(function() {
 	});
 
 	//for graduation detail form
-	$('#clg_id').change(function(e) {
+	/*$('#clg_id').change(function(e) {
 		var clgid = $(this).val();
 
 		if(clgid == 0){
@@ -80,9 +80,9 @@ $(document).ready(function() {
 				}
 			});
 		}
-	});
+	});*/
 	
-	$('#cos_id').change(function(e) {
+	/*$('#cos_id').change(function(e) {
 		//console.log(clgid)
 		var postData = {
 			'cos_id' :$(this).val(),
@@ -117,10 +117,10 @@ $(document).ready(function() {
 		}
 
 		
-	});
+	});*/
 
 	//for diploma details form
-	$('#d_clg_id').change(function(e) {
+	/*$('#d_clg_id').change(function(e) {
 		var clgid = $(this).val();
 		console.log(clgid)
 		if(clgid == 0){
@@ -151,9 +151,9 @@ $(document).ready(function() {
 			});
 		}
 	});
-
+*/
 	//enable with new type speciallity
-	$('#d_cos_id').change(function(e) {
+/*	$('#d_cos_id').change(function(e) {
 
 		if($(this).val() == 0){
 			$("#speciality_in_word").attr('disabled',false);
@@ -171,7 +171,7 @@ $(document).ready(function() {
 			$("#speciality_in_word").attr('disabled',true);
 		}
 	});
-
+*/
 	//within degree register form open new field
 	//new University
 	$('#clg_id').change(function(e) {
@@ -193,14 +193,14 @@ $(document).ready(function() {
 		}
 	});
 	//New Degree
-	$('#cos_id').change(function(e) {
+	/*$('#cos_id').change(function(e) {
 
 		if($(this).val() ==0){
 			$("#new_cos").attr('disabled',false);
 		}else{
 			$("#new_cos").attr('disabled',true);
 		}
-	});
+	});*/
 
 	//jobavailability doprdown eneble
 	$('#job_availability').change(function(e) {

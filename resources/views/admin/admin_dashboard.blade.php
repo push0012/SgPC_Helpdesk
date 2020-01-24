@@ -57,7 +57,7 @@
                             <span class="btn-labeling btn-right">{{ $college }}</span>
                         </a>
                     </div>
-                    <div class="col-md-3">
+                    <!--<div class="col-md-3">
                         <a type="button" class="btn btn-labeled btn-danger" href="/admin/masterdata/course/">
                             <span class="btn-labeling"><i class="fas fa-shapes"></i></span>
                                 Course
@@ -70,16 +70,16 @@
                                 Speciality
                             <span class="btn-labeling btn-right">{{ $speciality }}</span>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="row">
-                    <div class="col-md-8">
+                    <!--<div class="col-md-8">
                         <a type="button" class="btn btn-labeled btn-secondary" href="/admin/masterdata/collegecourse">
                             <span class="btn-labeling"><i class="fa fa-chalkboard-teacher"></i></span>
                                 Course by University or Institute
                             <span class="btn-labeling btn-right">{{ $program }}</span>
                         </a>
-                    </div>
+                    </div>-->
                 </div>
                 @if(Auth::user()->role_rank < 3 )
                 <hr class="hrlines"/>

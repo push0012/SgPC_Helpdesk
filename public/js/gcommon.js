@@ -62,13 +62,9 @@ function gvalidate() {
 			output = false;
 			$("#dig_type-error").html("Required");
 		}
-		if($("#cos_id").val() == null) {
+		if($("#cos_title").val() == "") {
 			output = false;
-			$("#cos_id-error").html("Required");
-		}
-		if($("#spc_id").val() == null) {
-			output = false;
-			$("#spc_id-error").html("Required");
+			$("#cos_title-error").html("Required");
 		}
 		if($("#medium").val() == null) {
 			output = false;
@@ -91,7 +87,7 @@ function gvalidate() {
 			output = false;
 			$("#new_clg-error").html("Required");
 		}
-		//new cos enable true
+		/*//new cos enable true
 		if($('#new_cos').is(':disabled') == false && $("#new_cos").val() == "") {
 			output = false;
 			$("#new_cos-error").html("Required");
@@ -100,7 +96,7 @@ function gvalidate() {
 		if($('#speciality_in_word').is(':disabled') == false && $("#speciality_in_word").val() == "") {
 			output = false;
 			$("#speciality_in_word-error").html("Required");
-		}
+		}*/
 		
 	}
 	if($("#gprofessional-field").css('display') != 'none') {
@@ -209,9 +205,9 @@ function dvalidate() {
 			output = false;
 			$("#d_clg_id-error").html("Required");
 		}
-		if($("#d_cos_id").val() == null) {
+		if($("#cos_title").val() == null) {
 			output = false;
-			$("#d_cos_id-error").html("Required");
+			$("#cos_title-error").html("Required");
 		}
 		if($("#medium").val() == null) {
 			output = false;
@@ -225,17 +221,16 @@ function dvalidate() {
 		if($('#new_clg').is(':disabled') == false && $("#new_clg").val() == "") {
 			output = false;
 			$("#new_clg-error").html("Required");
-		}
+		}/*W
 		//speciality_in_word enable true
 		if($('#speciality_in_word').is(':disabled') == false && $("#speciality_in_word").val() == "") {
 			output = false;
 			$("#speciality_in_word-error").html("Required");
-		}
+		}*/
 		if($('input[type=file]')[0].files.length === 0) {
 			output = false;
 			$("#certificate_image-error").html("Required");
 		}
-		
 	}
 	if($("#dprofessional-field").css('display') != 'none') {
 

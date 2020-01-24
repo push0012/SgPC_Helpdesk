@@ -12,7 +12,7 @@ class StudentEducationDegree extends Model
 
     protected $fillable = [
         'stream','dig_type','medium','degree_class','effective_date','other_details',
-        'stu_id','clg_id','cos_id','spc_id','seg_confirm_data'
+        'stu_id','clg_id','cos_title','seg_confirm_data'
     ];
 
     //public $timestamps = false;

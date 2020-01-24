@@ -66,8 +66,8 @@ class GraduationController extends Controller
                 $image_upload = new ImageSave(); 
                 $image_upload->stu_id = $request->stu_id;
                 $image_upload->clg_id = $request->clg_id;
-                $image_upload->cos_id = $request->cos_id;
-                $image_upload->spc_id = $request->spc_id;
+                /*$image_upload->cos_id = $request->cos_id;
+                $image_upload->spc_id = $request->spc_id;*/
 
                 // Check if a profile image has been uploaded
                 //echo  $request->file('certificate_image');
@@ -94,7 +94,7 @@ class GraduationController extends Controller
                 $image_upload->img_url = json_encode($data);
                 $image_upload->save();
 
-        $refs = $student->stu_id."".$request->clg_id."".$request->cos_id."".$request->spc_id;
+        $refs = $student->stu_id."".$request->clg_id/*."".$request->cos_id."".$request->spc_id*/;
         $date = $student->created_at->format('Y-m-d');
         DB::commit();
         return response()->json(['ref'=>$refs,'date'=>$date], 201);
@@ -120,10 +120,10 @@ class GraduationController extends Controller
         $imagesave = ImageSave::select('img_url')
                         ->where('stu_id', $degreeholders->stu_id)
                         ->where('clg_id',$degreeholders->clg_id)
-                        ->where('cos_id',$degreeholders->cos_id)
-                        ->where('spc_id',$degreeholders->spc_id)
+                        /*->where('cos_id',$degreeholders->cos_id)
+                        ->where('spc_id',$degreeholders->spc_id)*/
                         ->first();
-        $refs = $degreeholders->stu_id."".$degreeholders->clg_id."".$degreeholders->cos_id."".$degreeholders->spc_id;
+        $refs = $degreeholders->stu_id."".$degreeholders->clg_id/*."".$degreeholders->cos_id."".$degreeholders->spc_id*/;
         return view('admin.pending.degree_holder', compact(['degreeholders','last_degree', 'refs','imagesave']));
     }
 
@@ -141,8 +141,8 @@ class GraduationController extends Controller
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '1'));
         $gos = StudentEducationDegree::where('stu_id', $request->stu_id)
                                         ->where('clg_id', $request->clg_id)
-                                        ->where('cos_id', $request->cos_id)
-                                        ->where('spc_id', $request->spc_id)
+                                        /*->where('cos_id', $request->cos_id)
+                                        ->where('spc_id', $request->spc_id)*/
                                         ->update(array('srg_confirm_data' => '1'));
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '1'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '1'));
@@ -157,7 +157,6 @@ class GraduationController extends Controller
                 'reg_date'=>$request->reg_date,
                 'clg_name'=>$degreeholder->clg_name,
                 'cos_title'=>$degreeholder->cos_title,
-                'spc_name'=>$degreeholder->spc_name,
         ]);
 
         Mail::send(new StudentRegister($result));
@@ -182,8 +181,8 @@ class GraduationController extends Controller
         $go = Student::where('stu_id', $request->stu_id)->update(array('stu_confirm_data' => '2'));
         $gos = StudentEducationDegree::where('stu_id', $request->stu_id)
                                         ->where('clg_id', $request->clg_id)
-                                        ->where('cos_id', $request->cos_id)
-                                        ->where('spc_id', $request->spc_id)
+                                       /*->where('cos_id', $request->cos_id)
+                                        ->where('spc_id', $request->spc_id)*/
                                         ->update(array('srg_confirm_data' => '2'));
         $go = StudentProfessional::where('stu_id', $request->stu_id)->update(array('sp_confirm_data' => '2'));
         $goss = StudentLanguage::where('stu_id', $request->stu_id)->update(array('sl_confirm_data' => '2'));

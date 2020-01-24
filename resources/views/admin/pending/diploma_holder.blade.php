@@ -54,7 +54,6 @@
                         <lable>{{ $diplomaholder->stu_email}}</lable>
                     </div>
                 </div>
-                <input type="hidden" name="cos_id" id="cos_id" value="{{ $diplomaholder->cos_id }}"/>
                 <div class="row digdetail">
                     <div class="col-md-3">
                         <lable>Diploma:</lable>
@@ -96,14 +95,6 @@
                     </div>
                     <div class="col-md-9">
                         <lable name="reg_date" id="reg_date">{{ Carbon\Carbon::parse($diplomaholder->created_at)->format('Y-m-d')}}</lable>
-                    </div>
-                </div>
-                <div class="row digdetail">
-                    <div class="col-md-3">
-                        <lable>Reference Number:</lable>
-                    </div>
-                    <div class="col-md-9">
-                        <lable name="ref_no" id="ref_no">{{ $refs }}</lable>
                     </div>
                 </div>
                 <div class="row digdetail">
