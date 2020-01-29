@@ -387,17 +387,17 @@ $(document).ready(function() {
             },
             success: function( msg ) {
                 callNotification('fas fa-check-circle','Information','Data Save Successfully','success' );
-               /* setTimeout(function(){
+                setTimeout(function(){
                     window.location = '/admin/pending/degree/';
-                },2500);*/
+                },2500);
                 //console.log(msg);
             },
             error: function(msg) {
                 console.log(msg);
                 callNotification('fas fa-exclamation-triangle','Error','Data Saving Unsuccessfully','danger' );
-                /*setTimeout(function(){
+                setTimeout(function(){
                     window.location = '/admin/pending/degree/';
-                },2500);*/
+                },2500);
             }
         });
     });

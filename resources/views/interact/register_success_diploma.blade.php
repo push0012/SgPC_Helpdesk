@@ -79,9 +79,7 @@
                                 බවට තහවුරු කරගන්නා ලදී.</p>
                             <p>ඒ අනුව ඔබගේ ලියාපදිංචියට අදාල තොරතුරු පහත පරිදි වේ.</p>
                             <p><label>University/Institute : </lable>{{ $email['clg_name'] }}</p>
-                         
                             <p><label>Diploma : </lable>{{ $email['cos_title'] }}</p>
-                            
                             <p><label>Registered Date : </lable>{{ $email['reg_date'] }}</p>
                             <p><label>Registration No : </lable>{{ $email['reg_no'] }}</p>
                     </div>

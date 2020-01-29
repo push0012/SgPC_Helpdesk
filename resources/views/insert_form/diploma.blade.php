@@ -91,8 +91,8 @@
                                     <div><input type="text" name="stu_telephone" id="stu_telephone" minlength="10" maxlength="10" class="form-control numberonly" placeholder="Telephone"/></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="stu_email">Email</label><span id="stu_email-error" class="registration-error"></span>
-                                    <div><input type="email" name="stu_email" id="stu_email" class="form-control" placeholder="E-mail"/></div>
+                                    <label for="stu_email">Email (if you haven't please type not-applicable@help.com)</label><span id="stu_email-error" class="registration-error"></span>
+                                    <div><input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" name="stu_email" id="stu_email" class="form-control" placeholder="E-mail"/></div>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                                     
                                     <label for="cos_title">Diploma Name</label><span id="cos_title-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="text" name="cos_title" id="cos_title" class="form-control" placeholder="Specify" disabled/></div>
+                                        <div><input type="text" name="cos_title" id="cos_title" class="form-control" placeholder="Specify"/></div>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +262,7 @@
                                     <div class="captcha-image" id="captcha" ></div>
                                     <span id="captcha-error" class="registration-error"></span><br/>
                                     <button type="button" class="btn btn-outline-info btn-sm" onClick="createCaptcha_diploma()">
-                                        <span class="btn-label"><i class="fas fa-sync-alt"></i></span>
+                                        <span class="btn-label"><i class="fas fa-sync-alt"></i> (If you don't See Anything Above, Please Press this Once)</span>
                                     </button>
                                 </div>
                             </div>

@@ -55,16 +55,6 @@
                         <lable>{{ $degreeholders->stu_email}}</lable>
                     </div>
                 </div>
-                
-                <div class="row digdetail">
-                    <div class="col-md-3">
-                        <lable>Degree Title:</lable>
-                    </div>
-                    <div class="col-md-9">
-                        <lable>{{ $degreeholders->cos_title}}</lable>
-                        
-                    </div>
-                </div>
                 <div class="row digdetail">
                     <div class="col-md-3">
                         <lable>Degree Type:</lable>
@@ -89,7 +79,6 @@
                     </div>
                     <div class="col-md-9">
                         <lable>{{ $degreeholders->cos_title}}</lable>
-                        
                     </div>
                 </div>
                 <div class="row digdetail">

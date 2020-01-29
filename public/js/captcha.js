@@ -4,7 +4,7 @@ function createCaptcha_degree() {
   //clear the contents of captcha div first 
   document.getElementById('captcha').innerHTML = "";
   var charsArray =
-  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lengthOtp = 6;
   var captcha = [];
   for (var i = 0; i < lengthOtp; i++) {
@@ -28,12 +28,12 @@ function createCaptcha_degree() {
 }
 function validateCaptcha_degree() {
   event.preventDefault();
-  debugger
+  //debugger
   if (document.getElementById("cpatchaTextBox").value == codeg) {
-    alert("Valid Captcha")
+    //alert("Valid Captcha")
     degree_save();
   }else{
-    alert("Invalid Captcha. try Again");
+    //alert("Invalid Captcha. try Again");
     $("#captcha-error").html("Invalid Captcha. try Again");
     createCaptcha_degree();
   }
@@ -45,7 +45,7 @@ function createCaptcha_diploma() {
   //clear the contents of captcha div first 
   document.getElementById('captcha').innerHTML = "";
   var charsArray =
-  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*";
+  "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lengthOtp = 6;
   var captcha = [];
   for (var i = 0; i < lengthOtp; i++) {
@@ -69,12 +69,12 @@ function createCaptcha_diploma() {
 }
 function validateCaptcha_diploma() {
   event.preventDefault();
-  debugger
+  //debugger
   if (document.getElementById("cpatchaTextBox").value == code) {
-    alert("Valid Captcha")
+    //alert("Valid Captcha")
     diploma_save();
   }else{
-    alert("Invalid Captcha. try Again");
+    //alert("Invalid Captcha. try Again");
     $("#captcha-error").html("Invalid Captcha. try Again");
     createCaptcha_diploma();
   }

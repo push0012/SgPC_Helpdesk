@@ -31,7 +31,7 @@ class StudentRegister extends Mailable
     public function build()
     {
         return $this->subject('Graduate Registration')
-                    ->from('hdcspspc@gmail.com', 'Administrator')
+                    ->from('sghelpdesk001@gmail.com', 'Administrator')
                     ->to($this->email['email'])
                     ->view('interact.register_success');
     }

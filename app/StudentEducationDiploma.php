@@ -11,7 +11,7 @@ class StudentEducationDiploma extends Model
     //protected $primaryKey = 'dsa_id';
 
     protected $fillable = [
-        'medium','effective_date',
+        'medium','effective_date','other_details',
         'stu_id','clg_id','cos_title','sep_confirm_data'
     ];
 

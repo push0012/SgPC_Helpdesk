@@ -79,11 +79,7 @@
                                 බවට තහවුරු කරගන්නා ලදී.</p>
                             <p>ඒ අනුව ඔබගේ ලියාපදිංචියට අදාල තොරතුරු පහත පරිදි වේ.</p>
                             <p><label>University/Institute : </lable>{{ $email['clg_name'] }}</p>
-                            @if( $email['spc_name'] == 'General')
-                            <p><label>Degree/Diploma : </lable>{{ $email['cos_title'] }} ({{ $email['spc_name'] }})</p>
-                            @else
-                            <p><label>Degree/Diploma : </lable>{{ $email['cos_title'] }} (Special) in {{ $email['spc_name'] }}</p>
-                            @endif
+                            <p><label>Degree/Diploma : </lable>{{ $email['cos_title'] }}</p>
                             <p><label>Registered Date : </lable>{{ $email['reg_date'] }}</p>
                             <p><label>Registration No : </lable>{{ $email['reg_no'] }}</p>
                     </div>

@@ -59,14 +59,23 @@
                     <div class="row " style="">
                                 <div class="col-md-3 left-menus bg-secondary-front" style="padding: 2%; color: black;">
                                     <h4 align="center" class="bg-info" style="border-radius:5px;">නිවේදන</h4>
+                                    
                                     <ul style="list-style-type:square; padding-left:4%;" class="list-group list-group-flush">
+                                        <marquee direction = "up" scrollamount="2">
                                         <li class="">
                                         ශ්‍රී ලංකා පාර්ලිමේන්තු ගිණුම් කාරක සභාවේ 2017 මුදල් වර්ශය සඳහා 
                                         නිර්මල මූල්‍ය කලමනාකරණය හා කාර්යක්ශම කාර්යසාධනය සඳහා වූ
                                          ස්වර්ණ සම්මානයෙන් පිදුම් ලැබූ වගයි
                                         </li>
-                            
+                                        <br/>
+                                        <li class="">
+                                        දැන් ඔබගේ පහසුව සඳහා උපාධිධාරී හෝ ඩිප්ලෝමාධාරී ලෙස සබරගමුව
+                                         පළාත් සභාවේ ලියාපදිංචි වීම අන්තර්ජාලය මගින් සිදුකල හැකිය. 
+                                         <a href="{{ url('/resource/application/')}}">අදාල පිටුවට යාම සඳහා මෙහි Click කරන්න.</a>
+                                        </li>
+                                        </marquee>
                                     </ul>
+                                    
                                 </div>
                                 <div class="col-md-9" style="padding: unset !important;">
                                     @include('slider')

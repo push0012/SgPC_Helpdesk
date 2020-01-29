@@ -32,7 +32,7 @@ class Information extends Mailable
     public function build()
     {
         return $this->subject('Right to Information Inquiry')
-                    ->from('hdcspspc@gmail.com', 'Administrator RTI')
+                    ->from('sghelpdesk001@gmail.com', 'Administrator RTI')
                     ->to('pushpamal0012@gmail.com')
                     ->view('interact.inquiry');
     }

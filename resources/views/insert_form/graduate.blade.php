@@ -94,7 +94,7 @@
                                     <div><input type="text" name="stu_telephone" id="stu_telephone" minlength="10" maxlength="10" class="form-control numberonly" placeholder="Telephone"/></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="stu_email">Email</label><span id="stu_email-error" class="registration-error"></span>
+                                    <label for="stu_email">Email (if you haven't please type not-applicable@help.com)</label><span id="stu_email-error" class="registration-error"></span>
                                     <div><input type="email" name="stu_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="stu_email" class="form-control" placeholder="E-mail"/></div>
                                 </div>
                             </div>
@@ -305,11 +305,11 @@
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="col-md-12" >
-                                    <strong>Retype the Characters from the Image</strong>
+                                    <strong>Retype the Characters from the Image shown Below</strong>
                                     <div class="captcha-image" id="captcha" ></div>
                                     <span id="captcha-error" class="registration-error"></span><br/>
                                     <button type="button" class="btn btn-outline-info btn-sm" onClick="createCaptcha_degree()">
-                                        <span class="btn-label"><i class="fas fa-sync-alt"></i></span>
+                                        <span class="btn-label"><i class="fas fa-sync-alt"></i>  (If you don't See Anything Above, Please Press this Once)</span>
                                     </button>
                                 </div>
                             </div>

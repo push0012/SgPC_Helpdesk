@@ -23,19 +23,19 @@
                 <div class="card-body border-0">
                     <ul style="list-style-type: none;">
 
-                        <a href="{{ asset('file/grs.pdf') }}" target="_blank" class="page_links">
+                        <a href="{{ asset('file/application/2020/grs.pdf') }}" target="_blank" class="page_links">
                             <li style="padding-top:1%;">උපාධීධාරී ලියාපදිංචිය (සිංහල)</li>
                         </a>
 
-                        <a href="{{ asset('file/gre.pdf') }}" target="_blank" class="page_links">
+                        <a href="{{ asset('file/application/2020/gre.pdf') }}" target="_blank" class="page_links">
                             <li style="padding-top:1%;">උපාධීධාරී ලියාපදිංචිය (ඉංග්‍රීසි)</li>
                         </a>
 
-                        <a href="{{ asset('file/drs.pdf') }}" target="_blank" class="page_links">
+                        <a href="{{ asset('file/application/2020/drs.pdf') }}" target="_blank" class="page_links">
                             <li style="padding-top:1%;">ඩිප්ලෝමාධාරී ලියාපදිංචිය (සිංහල)</li>
                         </a>
 
-                        <a href="{{ asset('file/dre.pdf') }}" target="_blank" class="page_links">
+                        <a href="{{ asset('file/application/2020/dre.pdf') }}" target="_blank" class="page_links">
                             <li style="padding-top:1%;">ඩිප්ලෝමාධාරී ලියාපදිංචිය (ඉංග්‍රීසි)</li>
                         </a>
 

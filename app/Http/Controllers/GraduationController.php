@@ -83,7 +83,7 @@ class GraduationController extends Controller
                     // Define folder path
                     $folder = '/uploads/Graduate/'.$request->stu_id.'/';
                     // Make a file path where image will be stored [ folder path + file name + file extension]
-                    $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+                    $filePath = $folder . $name;
                     // Upload image
                     $this->uploadOne($image, $folder, 'public', $name);
                     // Set user profile image path in database to filePath

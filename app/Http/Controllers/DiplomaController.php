@@ -78,9 +78,9 @@ class DiplomaController extends Controller
                     // Make a image name based on user name and current timestamp
                     $name = Str::slug($request->stu_id).'_'.time().'_'. $image->getClientOriginalName();
                     // Define folder path
-                    $folder = '/uploads/Diploma/'.$request->stu_id;
+                    $folder = '/uploads/Diploma/'.$request->stu_id.'/';
                     // Make a file path where image will be stored [ folder path + file name + file extension]
-                    $filePath = $folder . $name. '.' . $image->getClientOriginalExtension();
+                    $filePath = $folder . $name;
                     // Upload image
                     $this->uploadOne($image, $folder, 'public', $name);
                     // Set user profile image path in database to filePath
