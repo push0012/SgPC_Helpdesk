@@ -1,8 +1,12 @@
+@font-face {
+    font-family: 'iskoola pota';
+    src: url("../fonts/iskpota.ttf") format("truetype"), url("../fonts/iskpotab.ttf") format("truetype");
+  }
 html, body {
     /*background: url("../image/header.png") !important;*/
     background-color: #2e2e1f !important;
     background-repeat: inherit !important;
-    font-family: 'Nunito', sans-serif !important;
+    font-family: 'Nunito', sans-serif, 'iskoola pota' !important;
     /*font-weight: 200;*/
 }
 header {
