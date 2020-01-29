@@ -159,9 +159,9 @@
                             </div>
                             <div class="form-group row">
                                 <div class="col-md-12">
-                                    <label for="cos_title">Degree Name</label><span id="cos_title-error" class="registration-error"></span>
+                                    <label for="cos_title">Degree Name (eg:- Bachelor of Arts (Genaral), Bachelor of Science (Special) in ............... )</label><span id="cos_title-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="text" name="cos_title" id="cos_title" class="form-control" placeholder=""/></div>
+                                        <div><input type="text" name="cos_title" id="cos_title" class="form-control" placeholder="eg:- Bachelor of Arts, Bachelor of Science in ................ "/></div>
                                     </div>
                                 </div>
                             </div>

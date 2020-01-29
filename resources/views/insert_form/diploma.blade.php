@@ -124,9 +124,9 @@
                             <div class="form-group row">
                                 <div class="col-md-12">
                                     
-                                    <label for="cos_title">Diploma Name</label><span id="cos_title-error" class="registration-error"></span>
+                                    <label for="cos_title">Diploma Name (eg:- Higher National Diploma in Accounting, National Diploma in Information and Communication Technology)</label><span id="cos_title-error" class="registration-error"></span>
                                     <div>
-                                        <div><input type="text" name="cos_title" id="cos_title" class="form-control" placeholder="Specify"/></div>
+                                        <div><input type="text" name="cos_title" id="cos_title" class="form-control" placeholder="eg:- Higher National Diploma in Accounting, National Diploma in Information and Communication Technology" /></div>
                                     </div>
                                 </div>
                             </div>
