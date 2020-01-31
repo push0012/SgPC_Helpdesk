@@ -154,7 +154,7 @@ class GraduationController extends Controller
                 'email'=> $request->stu_email,
                 'mobile'=>$request->stu_mobile,
                 'reg_no'=>$request->degree_reg_no,
-                'reg_date'=>$request->reg_date,
+                'reg_date'=>$confirm->created_at->format('Y-m-d'),
                 'clg_name'=>$degreeholder->clg_name,
                 'cos_title'=>$degreeholder->cos_title,
         ]);
