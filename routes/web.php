@@ -1,12 +1,53 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//sinhala version
+Route::group(['prefix' => 'si','as'=>'si.'], function () {
+    Route::get('/', function () {
+        return view('si.welcome');
+    });
+    //main navbar page routes
+    Route::get('/business_info', function(){ return view('si.main_navbar.business_info')->with('category',"Agriculture"); });
+    Route::get('/download', function(){ return view('si.main_navbar.downloads'); });
+    Route::get('/about', function(){ return view('si.main_navbar.about'); });
+    Route::get('/rti', function(){ return view('si.main_navbar.rti'); });
+    Route::get('/contactus', function(){ return view('si.main_navbar.contact'); });
+
+    Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
+
+        Route::get('/', function(){ return view('si.sub_cat.sub_humans'); });
+
+    });
+
+});
+
+//english version
+Route::group(['prefix' => 'en','as'=>'en.'], function () {
+    Route::get('/', function () {
+        return view('en.welcome');
+    });
+    //main navbar routes
+    Route::get('/business_info', function(){ return view('en.main_navbar.business_info')->with('category',"Agriculture"); });
+    Route::get('/download', function(){ return view('en.main_navbar.downloads'); });
+    Route::get('/about', function(){ return view('en.main_navbar.about'); });
+    Route::get('/rti', function(){ return view('en.main_navbar.rti'); });
+    Route::get('/contactus', function(){ return view('en.main_navbar.contact'); });
+});
+
+//tamil version
+Route::group(['prefix' => 'ta','as'=>'ta.'], function () {
+    
+});
+
+
+
 
 //detail list routes
 Route::get('/business_list', function(){ return view('data_list.business_list')->with('category',"Agriculture"); });
@@ -20,15 +61,8 @@ Route::get('/business_ins', function(){ return view('insert_form.business'); });
 Route::get('/business', function(){ return view('sub_cat.sub_business'); });
 
 
-
-//detail page routes
-Route::get('/business_info', function(){ return view('detail_page.business_info')->with('category',"Agriculture"); });
-Route::get('/download', function(){ return view('detail_page.downloads'); });
-Route::get('/about', function(){ return view('detail_page.about'); });
-Route::get('/rti', function(){ return view('detail_page.rti'); });
-
 //interact page routes
-Route::get('/contactus', function(){ return view('interact.contact'); });
+
 Route::post('/sendmail', 'ContactUsController@sendMail');
 Route::post('/sendinquiry', 'ContactUsController@sendInquiry');
 

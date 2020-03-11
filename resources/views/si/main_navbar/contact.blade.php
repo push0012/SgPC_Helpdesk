@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('si.layouts.app')
 @section('pageTitle', 'අපව අමතන්න')
 @section('content')
 <div class="container">
@@ -79,16 +79,12 @@
             <ul class="list-unstyled mb-0">
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
                     <p style="font-size:0.75em;">
-                    
-                    නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය, සබරගමුව පළාත් සභාව, නවනගරය, රත්නපුර  
-                
-                </p>
+                        නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය, සබරගමුව පළාත් සභාව, නවනගරය, රත්නපුර  
+                    </p>
                 </li>
-
                 <li><i class="fas fa-phone mt-4 fa-2x"></i>
                     <p>+94 45 2222173</p>
                 </li>
-
                 <li><i class="fas fa-envelope mt-4 fa-2x"></i>
                     <p>spcplan@yahoo.com</p>
                 </li>

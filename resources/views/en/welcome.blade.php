@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>තොරතුරු කේන්ද්‍රය</title>  
+    <title>Helpdesk</title>  
 
     <link rel="icon" type="image/png" href="{{ asset('image/sg_info.png') }}" />
     
@@ -52,7 +52,7 @@
                 </div>
             </div> 
             <div class="header">
-                @include('navbar')
+                @include('en.navbar')
             </div>
             <div class="container-fluid">
                 <div class="col-md-12" >
@@ -78,7 +78,7 @@
                                     </marquee>
                                 </div>
                                 <div class="col-md-9" style="padding: unset !important;">
-                                    @include('slider')
+                                    @include('en.slider')
                                 </div>
                             </div>
                         </div>
@@ -192,7 +192,7 @@
 
                 </div>
                 <hr>
-                @include('footer')
+                @include('en.footer')
             </div>
         </body>
         <script type="text/JavaScript">

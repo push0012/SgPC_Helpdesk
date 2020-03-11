@@ -107,7 +107,7 @@
                 </div>
             </div> 
             <div class="header">
-                @include('navbar')
+                @include('en.navbar')
             </div>
         
         <div class="container" style="">
@@ -122,7 +122,7 @@
             </div>
             </div>
         </div>
-        @include('footer')
+        @include('en.footer')
     </div>
     @stack('scripts')
 </body>

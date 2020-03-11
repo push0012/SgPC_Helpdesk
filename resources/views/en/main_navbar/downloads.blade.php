@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('en.layouts.app')
 @section('pageTitle', 'බාගත කිරීම්')
 @section('content')
 <div class="container">

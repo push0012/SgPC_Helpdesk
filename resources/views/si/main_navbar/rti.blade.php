@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('si.layouts.app')
 @section('pageTitle', 'තොරතුරු පනත')
 @section('content')
 <div class="container">

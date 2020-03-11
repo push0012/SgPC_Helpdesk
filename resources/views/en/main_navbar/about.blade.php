@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('en.layouts.app')
 @section('pageTitle', 'අප ගැන')
 @section('content')
 <div class="container" style="margin-bottom: 25px;">
