@@ -20,14 +20,53 @@
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
 </head>
-<body>
-    <div class="container bg-light" >
-        <div id="app">
-            <a href="{{ url('/si/')}}">සිංහල</a> 
-            <a href="{{ url('/en/')}}">English</a>  
-            <a href="{{ url('/ta/')}}">தமிழ்</a>    
+<body class="index-bg">
+        <div class="container" >
+            <div class="row" style="padding-top:50px !important; padding-bottom:50px !important;">
+                <div class="col-md-4" style="text-align:center;">
+                    
+                </div>
+                <div class="col-md-4" style="text-align:center;">
+                    <img src="{{ asset('image/sabaraflag.png') }}" style="width: 50%;">
+                </div>
+                <div class="col-md-4" style="text-align:center;">
+                    
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col-md-4" style="text-align:center;">
+                    <img src="{{ asset('image/sinhalahead.png') }}" style="width: 100%;">
+                </div>
+                <div class="col-md-4" style="text-align:center;">
+                    <img src="{{ asset('image/tamilhead.png') }}" style="width: 100%;">
+                </div>
+                <div class="col-md-4" style="text-align:center;">
+                    <img src="{{ asset('image/englishhead.png') }}" style="width: 100%;">
+                </div>
+            </div>
+            
+                    <div class="row" style="padding-top:50px !important; padding-bottom:50px !important;">
+                        <div class="col-md-4" style="text-align:center;">
+                            <a href="{{ url('/si/')}}">
+                                <img src="{{ asset('image/sinhalabutton.png') }}" style="width: 100%;">
+                            </a> 
+                        </div>
+                        
+                        <div class="col-md-4" style="text-align:center;">
+                            <a href="{{ url('/ta/')}}">
+                            <img src="{{ asset('image/tamilbutton.png') }}" style="width: 100%;">
+                            </a>  
+                        </div>
+                        
+                        <div class="col-md-4" style="text-align:center;">
+                            <a href="{{ url('/en/')}}">
+                                <img src="{{ asset('image/englishbutton.png') }}" style="width: 100%;">
+                            </a>    
+                        </div>
+                    </div>
+
         </div>
-    </div>
+
 </body>
 <script type="text/JavaScript">
       
