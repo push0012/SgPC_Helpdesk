@@ -330,3 +330,9 @@ canvas{
     margin-left: 20px !important;
     margin-right: 20px !important;
 }
+.index-bg{
+    background-image: url('../image/maincover1.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+        
+}
