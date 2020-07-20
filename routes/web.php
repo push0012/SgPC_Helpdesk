@@ -43,7 +43,15 @@ Route::group(['prefix' => 'en','as'=>'en.'], function () {
 
 //tamil version
 Route::group(['prefix' => 'ta','as'=>'ta.'], function () {
-    
+    Route::get('/', function () {
+        return view('ta.welcome');
+    });
+    //main navbar routes
+   /* Route::get('/business_info', function(){ return view('en.main_navbar.business_info')->with('category',"Agriculture"); });
+    Route::get('/download', function(){ return view('en.main_navbar.downloads'); });
+    Route::get('/about', function(){ return view('en.main_navbar.about'); });
+    Route::get('/rti', function(){ return view('en.main_navbar.rti'); });
+    Route::get('/contactus', function(){ return view('en.main_navbar.contact'); });*/
 });
 
 
