@@ -47,11 +47,11 @@ Route::group(['prefix' => 'ta','as'=>'ta.'], function () {
         return view('ta.welcome');
     });
     //main navbar routes
-   /* Route::get('/business_info', function(){ return view('en.main_navbar.business_info')->with('category',"Agriculture"); });
-    Route::get('/download', function(){ return view('en.main_navbar.downloads'); });
-    Route::get('/about', function(){ return view('en.main_navbar.about'); });
-    Route::get('/rti', function(){ return view('en.main_navbar.rti'); });
-    Route::get('/contactus', function(){ return view('en.main_navbar.contact'); });*/
+    Route::get('/business_info', function(){ return view('ta.main_navbar.business_info')->with('category',"Agriculture"); });
+    Route::get('/download', function(){ return view('ta.main_navbar.downloads'); });
+    Route::get('/about', function(){ return view('ta.main_navbar.about'); });
+    Route::get('/rti', function(){ return view('ta.main_navbar.rti'); });
+    Route::get('/contactus', function(){ return view('ta.main_navbar.contact'); });
 });
 
 
