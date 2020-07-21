@@ -1,4 +1,4 @@
-@extends('si.layouts.app')
+@extends('ta.layouts.app')
 @section('pageTitle', '‍‍ලියාපදිංචි වීම')
 @section('content')
 <div class="container">
