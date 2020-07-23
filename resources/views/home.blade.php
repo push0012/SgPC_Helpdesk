@@ -33,6 +33,17 @@
                     
                 </div>
             </div>
+            <div class="row" style="padding-bottom:50px;" >
+                <div class="col-md-4" style="text-align:center;">
+                    <img src="{{ asset('image/home/sinhalagreeting.png') }}" style="width: 100%;">
+                </div>
+                <div class="col-md-4" style="text-align:center;">
+                    <img src="{{ asset('image/home/tamilgreeting.png') }}" style="width: 100%;">
+                </div>
+                <div class="col-md-4" style="text-align:center;">
+                    <img src="{{ asset('image/home/englishgreeting.png') }}" style="width: 100%;">
+                </div>
+            </div>
             <div class="row" >
                 <div class="col-md-4" style="text-align:center;">
                     <img src="{{ asset('image/home/sinhalahead.png') }}" style="width: 100%;">

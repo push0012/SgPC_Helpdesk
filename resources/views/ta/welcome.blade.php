@@ -131,7 +131,7 @@
                             <div class="contents" align="center">
                                 <div class="containers-dashboard" >
 
-                                    <a href="{{ url('/si/resource')}}" class="img1 box bg-info">
+                                    <a href="{{ url('/ta/resource')}}" class="img1 box bg-info">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img src="{{ asset('image/hrm.png') }}" style="border-radius: 18px; width: 100px; height: 100px;">
@@ -145,7 +145,7 @@
                                         </div>
                                     </a>
 
-                                    <a href="{{ url('/business')}}" class="img2 box bg-info">
+                                    <a href="{{ url('/ta/business')}}" class="img2 box bg-info">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img src="{{ asset('image/empl.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
@@ -208,7 +208,7 @@
 
                 </div>
                 <hr>
-                @include('si.footer')
+                @include('ta.footer')
             </div>
         </body>
         <script type="text/JavaScript">

@@ -1,20 +1,20 @@
 @extends('ta.layouts.app')
-@section('pageTitle', '‍‍මානව සම්පත')
+@section('pageTitle', '‍‍வேலை வாய்ப்புகள்')
 @section('content')
 <div class="container">
     <div class="row">
-        <h3>මානව සම්පත</h3>    
+        <h3 style="font-size:1em;">மனித வளங்கள்</h3>    
     </div>
     <hr>
     <div class="row justify-content-center">
         <div class="containers">
-            <a href="{{ url('/resource/job')}}" class="img4 box bg-info">
+            <a href="#" class="img4 box bg-info">
                 <div class="row">
                     <div class="col-md-4">
                         <img  src="{{ asset('image/job.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
                     </div>
                     <div class="col-md-8">
-                        <h5 class="box-head">රැකියා අවස්ථා</h5>
+                        <h5 class="box-head" style="font-size:0.9em;">வேலை வாய்ப்புகள்</h5>
                         <img  src="{{ asset('image/go.png') }}" class="bottomright" style="width: 35px; height: 35px;">
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                         <img  src="{{ asset('image/register.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
                     </div>
                     <div class="col-md-8">
-                        <h5 class="box-head">ලියාපදිංචි වීම</h5>
+                        <h5 class="box-head" style="font-size:0.9em;">பதிவு செய்தல்</h5>
                         <img  src="{{ asset('image/go.png') }}" class="bottomright" style="width: 35px; height: 35px;">
                         
                     </div>

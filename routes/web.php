@@ -52,6 +52,12 @@ Route::group(['prefix' => 'ta','as'=>'ta.'], function () {
     Route::get('/about', function(){ return view('ta.main_navbar.about'); });
     Route::get('/rti', function(){ return view('ta.main_navbar.rti'); });
     Route::get('/contactus', function(){ return view('ta.main_navbar.contact'); });
+
+    Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
+
+        Route::get('/', function(){ return view('ta.sub_cat.sub_humans'); });
+
+    });
 });
 
 
