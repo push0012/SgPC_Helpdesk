@@ -15,15 +15,44 @@ Route::group(['prefix' => 'si','as'=>'si.'], function () {
     });
     //main navbar page routes
     Route::get('/business_info', function(){ return view('si.main_navbar.business_info')->with('category',"Agriculture"); });
-    Route::get('/download', function(){ return view('si.main_navbar.downloads'); });
+    
     Route::get('/about', function(){ return view('si.main_navbar.about'); });
     Route::get('/rti', function(){ return view('si.main_navbar.rti'); });
     Route::get('/contactus', function(){ return view('si.main_navbar.contact'); });
 
+    Route::group(['prefix' => 'publications','as'=>'publications'], function () {
+        Route::get('/performance', function(){ return view('si.main_navbar.publications.performance'); });
+        Route::get('/policy', function(){ return view('si.main_navbar.publications.policy'); });
+        Route::get('/conceptpaper', function(){ return view('si.main_navbar.publications.concept'); });
+        Route::get('/actionplan', function(){ return view('si.main_navbar.publications.actionplan'); });
+        Route::get('/datainfo', function(){ return view('si.main_navbar.publications.datainfo'); });
+        Route::get('/download', function(){ return view('si.main_navbar.publications.downloads'); });
+    });
+
     Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
 
         Route::get('/', function(){ return view('si.sub_cat.sub_humans'); });
-
+    
+        Route::group(['prefix' => 'job','as'=>'job.'], function () {
+            Route::get('/', function(){ return view('si.data_list.job_list'); });
+        });
+        Route::group(['prefix' => 'training','as'=>'training.'], function () {
+            Route::get('/', function(){ return view('si.data_list.training_list'); });
+        });
+    
+        Route::group(['prefix' => 'application','as'=>'application.'], function () {
+    
+            Route::get('/', function(){ return view('si.sub_cat.sub_stu_registration'); });
+    
+            Route::group(['prefix' => 'graduate','as'=>'graduate.'], function () {
+                Route::get('/', function(){ return view('si.register.intro_graduate'); });
+            });
+    
+            Route::group(['prefix' => 'diploma','as'=>'diploma.'], function () {
+                Route::get('/', function(){ return view('si.register.intro_diploma'); });
+            });
+        });
+    
     });
 
 });
@@ -35,10 +64,45 @@ Route::group(['prefix' => 'en','as'=>'en.'], function () {
     });
     //main navbar routes
     Route::get('/business_info', function(){ return view('en.main_navbar.business_info')->with('category',"Agriculture"); });
-    Route::get('/download', function(){ return view('en.main_navbar.downloads'); });
+    //Route::get('/download', function(){ return view('en.main_navbar.downloads'); });
     Route::get('/about', function(){ return view('en.main_navbar.about'); });
     Route::get('/rti', function(){ return view('en.main_navbar.rti'); });
     Route::get('/contactus', function(){ return view('en.main_navbar.contact'); });
+
+    Route::group(['prefix' => 'publications','as'=>'publications'], function () {
+        Route::get('/performance', function(){ return view('en.main_navbar.publications.performance'); });
+        Route::get('/policy', function(){ return view('en.main_navbar.publications.policy'); });
+        Route::get('/conceptpaper', function(){ return view('en.main_navbar.publications.concept'); });
+        Route::get('/actionplan', function(){ return view('en.main_navbar.publications.actionplan'); });
+        Route::get('/datainfo', function(){ return view('en.main_navbar.publications.datainfo'); });
+        Route::get('/download', function(){ return view('en.main_navbar.publications.downloads'); });
+    });
+
+    Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
+
+        Route::get('/', function(){ return view('en.sub_cat.sub_humans'); });
+    
+        Route::group(['prefix' => 'job','as'=>'job.'], function () {
+            Route::get('/', function(){ return view('en.data_list.job_list'); });
+        });
+        Route::group(['prefix' => 'training','as'=>'training.'], function () {
+            Route::get('/', function(){ return view('en.data_list.training_list'); });
+        });
+    
+        Route::group(['prefix' => 'application','as'=>'application.'], function () {
+    
+            Route::get('/', function(){ return view('en.sub_cat.sub_stu_registration'); });
+    
+            Route::group(['prefix' => 'graduate','as'=>'graduate.'], function () {
+                Route::get('/', function(){ return view('en.register.intro_graduate'); });
+            });
+    
+            Route::group(['prefix' => 'diploma','as'=>'diploma.'], function () {
+                Route::get('/', function(){ return view('en.register.intro_diploma'); });
+            });
+        });
+    
+    });
 });
 
 //tamil version
@@ -53,10 +117,39 @@ Route::group(['prefix' => 'ta','as'=>'ta.'], function () {
     Route::get('/rti', function(){ return view('ta.main_navbar.rti'); });
     Route::get('/contactus', function(){ return view('ta.main_navbar.contact'); });
 
+    Route::group(['prefix' => 'publications','as'=>'publications'], function () {
+        Route::get('/performance', function(){ return view('ta.main_navbar.publications.performance'); });
+        Route::get('/policy', function(){ return view('ta.main_navbar.publications.policy'); });
+        Route::get('/conceptpaper', function(){ return view('ta.main_navbar.publications.concept'); });
+        Route::get('/actionplan', function(){ return view('ta.main_navbar.publications.actionplan'); });
+        Route::get('/datainfo', function(){ return view('ta.main_navbar.publications.datainfo'); });
+        Route::get('/download', function(){ return view('ta.main_navbar.publications.downloads'); });
+    });
+
     Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
 
         Route::get('/', function(){ return view('ta.sub_cat.sub_humans'); });
-
+    
+        Route::group(['prefix' => 'job','as'=>'job.'], function () {
+            Route::get('/', function(){ return view('ta.data_list.job_list'); });
+        });
+        Route::group(['prefix' => 'training','as'=>'training.'], function () {
+            Route::get('/', function(){ return view('ta.data_list.training_list'); });
+        });
+    
+        Route::group(['prefix' => 'application','as'=>'application.'], function () {
+    
+            Route::get('/', function(){ return view('ta.sub_cat.sub_stu_registration'); });
+    
+            Route::group(['prefix' => 'graduate','as'=>'graduate.'], function () {
+                Route::get('/', function(){ return view('ta.register.intro_graduate'); });
+            });
+    
+            Route::group(['prefix' => 'diploma','as'=>'diploma.'], function () {
+                Route::get('/', function(){ return view('ta.register.intro_diploma'); });
+            });
+        });
+    
     });
 });
 

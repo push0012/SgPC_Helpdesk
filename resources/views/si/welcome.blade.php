@@ -129,7 +129,7 @@
                                         </div>
                                     </a>
 
-                                    <a href="{{ url('/business')}}" class="img2 box bg-info">
+                                    <a href="{{ url('/si/business')}}" class="img2 box bg-info">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img src="{{ asset('image/empl.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">

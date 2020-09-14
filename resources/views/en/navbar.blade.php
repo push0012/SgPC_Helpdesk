@@ -23,8 +23,31 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                 <li class="nav-item bg-danger" style="">
                     <a class="nav-link" href="{{ url('about')  }}">{{ __('About Us') }}</a>
                 </li>
-                <li class="nav-item bg-primary" style="">
-                    <a class="nav-link" href="{{ url('download') }}">{{ __('Download') }}</a>
+                <li class="nav-item bg-primary dropdown" style="">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ __('Publications') }}
+                    </a>
+                        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item bg-primary" href="{{ url('/en/publications/policy')  }}">
+                                {{ __('Policy Statements') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/en/publications/conceptpaper')  }}">
+                                {{ __('Concept Papers and Development Plans') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/en/publications/actionplan')  }}">
+                                {{ __('Implementation Plans') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/en/publications/performance') }}">
+                                {{ __('Performance Reports') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/en/publications/datainfo') }}">
+                                {{ __('Data and Information ') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/en/publications/download') }}">
+                                {{ __('Downloads') }}
+                            </a>
+                        </div>
+
                 </li>
                 <li class="nav-item bg-success" style="">
                     <a class="nav-link" href="{{ url('contactus') }}">{{ __('Contact Us') }}</a>

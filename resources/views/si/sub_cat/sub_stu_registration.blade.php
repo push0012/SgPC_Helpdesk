@@ -8,7 +8,7 @@
     <hr>
     <div class="row justify-content-center align-items-center" >
         <div class="containers" align="center">
-            <a href="{{ url('resource/application/graduate')}}" class="img7 box bg-warning">
+            <a href="{{ url('/si/resource/application/graduate')}}" class="img7 box bg-warning">
                 <div class="row">
                     <div class="col-md-4">
                         <img  src="{{ asset('image/graduate.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ url('resource/application/diploma')}}" class="img8 box bg-warning">
+            <a href="{{ url('/si/resource/application/diploma')}}" class="img8 box bg-warning">
                 <div class="row">
                     <div class="col-md-4">
                         <img  src="{{ asset('image/diploma.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ url('/stu_regi')}}" class="img9 box bg-warning">
+            <!--<a href="{{ url('/stu_regi')}}" class="img9 box bg-warning">
                 <div class="row">
                     <div class="col-md-4">
                         <img  src="{{ asset('image/nvq.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
@@ -55,7 +55,7 @@
                         <img  src="{{ asset('image/go.png') }}" class="bottomright" style="width: 35px; height: 35px;">
                     </div>
                 </div>
-            </a>
+            </a>-->
         </div>
     </div>
 </div>

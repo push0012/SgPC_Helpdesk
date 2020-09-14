@@ -27,7 +27,7 @@ class GraduationController extends Controller
     public function index()
     {
 
-        return view('insert_form.introductiong');
+        return view('si.register.intro_graduate');
     }
     public function form()
     {

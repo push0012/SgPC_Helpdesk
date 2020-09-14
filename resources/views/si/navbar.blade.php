@@ -23,8 +23,31 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                 <li class="nav-item bg-danger" style="">
                     <a class="nav-link" href="{{ url('/si/about')  }}">{{ __('අප ගැන') }}</a>
                 </li>
-                <li class="nav-item bg-primary" style="">
-                    <a class="nav-link" href="{{ url('/si/download') }}">{{ __('බාගත කිරීම්') }}</a>
+                <li class="nav-item bg-primary dropdown" style="">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ __('වාර්තා හා විශේෂාංග') }}
+                    </a>
+                        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item bg-primary" href="{{ url('/si/publications/policy')  }}">
+                                {{ __('ප්‍රතිපත්ති ප්‍රකාශ') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/si/publications/conceptpaper')  }}">
+                                {{ __('සංකල්ප පත්‍රිකා සහ සංවර්ධන සැලසුම්') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/si/publications/actionplan')  }}">
+                                {{ __('ක්‍රියාත්මක සැලසුම්') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/si/publications/performance') }}">
+                                {{ __('කාර්යසාධන වාර්තා') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/si/publications/datainfo') }}">
+                                {{ __('දත්ත සහ තොරතුරු') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/si/publications/download') }}">
+                                {{ __('බාගත කිරීම්') }}
+                            </a>
+                        </div>
+
                 </li>
                 <li class="nav-item bg-success" style="">
                     <a class="nav-link" href="{{ url('/si/contactus') }}">{{ __('අමතන්න') }}</a>

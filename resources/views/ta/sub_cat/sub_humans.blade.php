@@ -32,7 +32,7 @@
                     </div>
                 </div>
             </a>
-            <a href="{{ url('/resource/application')}}" class="img6 box bg-warning">
+            <a href="{{ url('/ta/resource/application')}}" class="img6 box bg-warning">
                 
                 <div class="row">
                     <div class="col-md-4">

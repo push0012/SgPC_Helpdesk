@@ -19,8 +19,32 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                 <li class="nav-item bg-danger" style="">
                     <a class="nav-link" href="{{ url('/ta/about')  }}" >{{ __('எம்மைப் பற்றி') }}</a>
                 </li>
-                <li class="nav-item bg-primary" style="">
-                    <a class="nav-link" href="{{ url('/ta/download') }}">{{ __('தரவிறக்கங்கள்') }}</a>
+                <li class="nav-item bg-primary dropdown" style="">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ __('வெளியீடுகள்') }}
+                    </a>
+                        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="font-size:0.8em !important;">
+
+                            <a class="dropdown-item bg-primary" href="{{ url('/ta/publications/policy')  }}">
+                                {{ __('கொள்கை அறிக்கைகள்') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/ta/publications/conceptpaper')  }}">
+                                {{ __('கருத்து ஆவணங்கள்') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/ta/publications/actionplan') }}">
+                                {{ __('செயல்படுத்தும் திட்டங்கள்') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/ta/publications/performance') }}">
+                                {{ __('செயல்திறன் அறிக்கைகள்') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/ta/publications/datainfo') }}">
+                                {{ __('தரவு மற்றும் தகவல்') }}
+                            </a>
+                            <a class="dropdown-item bg-primary" href="{{ url('/ta/publications/download') }}">
+                                {{ __('தரவிறக்கங்கள்') }}
+                            </a>
+                        </div>
+
                 </li>
                 <li class="nav-item bg-success" style="">
                     <a class="nav-link" href="{{ url('/ta/contactus') }}">{{ __('தொடர்புகளுக்கு') }}</a>
