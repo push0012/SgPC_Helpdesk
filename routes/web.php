@@ -19,6 +19,7 @@ Route::group(['prefix' => 'si','as'=>'si.'], function () {
     Route::get('/about', function(){ return view('si.main_navbar.about'); });
     Route::get('/rti', function(){ return view('si.main_navbar.rti'); });
     Route::get('/contactus', function(){ return view('si.main_navbar.contact'); });
+    Route::get('/construction', function(){ return view('si.construction'); });
 
     Route::group(['prefix' => 'publications','as'=>'publications'], function () {
         Route::get('/performance', function(){ return view('si.main_navbar.publications.performance'); });
@@ -68,6 +69,7 @@ Route::group(['prefix' => 'en','as'=>'en.'], function () {
     Route::get('/about', function(){ return view('en.main_navbar.about'); });
     Route::get('/rti', function(){ return view('en.main_navbar.rti'); });
     Route::get('/contactus', function(){ return view('en.main_navbar.contact'); });
+    Route::get('/construction', function(){ return view('en.construction'); });
 
     Route::group(['prefix' => 'publications','as'=>'publications'], function () {
         Route::get('/performance', function(){ return view('en.main_navbar.publications.performance'); });
@@ -116,6 +118,8 @@ Route::group(['prefix' => 'ta','as'=>'ta.'], function () {
     Route::get('/about', function(){ return view('ta.main_navbar.about'); });
     Route::get('/rti', function(){ return view('ta.main_navbar.rti'); });
     Route::get('/contactus', function(){ return view('ta.main_navbar.contact'); });
+
+    Route::get('/construction', function(){ return view('ta.construction'); });
 
     Route::group(['prefix' => 'publications','as'=>'publications'], function () {
         Route::get('/performance', function(){ return view('ta.main_navbar.publications.performance'); });
