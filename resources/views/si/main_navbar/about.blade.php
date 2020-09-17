@@ -51,6 +51,39 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
+                <h5 style="font-size:1.2em; font-weight:bold;">අපගේ අගයන්....</h5>
+                <ul style="list-style:circle;">
+                    <li>වගවීම</li>
+                    <li>ඒකාබද්ධතාවය</li>
+                    <li>නව්‍යකරණය</li>
+                    <li>තිරසර බව</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h5 style="font-size:1.2em; font-weight:bold;">අපගේ පරමාර්ථය.....</h5>
+                <p style="font-size: 0.9em !important;">
+                “කාර්යක්ෂම සහ සඵලදායී සැලසුම්කරණ ක්‍රියාවලියක් තුළින් සබරගමුව පළාතේ ජනතාවගේ ජීවන තත්ත්වය උසස්කරලීම”යි.
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h5 style="font-size:1.2em; font-weight:bold;">අපගේ ආයතනික අරමුණු වන්නේ....</h5>
+                <ol>
+                    <li>ඉදිරි වසර පහ තුළ ආයතනයේ සියලු දෙපාර්තමේන්තු පූර්ණ සැලසුම්කරණ ධාරිතාවයකින් යුතුව ක්‍රියාත්මක කරවීම.</li>
+                    <li>ඉදිරි වසර  තුන ඇතුළත පුනරාවර්තන වියදම් 15%කින් අඩුකිරීම.</li>
+                    <li>ඉදිරි වසර  තුන ඇතුළත බාහිර අරමුදල් ප්‍රභවයන් තුළින් සිදුකෙරෙන ප්‍රාග්ධන ආයෝජන දායකත්වය 5% කින් ඉහළ නැංවීම</li>
+                    <li>ආන්තික පුද්ගලයන්, සමාජ කණ්ඩායම් සහ භූගෝලීය ඒකකයන්හි අවශ්‍යතාවයන් සමඟ විශේෂ ව්‍යාපෘති සහ වැඩසටහන් සමපාත කිරීම සඳහා සැලසුම්කරණ ධාරිතාවය ඉහළ නැංවීම.</li>
+                </ol>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
                 <h5 style="font-size:1.2em; font-weight:bold;">ක්‍රියාකාරී දෙපාර්තමේන්තු</h5>
                 <div class="accordion" id="accordionExample">
                 <ul style="list-style:circle;">

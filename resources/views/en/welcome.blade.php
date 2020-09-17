@@ -34,13 +34,13 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <h3 style="float: left !important; color: white;">සබරගමුව උපකාරක කවුළුව : වෘත්තීය මංපෙත</h3>
+                                        <h3 style="float: left !important; color: white;">Sabaragamuwa Help Desk: Career Path</h3>
                                     </div>
                                     <div class="col-md-12">
-                                        <h4 style="float: left !important; color: white;">නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය</h4>
+                                        <h4 style="float: left !important; color: white;">Office of the Deputy Chief Secretary (Planning)</h4>
                                     </div>
                                     <div class="col-md-12">
-                                        <h5 style="float: left !important; color: white;">සබරගමුව පළාත් සභාව</h5>
+                                        <h5 style="float: left !important; color: white;">Sabaragamuwa Provincial Council</h5>
                                     </div>
                                 </div>
                             </div>
@@ -58,20 +58,20 @@
                 <div class="col-md-12" >
                     <div class="row " style="">
                                 <div class="col-md-3 left-menus bg-secondary-front" style="padding: 2%; color: black; max-height:300px !important;">
-                                    <h4 align="center" class="bg-info" style="border-radius:5px;">නිවේදන</h4>
+                                    <h4 align="center" class="bg-info" style="border-radius:5px;">Announcements</h4>
                                     <marquee direction = "up" scrollamount="3">
                                     <ul style="list-style-type:square; padding-left:4%;" class="list-group list-group-flush">
                                         
                                         <li class="">
-                                        ශ්‍රී ලංකා පාර්ලිමේන්තු ගිණුම් කාරක සභාවේ 2017 මුදල් වර්ශය සඳහා 
-                                        නිර්මල මූල්‍ය කලමනාකරණය හා කාර්යක්ශම කාර්යසාධනය සඳහා වූ
-                                         ස්වර්ණ සම්මානයෙන් පිදුම් ලැබූ වගයි
+                                        We won the Gold Award of web based financial performance evaluation 
+                                        programme - 2018 held by Sri Lanka Parliamentary Committee on Public 
+                                        Accounts
                                         </li>
                                         <br/>
                                         <li class="">
-                                        දැන් ඔබගේ පහසුව සඳහා උපාධිධාරී හෝ ඩිප්ලෝමාධාරී ලෙස සබරගමුව
-                                         පළාත් සභාවේ ලියාපදිංචි වීම අන්තර්ජාලය මගින් සිදුකල හැකිය. 
-                                         <a href="{{ url('/resource/application/')}}">අදාල පිටුවට යාම සඳහා මෙහි Click කරන්න.</a>
+                                        Online registration is now available here for you as Degree /Diploma holders 
+                                        in Sabaragamuwa Province. 
+                                         <a href="{{ url('/en/resource/application/')}}">Please Click here to Page.</a>
                                         </li>
                                         
                                     </ul>
@@ -92,16 +92,18 @@
                                         <div class="" style="margin:10px;">
                                             <h5 class="align-self-center box-head" align="center" 
                                             style="font-size:1.2em; font-weight:bold; padding: 5px 0 5px 0;">
-                                            සබරගමුව උපකාරක කවුළුව : වෘත්තීය මංපෙත
+                                            Sabaragamuwa Help Desk: The Career Path
                                             </h5>
                                         </div>
                                     <div style="padding: 0 15px; 0 15px;" class="">
-                                        <p style="font-size:0.9em;" align="center">සබරගමුව පළාතේ තිරසාර සංවර්ධනයත්, ජනතාවගේ උසස් ජීවන මට්ටමත් ළඟාකරගැනීමේ අරමුණ පෙරදැරිව, 
-                                            පවතින සම්පත් කාර්‍යක්ෂමව හා සඵලමත්ව යොදාගැනීම උදෙසා ක්‍රමවත් ක්‍රමසම්පාදන ක්‍රියාවලියක් තුළින් ප්‍රතිපත්ති තීරකයන්ට 
-                                            සහ සියළු ආයතනයවලට අවශ්‍ය මඟපෙන්වීම හා පසුබල සහාය සැපයීම මෙහෙවර කරගත් සබරගමුව පළාත් 
-                                        නියෝජ්‍ය ලේකම් (ක්‍රමසම්පාදන) කාර්යාලය විසින් ක්‍රියාත්මක සුවිශේෂී සේවාවක් ලෙස මෙම සේවාව ක්‍රියාත්මකයි.</p>
-                                        <p style="font-size:0.9em;" align="center">සබරගමුව පළාතෙන් බිහිවන මානව සම්පත සඵලදායී ලෙස පළාතේ සහ රටේ සංවර්ධනයට දායක කරවීමත්, 
-                                            පළාතෙහි ගොඩනැගුණු ව්‍යවසායයින් හඳුන්වාදීමත්. එමගින් වෙළඳපලක් නිර්මාණය කිරීමත් මෙහි ස්විශේෂී පර්මාර්ථයන් වන්නේය..
+                                        <p style="font-size:0.9em;" align="center">This special facility is offered to 
+                                        reach our mission of Providing guidance and assistance to the policymakers and 
+                                        all institutions through a systematic planning process in order to utilize 
+                                        resources efficiently and effectively with the aim of achieving sustainable 
+                                        development and living standard of the people in the Sabaragamuwa province.</p>
+                                        <p style="font-size:0.9em;" align="center">Special Objectives of this project are, 
+                                            - Effective contribution of human resources in the Sabaragamuwa Province for the development of the province and the country,
+                                            - Introduction of established enterprises in the province and creating a market.
                                         </p>
                                     </div>
                                 </div>
@@ -121,9 +123,9 @@
                                                 <img src="{{ asset('image/hrm.png') }}" style="border-radius: 18px; width: 100px; height: 100px;">
                                             </div>
                                             <div class="col-md-8">
-                                                <h5 class="box-head">මානව සම්පත</h5>
-                                                <span>උසස්, තෘතීක හා ද්විතීක  අධ්‍යාපන මට්ටම් වල මානව සම්පත සදහා 
-                                                    වෘත්තීය අධ්‍යාපනය සඳහා ප්‍රවේශය සැපයීම හා වෘත්තතී මග පෙන්වීම
+                                                <h5 class="box-head" style="font-size:0.85em;">Graduates/Diploma Registration</h5>
+                                                <span>Support to have the access to vocational education and provide career guidance 
+                                                for human resources at higher, tertiary and secondary education levels
                                                 </span>
                                             </div>
                                         </div>
@@ -135,9 +137,9 @@
                                                 <img src="{{ asset('image/empl.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
                                             </div>
                                             <div class="col-md-8">
-                                                <h5 class="box-head">ව්‍යාසායකත්වය</h5>
-                                                <span>මධ්‍යම හා සුළු පරිමාන ව්‍යවසායකයින්, ස්වයං රැකියා නියුක්තිනයින් සඳහා මගපෙන්වීම හා 
-                                                ප්‍රචාරණයක් ලබාදීම</span>
+                                                <h5 class="box-head">Entrepreneurship</h5>
+                                                <span>Providing the guidance and market opportunities for medium and small scale 
+                                                entrepreneurs and self-employers.</span>
                                             </div>
                                         </div>
                                     </a>
@@ -148,8 +150,8 @@
                                                 <img  src="{{ asset('image/guid.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
                                             </div>
                                             <div class="col-md-8">
-                                                <h5 class="box-head">මාර්ගොපදේශනය</h5>
-                                                <span>වෘත්තීය අධ්‍යාපනය හා ව්‍යාවසාකයින් සඳහා මාර්ගෝපදේශණය</span>
+                                                <h5 class="box-head">Guidance</h5>
+                                                <span>Guidance for vocational education and entrepreneurs</span>
                                             </div>
                                         </div>
                                     </a>
@@ -160,7 +162,7 @@
                     </div>
                     <!--- newly added section in 2020.01.21 -->
                     <hr>
-                    <div class="container-fluid">
+                    <!--<div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12" style="padding: unset;">
                                 <div class="" style="margin:5px;">
@@ -187,7 +189,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <!-- newly added section over-->
 
                 </div>

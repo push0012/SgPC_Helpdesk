@@ -55,6 +55,40 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
+                <h5 style="font-size:1.2em; font-weight:bold;">எங்கள் மதிப்புகள்....</h5>
+                <ul style="list-style:circle; font-size: 0.8em !important;">
+                    <li>பொறுப்புக்கூறல்</li>
+                    <li>நேர்மை</li>
+                    <li>புதுமை</li>
+                    <li>நிலைத்தன்மை</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h5 style="font-size:1.2em; font-weight:bold;">எங்கள் இலக்கு.....</h5>
+                <p style="font-size: 0.85em !important;">
+                திறமையான மற்றும் பயனுள்ள திட்டமிடல் செயல்முறை மூலம் 
+                சபரகமுவ மாகாண மக்களின் வாழ்க்கைத் தரத்தை மேம்படுத்துதல்
+                </p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h5 style="font-size:1.2em; font-weight:bold;">எங்கள் குறிக்கோள்கள்....</h5>
+                <ol style="font-size: 0.85em !important;">
+                    <li>அடுத்த ஐந்து ஆண்டுகளுக்குள் நிறுவனத்தின் அனைத்து துறைகளும் முழு வடிவமைப்பு திறன் கொண்ட செயல்படுத்தல்.</li>
+                    <li>அடுத்த மூன்று ஆண்டுகளுக்குள் தொடர்ச்சியான செலவுகளில் 15% குறைப்பு.</li>
+                    <li>அடுத்த மூன்று ஆண்டுகளுக்குள் வெளி நிதி மூலங்களிலிருந்து திரட்டப்பட்ட மூலதன முதலீட்டின் விகிதத்தை 5% அதிகரிப்பு.</li>
+                    <li>ஓரங்கட்டப்பட்ட நபர்கள், சமூக குழுக்கள் மற்றும் புவியியல் பிரிவுகளின் தேவைகளுடன் சிறப்பு திட்டங்கள் மற்றும் திட்டங்களை ஒருங்கிணைக்க வடிவமைப்பு திறனை அதிகரிக்கும்.</li>
+                </ol>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
                 <h5 style="font-size:1em; font-weight:bold;">செயற்பாட்டுத் திணைக்களங்கள்</h5>
                 <div class="accordion" id="accordionExample">
                 <ul style="list-style:circle; font-size:0.9em;">

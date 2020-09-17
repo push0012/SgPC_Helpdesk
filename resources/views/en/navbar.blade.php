@@ -21,7 +21,7 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
                 </li>-->
                 
                 <li class="nav-item bg-danger" style="">
-                    <a class="nav-link" href="{{ url('about')  }}">{{ __('About Us') }}</a>
+                    <a class="nav-link" href="{{ url('/en/about')  }}">{{ __('About Us') }}</a>
                 </li>
                 <li class="nav-item bg-primary dropdown" style="">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -50,10 +50,10 @@ style="z-index:500; background-color: white; max-height: 44px !important; width:
 
                 </li>
                 <li class="nav-item bg-success" style="">
-                    <a class="nav-link" href="{{ url('contactus') }}">{{ __('Contact Us') }}</a>
+                    <a class="nav-link" href="{{ url('/en/contactus') }}">{{ __('Contact Us') }}</a>
                 </li>
                 <li class="nav-item bg-danger" style="">
-                    <a class="nav-link" href="{{ url('rti') }}">{{ __('Information Act') }}</a>
+                    <a class="nav-link" href="{{ url('/en/rti') }}">{{ __('Information Act') }}</a>
                 </li>
                <!-- @guest
                 <li class="nav-item bg-info" style="">

@@ -1,13 +1,13 @@
 @extends('en.layouts.app')
-@section('pageTitle', 'අපව අමතන්න')
+@section('pageTitle', 'Contact Us')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-        <h4 class="h1-responsive font-weight-bold my-4">අපව අමතන්න</h4>
+        <h4 class="h1-responsive font-weight-bold my-4">Contact Us</h4>
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">
-        ඔබට කිසියම් ප්‍රශ්නයක් තිබේද? කරුණාකර අපව කෙලින්ම සම්බන්ධ කර ගැනීමට පසුබට නොවන්න.
+        Any inquiries? Please do not hesitate to contact us directly.
     </p>
     <div class="row">
 
@@ -22,7 +22,7 @@
                     <div class="col-md-6">
                         <div class="md-form mb-0">
                             <input type="text" id="name" name="name" class="form-control">
-                            <label for="name" class="">ඔබගේ නම</label>
+                            <label for="name" class="">Your Name</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -31,7 +31,7 @@
                     <div class="col-md-6">
                         <div class="md-form mb-0">
                             <input type="text" id="email" name="email" class="form-control">
-                            <label for="email" class="">ඔබගේ ඊ තැපැල් ලිපිනය</label>
+                            <label for="email" class="">Your e-mail address</label>
                         </div>
                     </div>
                     <!--Grid column-->
@@ -44,7 +44,7 @@
                     <div class="col-md-12">
                         <div class="md-form mb-0">
                             <input type="text" id="subject" name="subject" class="form-control">
-                            <label for="subject" class="">මාත‍ෘකාව</label>
+                            <label for="subject" class="">Title</label>
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
 
                         <div class="md-form">
                             <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                            <label for="message">අප කාර්යාලය පිලිබඳ චෝදනා හෝ ප්‍රසංශා</label>
+                            <label for="message">Allegations or compliments about our office.</label>
                         </div>
 
                     </div>
@@ -80,7 +80,7 @@
                 <li><i class="fas fa-map-marker-alt fa-2x"></i>
                     <p style="font-size:0.75em;">
                     
-                    නියෝජ්‍ය ප්‍රධාන ලේකම් (ක්‍රමසම්පාදන) කර්යාලය, සබරගමුව පළාත් සභාව, නවනගරය, රත්නපුර  
+                    Office of the Deputy Chief Secretary (Planning), Sabaragamuwa Provincial Council, New Town, Ratnapura.  
                 
                 </p>
                 </li>
