@@ -67,7 +67,10 @@
                                         programme - 2018 held by Sri Lanka Parliamentary Committee on Public 
                                         Accounts
                                         </li>
-                                        <br/>
+                                        <li class="">
+                                        ----------------
+                                        </li>
+                                        <br/><br/><br/>
                                         <li class="">
                                         Online registration is now available here for you as Degree /Diploma holders 
                                         in Sabaragamuwa Province. 
