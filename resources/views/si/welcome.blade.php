@@ -129,15 +129,17 @@
                                         </div>
                                     </a>
 
-                                    <a href="{{ url('/si/business')}}" class="img2 box bg-info">
+                                    <a href="{{ url('/si/humanresource')}}" class="img2 box bg-info">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img src="{{ asset('image/empl.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
                                             </div>
                                             <div class="col-md-8">
-                                                <h5 class="box-head">ව්‍යාසායකත්වය</h5>
-                                                <span>මධ්‍යම හා සුළු පරිමාන ව්‍යවසායකයින්, ස්වයං රැකියා නියුක්තිනයින් සඳහා මගපෙන්වීම හා 
-                                                ප්‍රචාරණයක් ලබාදීම</span>
+                                                <h5 class="box-head" style="font-size:0.9em;">සම්පත් දායක සංචිතය</h5>
+                                                <span >සංවර්ධනයට අදාළ විවිධ ක්ෂේත්‍ර පිළිබඳ ඔබගේ විෂය දැනුම අවශ්‍යතාවයන් 
+                                                සපුරාගැනීමටත් ව්‍යාපෘති/වැඩසටහන් සහ ව්‍යාවසායකත්වය සඳහා මාර්ගෝපදේශනයන් 
+                                                ලබාගැනීමටත් පළපුරුද්ද හා අත්දැකීම් සහිත අප ආයතනයේ සම්පත් දායක සංචිතයේ 
+                                                සහාය සැපයීම.</span>
                                             </div>
                                         </div>
                                     </a>

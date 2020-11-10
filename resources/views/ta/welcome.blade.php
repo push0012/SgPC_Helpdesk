@@ -145,13 +145,13 @@
                                         </div>
                                     </a>
 
-                                    <a href="{{ url('/ta/business')}}" class="img2 box bg-info">
+                                    <a href="{{ url('/ta/humanresource')}}" class="img2 box bg-info">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img src="{{ asset('image/empl.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
                                             </div>
                                             <div class="col-md-8">
-                                                <h5 class="box-head" style="font-size:1em;">தொழில் முயற்சி</h5>
+                                                <h5 class="box-head" style="font-size:0.8em;">வள பங்களிப்பு குளம்</h5>
                                                 <span style="font-size:0.6em;">சிறிய அளவிலான தொழில் முயற்சியாளர்களுக்கும் , சுயதொழிலில் ஈடுபடுபவர்களுக்கும் 
                                                 வழிகாட்டல் மற்றும் விழிப்புணர்வு வழங்குதல்.</span>
                                             </div>

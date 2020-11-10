@@ -29,6 +29,9 @@ Route::group(['prefix' => 'si','as'=>'si.'], function () {
         Route::get('/datainfo', function(){ return view('si.main_navbar.publications.datainfo'); });
         Route::get('/download', function(){ return view('si.main_navbar.publications.downloads'); });
     });
+    Route::group(['prefix' => 'humanresource','as'=>'humanresource.'], function () {
+        Route::get('/', function(){ return view('si.sub_cat.sub_human_reso'); });
+    });
 
     Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
 
@@ -80,6 +83,10 @@ Route::group(['prefix' => 'en','as'=>'en.'], function () {
         Route::get('/download', function(){ return view('en.main_navbar.publications.downloads'); });
     });
 
+    Route::group(['prefix' => 'humanresource','as'=>'humanresource.'], function () {
+        Route::get('/', function(){ return view('en.sub_cat.sub_human_reso'); });
+    });
+
     Route::group(['prefix' => 'resource','as'=>'resource.'], function () {
 
         Route::get('/', function(){ return view('en.sub_cat.sub_humans'); });
@@ -128,6 +135,10 @@ Route::group(['prefix' => 'ta','as'=>'ta.'], function () {
         Route::get('/actionplan', function(){ return view('ta.main_navbar.publications.actionplan'); });
         Route::get('/datainfo', function(){ return view('ta.main_navbar.publications.datainfo'); });
         Route::get('/download', function(){ return view('ta.main_navbar.publications.downloads'); });
+    });
+
+    Route::group(['prefix' => 'humanresource','as'=>'humanresource.'], function () {
+        Route::get('/', function(){ return view('ta.sub_cat.sub_human_reso'); });
     });
 
     Route::group(['prefix' => 'resource','as'=>'resource.'], function () {

@@ -134,13 +134,13 @@
                                         </div>
                                     </a>
 
-                                    <a href="{{ url('/en/business')}}" class="img2 box bg-info">
+                                    <a href="{{ url('/en/humanresource')}}" class="img2 box bg-info">
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <img src="{{ asset('image/empl.png') }}" style="border-radius: 18px; width: 100px; height: 100px; ">
                                             </div>
                                             <div class="col-md-8">
-                                                <h5 class="box-head">Entrepreneurship</h5>
+                                                <h5 class="box-head">Resource Pool</h5>
                                                 <span>Providing the guidance and market opportunities for medium and small scale 
                                                 entrepreneurs and self-employers.</span>
                                             </div>
